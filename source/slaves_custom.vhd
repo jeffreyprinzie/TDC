@@ -22,7 +22,8 @@ entity slaves is
 		ckref_tdc: in std_logic;
 		hit1,hit2: in std_logic;
 		handshakeleds : out std_logic_vector(2 downto 0);
-		REFPLL : out std_logic
+		REFPLL : out std_logic;
+		TRIGGER : out std_logic
 	);
 
 end slaves;
@@ -198,7 +199,8 @@ begin
 		
 		hitCount1=>hitCount1,
 		hitCount2=>hitCount2,
-		SYSCLK=>SYSCLK
+		SYSCLK=>SYSCLK,
+		TRIGGER=>TRIGGER
 	);
 	
 	handshakeleds<='1' & handshakeFPGA1 & handshakeFPGA2;

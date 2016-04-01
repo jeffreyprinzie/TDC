@@ -10,7 +10,7 @@ Target Device  : xc6slx45
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Mon Mar 21 14:09:24 2016
+Mapped Date    : Tue Mar 29 13:57:46 2016
 
 Mapping design into LUTs...
 WARNING:MapLib:701 - Signal ckref_tdc_p connected to top level port ckref_tdc_p
@@ -26,11 +26,11 @@ WARNING:Timing:3159 - The DCM, clocks/dcm0, has the attribute DFS_OSCILLATOR_MOD
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-Total REAL time at the beginning of Placer: 34 secs 
-Total CPU  time at the beginning of Placer: 32 secs 
+Total REAL time at the beginning of Placer: 38 secs 
+Total CPU  time at the beginning of Placer: 37 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:62b62d86) REAL time: 38 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:e99f8ca7) REAL time: 42 secs 
 
 Phase 2.7  Design Feasibility Check
 WARNING:Place:1206 - This design contains a global buffer instance,
@@ -48,20 +48,6 @@ WARNING:Place:1206 - This design contains a global buffer instance,
    applied on COMP.PIN <slaves/TDCchannels/PLLgen/clkout6_buf.O> allowing your
    design to continue. This constraint disables all clock placer rules related
    to the specified COMP.PIN.
-WARNING:Place:1137 - This design is not guaranteed to be routable! This design
-   contains a global buffer instance, <slaves/TDCchannels/dc1/TDCcore/buffer>,
-   driving the net, <slaves/TDCchannels/dc1/TDCcore/hit>, that is driving the
-   following (first 30) non-clock load pins.
-   < PIN: slaves/TDCchannels/dc1/TDCcore/hit_syn0.D; >
-   This is not a recommended design practice in Spartan-6 due to limitations in
-   the global routing that may cause excessive delay, skew or unroutable
-   situations.  It is recommended to only use a BUFG resource to drive clock
-   loads. Please pay extra attention to the timing and routing of this path to
-   ensure the design goals are met. This is normally an ERROR but the
-   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
-   <slaves/TDCchannels/dc1/TDCcore/buffer.O> allowing your design to continue.
-   This constraint disables all clock placer rules related to the specified
-   COMP.PIN.
 WARNING:Place:1137 - This design is not guaranteed to be routable! This design
    contains a global buffer instance, <slaves/TDCchannels/PLLgen/clkout6_buf>,
    driving the net, <REFPLL>, that is driving the following (first 30) non-clock
@@ -151,10 +137,24 @@ WARNING:Place:1137 - This design is not guaranteed to be routable! This design
    <slaves/TDCchannels/dc2/TDCcore/buffer.O> allowing your design to continue.
    This constraint disables all clock placer rules related to the specified
    COMP.PIN.
-Phase 2.7  Design Feasibility Check (Checksum:62b62d86) REAL time: 39 secs 
+WARNING:Place:1137 - This design is not guaranteed to be routable! This design
+   contains a global buffer instance, <slaves/TDCchannels/dc1/TDCcore/buffer>,
+   driving the net, <slaves/TDCchannels/dc1/TDCcore/hit>, that is driving the
+   following (first 30) non-clock load pins.
+   < PIN: slaves/TDCchannels/dc1/TDCcore/hit_syn0.D; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. Please pay extra attention to the timing and routing of this path to
+   ensure the design goals are met. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
+   <slaves/TDCchannels/dc1/TDCcore/buffer.O> allowing your design to continue.
+   This constraint disables all clock placer rules related to the specified
+   COMP.PIN.
+Phase 2.7  Design Feasibility Check (Checksum:e99f8ca7) REAL time: 44 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:62b62d86) REAL time: 39 secs 
+Phase 3.31  Local Placement Optimization (Checksum:e99f8ca7) REAL time: 44 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
 
@@ -163,7 +163,7 @@ WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
    that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock
    IOB component <hit1_P> is placed at site <U8>. The corresponding BUFG
    component <slaves/TDCchannels/dc1/TDCcore/buffer> is placed at site
-   <BUFGMUX_X3Y6>. There is only a select set of IOBs that can use the fast path
+   <BUFGMUX_X2Y2>. There is only a select set of IOBs that can use the fast path
    to the Clocker buffer, and they are not being used. You may want to analyze
    why this problem exists and correct it. This is normally an ERROR but the
    CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN <hit1_P.PAD>
@@ -175,7 +175,7 @@ WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
    that are not placed at an optimal clock IOB / BUFGMUX site pair. The clock
    IOB component <hit2_P> is placed at site <N7>. The corresponding BUFG
    component <slaves/TDCchannels/dc2/TDCcore/buffer> is placed at site
-   <BUFGMUX_X2Y4>. There is only a select set of IOBs that can use the fast path
+   <BUFGMUX_X3Y7>. There is only a select set of IOBs that can use the fast path
    to the Clocker buffer, and they are not being used. You may want to analyze
    why this problem exists and correct it. This is normally an ERROR but the
    CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN <hit2_P.PAD>
@@ -184,41 +184,42 @@ WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
    discouraged as it may lead to very poor timing results. It is recommended
    that this error condition be corrected in the design.
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:bffc6cd) REAL time: 1 mins 44 secs 
+(Checksum:539b2e4) REAL time: 2 mins 2 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:bffc6cd) REAL time: 1 mins 44 secs 
+Phase 5.36  Local Placement Optimization (Checksum:539b2e4) REAL time: 2 mins 2 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:bffc6cd) REAL time: 1 mins 44 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:539b2e4) REAL time: 2 mins 2 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:bffc6cd) REAL time: 1 mins 44 secs 
+Phase 7.3  Local Placement Optimization (Checksum:539b2e4) REAL time: 2 mins 2 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:bffc6cd) REAL time: 1 mins 44 secs 
+Phase 8.5  Local Placement Optimization (Checksum:539b2e4) REAL time: 2 mins 3 secs 
 
 Phase 9.8  Global Placement
-.................................................................................................................
-...............................................................................................................
-..............................................................................
-.......................................
-Phase 9.8  Global Placement (Checksum:8efc8f8) REAL time: 2 mins 58 secs 
+...............................
+.......................................................
+.........................................................................................................................
+................................................................................................
+................................
+Phase 9.8  Global Placement (Checksum:9de587ae) REAL time: 4 mins 31 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:8efc8f8) REAL time: 2 mins 58 secs 
+Phase 10.5  Local Placement Optimization (Checksum:9de587ae) REAL time: 4 mins 31 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:776c7c4e) REAL time: 3 mins 17 secs 
+Phase 11.18  Placement Optimization (Checksum:79549266) REAL time: 5 mins 11 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:776c7c4e) REAL time: 3 mins 17 secs 
+Phase 12.5  Local Placement Optimization (Checksum:79549266) REAL time: 5 mins 12 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:12635068) REAL time: 3 mins 18 secs 
+Phase 13.34  Placement Validation (Checksum:2944714e) REAL time: 5 mins 13 secs 
 
-Total REAL time to Placer completion: 3 mins 30 secs 
-Total CPU  time to Placer completion: 3 mins 36 secs 
+Total REAL time to Placer completion: 5 mins 39 secs 
+Total CPU  time to Placer completion: 4 mins 44 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:367 - The signal
@@ -268,16 +269,16 @@ Design Summary:
 Number of errors:      0
 Number of warnings:   21
 Slice Logic Utilization:
-  Number of Slice Registers:                 5,350 out of  54,576    9%
-    Number used as Flip Flops:               5,350
+  Number of Slice Registers:                 5,423 out of  54,576    9%
+    Number used as Flip Flops:               5,423
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      4,340 out of  27,288   15%
-    Number used as logic:                    4,004 out of  27,288   14%
-      Number using O6 output only:           2,370
-      Number using O5 output only:             295
-      Number using O5 and O6:                1,339
+  Number of Slice LUTs:                      4,424 out of  27,288   16%
+    Number used as logic:                    4,038 out of  27,288   14%
+      Number using O6 output only:           2,395
+      Number using O5 output only:             294
+      Number using O5 and O6:                1,349
       Number used as ROM:                        0
     Number used as Memory:                      57 out of   6,408    1%
       Number used as Dual Port RAM:             32
@@ -289,21 +290,21 @@ Slice Logic Utilization:
         Number using O6 output only:             9
         Number using O5 output only:             0
         Number using O5 and O6:                 16
-    Number used exclusively as route-thrus:    279
-      Number with same-slice register load:    261
+    Number used exclusively as route-thrus:    329
+      Number with same-slice register load:    311
       Number with same-slice carry load:        18
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,820 out of   6,822   26%
-  Number of MUXCYs used:                       664 out of  13,644    4%
-  Number of LUT Flip Flop pairs used:        5,363
-    Number with an unused Flip Flop:         1,142 out of   5,363   21%
-    Number with an unused LUT:               1,023 out of   5,363   19%
-    Number of fully used LUT-FF pairs:       3,198 out of   5,363   59%
-    Number of unique control sets:             245
+  Number of occupied Slices:                 1,848 out of   6,822   27%
+  Number of MUXCYs used:                       696 out of  13,644    5%
+  Number of LUT Flip Flop pairs used:        5,424
+    Number with an unused Flip Flop:         1,168 out of   5,424   21%
+    Number with an unused LUT:               1,000 out of   5,424   18%
+    Number of fully used LUT-FF pairs:       3,256 out of   5,424   60%
+    Number of unique control sets:             247
     Number of slice register sites lost
-      to control set restrictions:             697 out of  54,576    1%
+      to control set restrictions:             704 out of  54,576    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -312,8 +313,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        50 out of     218   22%
-    Number of LOCed IOBs:                       50 out of      50  100%
+  Number of bonded IOBs:                        51 out of     218   23%
+    Number of LOCed IOBs:                       51 out of      51  100%
     IOB Flip Flops:                             11
     IOB Master Pads:                             2
     IOB Slave Pads:                              2
@@ -359,9 +360,9 @@ Specific Feature Utilization:
   Number of RPM macros:            1
 Average Fanout of Non-Clock Nets:                3.53
 
-Peak Memory Usage:  1096 MB
-Total REAL time to MAP completion:  3 mins 40 secs 
-Total CPU time to MAP completion (all processors):   3 mins 46 secs 
+Peak Memory Usage:  1097 MB
+Total REAL time to MAP completion:  5 mins 55 secs 
+Total CPU time to MAP completion (all processors):   4 mins 56 secs 
 
 Mapping completed.
 See MAP report file "top_map.mrp" for details.

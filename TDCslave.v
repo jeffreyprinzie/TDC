@@ -41,7 +41,8 @@ module TDCslave(
 		
 		
 		output wire SYSCLK,
-		output wire REFPLL
+		output wire REFPLL,
+		output wire TRIGGER
     );
 	 
 	 
@@ -54,7 +55,24 @@ module TDCslave(
 	wire enableHitskip;
 	assign enableHitskip=0;
 	
+		reg [7:0] triggerCounter;
+	reg [31:0] hitCount1_tm1,hitCount2_tm1;
 	
+	always @(posedge SYSCLK) begin //runs at 192 MHz
+		if( hitCount1_tm1 == hitCount1 && hitCount2_tm1 == hitCount2) begin
+			if (triggerCounter != 0) begin
+				triggerCounter<=triggerCounter -1;		
+			end else begin
+				triggerCounter<=0;
+			end
+		end else begin
+			hitCount1_tm1<=hitCount1;
+			hitCount2_tm1<=hitCount2;
+			triggerCounter<=255;
+		end
+	end
+	
+	assign TRIGGER = (triggerCounter == 0) ? 0 : 1;
 	
 	PLL PLLgen (
 		.CLK_IN1(ckref), 
