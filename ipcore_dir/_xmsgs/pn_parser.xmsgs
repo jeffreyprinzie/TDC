@@ -8,10 +8,10 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/jeffrey/projects/work/ipcore_dir/mac_fifo_axi4.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/Administrators/jeffrey/xilinx/work/ipcore_dir/mac_fifo_axi4.v&quot; into library work</arg>
 </msg>
 
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/jeffrey/projects/work/ipcore_dir/mac_fifo_axi4.vhd&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;/home/Administrators/jeffrey/xilinx/work/ipcore_dir/mac_fifo_axi4.vhd&quot; into library work</arg>
 </msg>
 
 </messages>
