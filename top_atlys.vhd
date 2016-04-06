@@ -27,7 +27,7 @@ entity top is port(
 	dip_switch: in std_logic_vector(3 downto 0);
 	
 	--tdc
-	ckref_tdc_p,ckref_tdc_n: in std_logic;
+	trigger_diff_p,trigger_diff_n: out std_logic;
 	PLLREF1_P,PLLREF1_N: out std_logic;
 	PLLREF2_P,PLLREF2_N: out std_logic;
 	hit1_P,hit1_N: in std_logic;
@@ -57,7 +57,7 @@ architecture rtl of top is
 	signal hit1,hit2 : std_logic;
 	signal sysclk_b : std_logic;
 	signal REFPLL : std_logic;
-	
+	signal TRIGGER_i : std_logic;
 	
 
 	
@@ -155,9 +155,10 @@ begin
 		hit2=>hit2,
 		handshakeleds=>handshakeleds,
 		REFPLL=>REFPLL,
-		TRIGGER=>TRIGGER
+		TRIGGER=>TRIGGER_i
 	);
 	
+	TRIGGER<=TRIGGER_i;
 	
 	myprogrammer: entity work.programmer port map(
 	 clkin=>sysclk_b,
@@ -172,12 +173,12 @@ begin
 	 
 	 
 	
-	input_buffer_ckref: IBUFGDS 
-   port map(
-		O=>open,--ckref_tdc
-		I=>ckref_tdc_p,
-		IB=>ckref_tdc_n
-		);
+--	input_buffer_ckref: IBUFGDS 
+--   port map(
+--		O=>open,--ckref_tdc
+--		I=>ckref_tdc_p,
+--		IB=>ckref_tdc_n
+--		);
 	 --hit1 <= not ckref_tdc;
 	 
 	 	input_buffer_hit1: IBUFGDS 
@@ -207,7 +208,12 @@ begin
 		OB=>PLLREF2_N
 		);
  
-
+		output_bufferTRIGGERdiff: OBUFDS 
+	port map(
+		O=>trigger_diff_p,
+		I=>TRIGGER_i,
+		OB=>trigger_diff_n
+		);
 	 
 	
 

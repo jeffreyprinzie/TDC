@@ -1,11 +1,13 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri Apr 01 17:08:32 2016
+// Written by: Map P.20131013 on Wed Apr 06 11:42:04 2016
 //! **************************************************************************
 
 SCHEMATIC START;
 COMP "TRIGGER" LOCATE = SITE "U13" LEVEL 1;
 COMP "sda" LOCATE = SITE "P11" LEVEL 1;
 COMP "sck" LOCATE = SITE "N10" LEVEL 1;
+COMP "trigger_diff_n" LOCATE = SITE "V10" LEVEL 1;
+COMP "trigger_diff_p" LOCATE = SITE "U10" LEVEL 1;
 COMP "sdai2c" LOCATE = SITE "M11" LEVEL 1;
 COMP "sysclk" LOCATE = SITE "L15" LEVEL 1;
 COMP "leds<0>" LOCATE = SITE "U18" LEVEL 1;
@@ -96,17 +98,15 @@ COMP "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0<1>" LOCATE = SITE
 COMP "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0<3>" LOCATE = SITE
         "SLICE_X47Y57" LEVEL 1;
 COMPGRP pblock_counter_ch2.SLICE = COMP
-        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0_L0<2>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180<2>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180_L0<2>" COMP
         "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0<1>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0<0>";
+        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180_L0<2>" COMP
+        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180<2>";
 COMPGRP "pblock_counter_ch2.SLICE" LOCATE = SITE "SLICE_X46Y58:SLICE_X47Y63"
         LEVEL 4;
 COMPGRP pblock_counter_ch1.SLICE = COMP
+        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180<2>" COMP
         "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0<1>" COMP
-        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180_L0<2>" COMP
-        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180<2>";
+        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0_L0<2>";
 COMPGRP "pblock_counter_ch1.SLICE" LOCATE = SITE "SLICE_X46Y50:SLICE_X47Y55"
         LEVEL 4;
 COMPGRP L1buffers_ch2.SLICE = COMP
@@ -115,24 +115,24 @@ COMPGRP L1buffers_ch2.SLICE = COMP
 COMPGRP "L1buffers_ch2.SLICE" LOCATE = SITE "SLICE_X48Y56:SLICE_X51Y63" LEVEL
         4;
 COMPGRP L1buffers_ch1.SLICE = COMP
-        "slaves/TDCchannels/dc1/TDCcore/hit_registers_L1<3>" COMP
-        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180_L1<2>";
+        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0_L1<2>" COMP
+        "slaves/TDCchannels/dc1/TDCcore/hit_registers_L1<3>";
 COMPGRP "L1buffers_ch1.SLICE" LOCATE = SITE "SLICE_X48Y48:SLICE_X51Y55" LEVEL
         4;
-COMPGRP FSM_TDC2.SLICE = COMP
-        "slaves/TDCchannels/dc2/TDCcore/FSMstate[3]_GND_469_o_AND_374_o" COMP
-        "slaves/TDCchannels/dc2/TDCcore/coarse_time<1>" COMP
+COMPGRP FSM_TDC2.SLICE = COMP "slaves/TDCchannels/dc2/TDCcore/coarse_time<1>"
+        COMP "slaves/TDCchannels/dc2/TDCcore/FSMstate[3]_GND_469_o_AND_374_o"
+        COMP "slaves/TDCchannels/dc2/TDCcore/valid_hit" COMP
         "slaves/TDCchannels/dc2/TDCcore/FSMstate_FSM_FFd2" COMP
-        "slaves/TDCchannels/dc2/TDCcore/coarse_time<0>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/fine_time_decoded<1>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/coarse_time<2>";
+        "slaves/TDCchannels/dc2/TDCcore/coarse_time<2>" COMP
+        "slaves/TDCchannels/dc2/TDCcore/fine_time_decoded<1>";
 COMPGRP "FSM_TDC2.SLICE" LOCATE = SITE "SLICE_X52Y56:SLICE_X59Y63" SITE
         "SLICE_X30Y56:SLICE_X45Y63" LEVEL 4;
 COMPGRP FSM_TDC1.SLICE = COMP
+        "slaves/TDCchannels/dc1/TDCcore/FSMstate[3]_GND_469_o_AND_374_o" COMP
         "slaves/TDCchannels/dc1/TDCcore/FSMstate_FSM_FFd2" COMP
-        "slaves/TDCchannels/dc1/TDCcore/_n0125_inv" COMP
-        "slaves/TDCchannels/dc1/TDCcore/valid_hit" COMP
         "slaves/TDCchannels/dc1/TDCcore/coarse_time<2>" COMP
+        "slaves/TDCchannels/dc1/TDCcore/fine_time_decoded<1>" COMP
+        "slaves/TDCchannels/dc1/TDCcore/valid_hit" COMP
         "slaves/TDCchannels/dc1/TDCcore/coarse_time<1>";
 COMPGRP "FSM_TDC1.SLICE" LOCATE = SITE "SLICE_X52Y48:SLICE_X59Y55" SITE
         "SLICE_X30Y48:SLICE_X45Y55" LEVEL 4;
