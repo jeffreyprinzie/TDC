@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: top.prj
@@ -399,6 +399,15 @@ Back to vhdl to continue elaboration
 Going to verilog side to elaborate module programmer
 
 Elaborating module <programmer>.
+WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 93: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 98: Result of 27-bit expression is truncated to fit in 26-bit target.
+WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 107: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 108: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 111: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 113: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 115: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 117: Result of 9-bit expression is truncated to fit in 8-bit target.
+WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 118: Result of 32-bit expression is truncated to fit in 8-bit target.
 
 Elaborating module <CommunicationController>.
 
@@ -420,7 +429,20 @@ WARNING:HDLCompiler:91 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/re
 WARNING:HDLCompiler:91 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/registerInterface.v" Line 109: Signal <myReg11> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/registerInterface.v" Line 110: Signal <myReg12> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 WARNING:HDLCompiler:91 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/registerInterface.v" Line 111: Signal <myReg13> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
-WARNING:HDLCompiler:604 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 82: Module instantiation should have an instance name
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 146: Assignment to myReg1 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 147: Assignment to myReg2 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 148: Assignment to myReg3 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 149: Assignment to myReg4 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 150: Assignment to myReg5 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 151: Assignment to myReg6 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 152: Assignment to myReg7 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 153: Assignment to myReg8 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 154: Assignment to myReg9 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 155: Assignment to myReg10 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 156: Assignment to myReg11 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 157: Assignment to myReg12 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 158: Assignment to myReg13 ignored, since the identifier is never used
+WARNING:HDLCompiler:604 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 162: Module instantiation should have an instance name
 
 Elaborating module <SerialConfig>.
 WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 81: Result of 32-bit expression is truncated to fit in 1-bit target.
@@ -430,7 +452,7 @@ WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/S
 WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 194: Result of 11-bit expression is truncated to fit in 10-bit target.
 WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 210: Result of 32-bit expression is truncated to fit in 1-bit target.
 WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 211: Result of 32-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 111: Result of 24-bit expression is truncated to fit in 23-bit target.
+WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 191: Result of 24-bit expression is truncated to fit in 23-bit target.
 Back to vhdl to continue elaboration
 
 =========================================================================
@@ -1493,11 +1515,28 @@ Unit <rammgmt> synthesized.
 
 Synthesizing Unit <programmer>.
     Related source file is "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v".
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg1> of the instance <UCOMM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg2> of the instance <UCOMM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg3> of the instance <UCOMM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg4> of the instance <UCOMM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg5> of the instance <UCOMM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg6> of the instance <UCOMM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg7> of the instance <UCOMM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg8> of the instance <UCOMM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg9> of the instance <UCOMM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg10> of the instance <UCOMM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg11> of the instance <UCOMM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg12> of the instance <UCOMM> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" line 138: Output port <myReg13> of the instance <UCOMM> is unconnected or connected to loadless signal.
+    Found 26-bit register for signal <prescaleCounter>.
+    Found 1-bit register for signal <configsel>.
     Found 23-bit register for signal <commBusyCtr>.
-    Found 23-bit adder for signal <commBusyCtr[22]_GND_521_o_add_3_OUT> created at line 111.
+    Found 1-bit register for signal <startProgram>.
+    Found 26-bit adder for signal <prescaleCounter[25]_GND_521_o_add_3_OUT> created at line 98.
+    Found 23-bit adder for signal <commBusyCtr[22]_GND_521_o_add_34_OUT> created at line 191.
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  23 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  51 D-type flip-flop(s).
 Unit <programmer> synthesized.
 
 Synthesizing Unit <CommunicationController>.
@@ -1603,7 +1642,7 @@ WARNING:Xst:647 - Input <myReg13<7:5>> is never used. This port will be preserve
     Found 4-bit register for signal <FSMstate>.
     Found 8-bit adder for signal <shiftCtr[7]_GND_527_o_add_9_OUT> created at line 106.
     Found 10-bit adder for signal <prescaler[9]_GND_527_o_add_38_OUT> created at line 194.
-    Found 4-bit 8-to-1 multiplexer for signal <_n0328> created at line 64.
+    Found 4-bit 8-to-1 multiplexer for signal <_n0329> created at line 64.
     HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <FSMstate> would allow inference of a finite state machine and as consequence better performance and smaller area.
     Summary:
 	inferred   2 Adder/Subtractor(s).
@@ -1620,7 +1659,7 @@ Macro Statistics
  4096x8-bit dual-port RAM                              : 1
  8192x32-bit dual-port RAM                             : 1
  8192x8-bit dual-port RAM                              : 4
-# Adders/Subtractors                                   : 50
+# Adders/Subtractors                                   : 51
  1-bit adder                                           : 2
  10-bit adder                                          : 1
  12-bit adder                                          : 2
@@ -1629,6 +1668,7 @@ Macro Statistics
  2-bit adder                                           : 3
  23-bit adder                                          : 1
  24-bit adder                                          : 1
+ 26-bit adder                                          : 1
  28-bit adder                                          : 3
  3-bit adder                                           : 5
  32-bit adder                                          : 5
@@ -1639,8 +1679,8 @@ Macro Statistics
  8-bit adder                                           : 6
  8-bit subtractor                                      : 2
  9-bit adder                                           : 4
-# Registers                                            : 495
- 1-bit register                                        : 223
+# Registers                                            : 498
+ 1-bit register                                        : 225
  10-bit register                                       : 5
  11-bit register                                       : 1
  112-bit register                                      : 1
@@ -1651,6 +1691,7 @@ Macro Statistics
  2-bit register                                        : 15
  23-bit register                                       : 1
  24-bit register                                       : 3
+ 26-bit register                                       : 1
  28-bit register                                       : 3
  3-bit register                                        : 25
  32-bit register                                       : 35
@@ -1861,6 +1902,7 @@ INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing
 Unit <ipbus_dpram> synthesized (advanced).
 
 Synthesizing (advanced) Unit <programmer>.
+The following registers are absorbed into counter <prescaleCounter>: 1 register on signal <prescaleCounter>.
 The following registers are absorbed into counter <commBusyCtr>: 1 register on signal <commBusyCtr>.
 Unit <programmer> synthesized (advanced).
 
@@ -2084,7 +2126,7 @@ Macro Statistics
  7-bit adder                                           : 1
  8-bit adder                                           : 2
  9-bit adder                                           : 4
-# Counters                                             : 32
+# Counters                                             : 33
  1-bit up counter                                      : 2
  10-bit up counter                                     : 1
  12-bit up counter                                     : 2
@@ -2092,6 +2134,7 @@ Macro Statistics
  2-bit up counter                                      : 3
  23-bit up counter                                     : 1
  24-bit up counter                                     : 1
+ 26-bit up counter                                     : 1
  28-bit up counter                                     : 3
  3-bit up counter                                      : 2
  32-bit up counter                                     : 3
@@ -2099,8 +2142,8 @@ Macro Statistics
  6-bit up counter                                      : 1
  8-bit down counter                                    : 2
  8-bit up counter                                      : 5
-# Registers                                            : 5023
- Flip-Flops                                            : 5023
+# Registers                                            : 5025
+ Flip-Flops                                            : 5025
 # Comparators                                          : 39
  1-bit comparator equal                                : 2
  13-bit comparator equal                               : 1
@@ -2318,6 +2361,7 @@ Optimizing FSM <slaves/TDCchannels/dc2/ramManager/FSM_4> on signal <FSMstate[1:2
  11    | 10
 -------------------
 WARNING:Xst:1710 - FF/Latch <FSMstate_3> (without init value) has a constant value of 0 in block <SerialConfig>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <shiftregister_92> (without init value) has a constant value of 0 in block <SerialConfig>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <rarp_req_block.req_end_0> (without init value) has a constant value of 1 in block <udp_rarp_block>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <next_addr.addr_to_set_buf_0> (without init value) has a constant value of 0 in block <udp_build_arp>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <littleendian.unreliable_data_15> (without init value) has a constant value of 0 in block <udp_packet_parser>. This FF/Latch will be trimmed during the optimization process.
@@ -2987,8 +3031,8 @@ WARNING:Xst:2677 - Node <clean_block.clean_i_14> of sequential type is unconnect
 WARNING:Xst:2677 - Node <clean_block.clean_i_15> of sequential type is unconnected in block <rx_ram_selector>.
 WARNING:Xst:2677 - Node <hit_enable> of sequential type is unconnected in block <TDCcore>.
 WARNING:Xst:2677 - Node <hit_enable> of sequential type is unconnected in block <TDCcore>.
-WARNING:Xst:1710 - FF/Latch <prescaler_8> (without init value) has a constant value of 0 in block <_i000001>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <prescaler_9> (without init value) has a constant value of 0 in block <_i000001>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <prescaler_8> (without init value) has a constant value of 0 in block <_i000032>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <prescaler_9> (without init value) has a constant value of 0 in block <_i000032>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <write_data.shift_buf_9> (without init value) has a constant value of 0 in block <ARP>. This FF/Latch will be trimmed during the optimization process.
 INFO:Xst:2261 - The FF/Latch <rarp_end_addr_0> in Unit <RARP_block> is equivalent to the following FF/Latch, which will be removed : <rarp_send> 
 INFO:Xst:2261 - The FF/Latch <data_block.data_buffer_48> in Unit <RARP_block> is equivalent to the following 4 FFs/Latches, which will be removed : <data_block.data_buffer_50> <data_block.data_buffer_65> <data_block.data_buffer_67> <data_block.we_buffer_1> 
@@ -3088,7 +3132,7 @@ Mapping all equations...
 WARNING:Xst:1710 - FF/Latch <history_block.async_payload_3> (without init value) has a constant value of 1 in block <status_buffer>. This FF/Latch will be trimmed during the optimization process.
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block top, actual ratio is 5.
-In hierarchy level myprogrammer/_i000001.
+In hierarchy level myprogrammer/_i000032.
 Forward register balancing over carry chain Mcount_shiftCtr_cy<0>
 In hierarchy level slaves/TDCchannels/dc2/ramManager.
 Forward register balancing over carry chain Mcount_ramAddr_cy<0>
@@ -3393,8 +3437,8 @@ Unit <u_i2cSlave> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 4737
- Flip-Flops                                            : 4737
+# Registers                                            : 4764
+ Flip-Flops                                            : 4764
 # Shift Registers                                      : 18
  10-bit shift register                                 : 1
  13-bit shift register                                 : 16
@@ -3421,30 +3465,30 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 6731
+# BELS                             : 6810
 #      GND                         : 36
-#      INV                         : 72
-#      LUT1                        : 315
-#      LUT2                        : 1118
-#      LUT3                        : 1146
-#      LUT4                        : 533
-#      LUT5                        : 762
-#      LUT6                        : 1592
-#      MUXCY                       : 608
+#      INV                         : 74
+#      LUT1                        : 340
+#      LUT2                        : 1119
+#      LUT3                        : 1144
+#      LUT4                        : 531
+#      LUT5                        : 787
+#      LUT6                        : 1569
+#      MUXCY                       : 633
 #      MUXF5                       : 1
-#      MUXF7                       : 36
+#      MUXF7                       : 38
 #      MUXF8                       : 5
 #      VCC                         : 31
-#      XORCY                       : 476
-# FlipFlops/Latches                : 5795
-#      FD                          : 1476
+#      XORCY                       : 502
+# FlipFlops/Latches                : 5822
+#      FD                          : 1504
 #      FDC                         : 141
 #      FDC_1                       : 6
 #      FDCE                        : 74
 #      FDE                         : 1577
 #      FDP                         : 44
 #      FDPE                        : 2
-#      FDR                         : 485
+#      FDR                         : 484
 #      FDRE                        : 1846
 #      FDS                         : 60
 #      FDSE                        : 83
@@ -3482,19 +3526,19 @@ Selected Device : 6slx45csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            5795  out of  54576    10%  
- Number of Slice LUTs:                 5635  out of  27288    20%  
-    Number used as Logic:              5538  out of  27288    20%  
+ Number of Slice Registers:            5822  out of  54576    10%  
+ Number of Slice LUTs:                 5661  out of  27288    20%  
+    Number used as Logic:              5564  out of  27288    20%  
     Number used as Memory:               97  out of   6408     1%  
        Number used as RAM:               52
        Number used as SRL:               45
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   7825
-   Number with an unused Flip Flop:    2030  out of   7825    25%  
-   Number with an unused LUT:          2190  out of   7825    27%  
-   Number of fully used LUT-FF pairs:  3605  out of   7825    46%  
-   Number of unique control sets:       328
+ Number of LUT Flip Flop pairs used:   7851
+   Number with an unused Flip Flop:    2029  out of   7851    25%  
+   Number with an unused LUT:          2190  out of   7851    27%  
+   Number of fully used LUT-FF pairs:  3632  out of   7851    46%  
+   Number of unique control sets:       329
 
 IO Utilization: 
  Number of IOs:                          53
@@ -3529,7 +3573,7 @@ Clock Signal                                   | Clock buffer(FF name)  | Load  
 -----------------------------------------------+------------------------+-------+
 gmii_rx_clk                                    | IBUFG+BUFIO2           | 464   |
 clocks/clk_125_i                               | BUFG                   | 3767  |
-sysclk                                         | IBUFG                  | 369   |
+sysclk                                         | IBUFG                  | 396   |
 clocks/clk_ipb_i                               | BUFG                   | 845   |
 slaves/TDCchannels/PLLgen/pll_base_inst/CLKOUT4| BUFG                   | 455   |
 slaves/TDCchannels/PLLgen/pll_base_inst/CLKOUT0| BUFG                   | 12    |
@@ -3547,8 +3591,8 @@ Speed Grade: -3
 
    Minimum period: 8.579ns (Maximum Frequency: 116.564MHz)
    Minimum input arrival time before clock: 5.025ns
-   Maximum output required time after clock: 5.924ns
-   Maximum combinational path delay: 3.298ns
+   Maximum output required time after clock: 6.514ns
+   Maximum combinational path delay: 3.301ns
 
 Timing Details:
 ---------------
@@ -3610,27 +3654,27 @@ Delay:               4.230ns (Levels of Logic = 1)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'sysclk'
-  Clock period: 5.872ns (frequency: 170.310MHz)
-  Total number of paths / destination ports: 6021 / 639
+  Clock period: 5.869ns (frequency: 170.386MHz)
+  Total number of paths / destination ports: 5352 / 666
 -------------------------------------------------------------------------
-Delay:               5.872ns (Levels of Logic = 4)
-  Source:            myprogrammer/_i000001/prescaler_7 (FF)
-  Destination:       myprogrammer/_i000001/FSMstate_1 (FF)
+Delay:               5.869ns (Levels of Logic = 4)
+  Source:            myprogrammer/_i000032/prescaler_7 (FF)
+  Destination:       myprogrammer/_i000032/FSMstate_1 (FF)
   Source Clock:      sysclk rising
   Destination Clock: sysclk rising
 
-  Data Path: myprogrammer/_i000001/prescaler_7 to myprogrammer/_i000001/FSMstate_1
+  Data Path: myprogrammer/_i000032/prescaler_7 to myprogrammer/_i000032/FSMstate_1
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDR:C->Q             14   0.447   1.186  prescaler_7 (prescaler_7)
-     LUT3:I0->O            1   0.205   0.580  _n0342_inv1_SW0 (N4)
-     LUT6:I5->O          113   0.205   2.159  _n0342_inv1 (tick_n)
-     LUT5:I1->O            1   0.203   0.580  Mmux__n032822 (Mmux__n032821)
-     LUT5:I4->O            1   0.205   0.000  Mmux__n032823 (FSMstate_next<1>)
+     LUT3:I0->O            1   0.205   0.580  _n0343_inv1_SW0 (N2)
+     LUT6:I5->O          112   0.205   2.156  _n0343_inv1 (tick_n)
+     LUT5:I1->O            1   0.203   0.580  Mmux__n032922 (Mmux__n032921)
+     LUT5:I4->O            1   0.205   0.000  Mmux__n032923 (FSMstate_next<1>)
      FD:D                      0.102          FSMstate_1
     ----------------------------------------
-    Total                      5.872ns (1.367ns logic, 4.505ns route)
+    Total                      5.869ns (1.367ns logic, 4.502ns route)
                                        (23.3% logic, 76.7% route)
 
 =========================================================================
@@ -3847,24 +3891,24 @@ Offset:              3.668ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET OUT AFTER for Clock 'sysclk'
   Total number of paths / destination ports: 10 / 7
 -------------------------------------------------------------------------
-Offset:              5.724ns (Levels of Logic = 4)
-  Source:            myprogrammer/_i000001/FSMstate_2 (FF)
+Offset:              6.514ns (Levels of Logic = 4)
+  Source:            myprogrammer/_i000032/FSMstate_2 (FF)
   Destination:       scapt (PAD)
   Source Clock:      sysclk rising
 
-  Data Path: myprogrammer/_i000001/FSMstate_2 to scapt
+  Data Path: myprogrammer/_i000032/FSMstate_2 to scapt
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FD:C->Q              12   0.447   1.137  FSMstate_2 (FSMstate_2)
-     LUT3:I0->O            1   0.205   0.579  Mmux__n0328141 (scapt)
-     end scope: 'myprogrammer/_i000001:scapt'
+     FD:C->Q              73   0.447   1.928  FSMstate_2 (FSMstate_2)
+     LUT3:I0->O            1   0.205   0.579  Mmux__n0329141 (scapt)
+     end scope: 'myprogrammer/_i000032:scapt'
      INV:I->O              1   0.206   0.579  p_scapt_inv1_INV_0 (p_scapt_inv)
      end scope: 'myprogrammer:p_scapt_inv'
      OBUF:I->O                 2.571          scapt_OBUF (scapt)
     ----------------------------------------
-    Total                      5.724ns (3.429ns logic, 2.295ns route)
-                                       (59.9% logic, 40.1% route)
+    Total                      6.514ns (3.429ns logic, 3.085ns route)
+                                       (52.6% logic, 47.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'slaves/TDCchannels/PLLgen/pll_base_inst/CLKOUT4'
@@ -3893,7 +3937,7 @@ Offset:              5.924ns (Levels of Logic = 4)
 Timing constraint: Default path analysis
   Total number of paths / destination ports: 13 / 13
 -------------------------------------------------------------------------
-Delay:               3.298ns (Levels of Logic = 2)
+Delay:               3.301ns (Levels of Logic = 2)
   Source:            sysclk (PAD)
   Destination:       clocks/dcm0:CLKIN (PAD)
 
@@ -3902,10 +3946,10 @@ Delay:               3.298ns (Levels of Logic = 2)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      begin scope: 'clocks:sysclk'
-     IBUFG:I->O          369   1.222   2.076  ibufgds0 (sysclk_buffer)
+     IBUFG:I->O          396   1.222   2.079  ibufgds0 (sysclk_buffer)
     DCM_CLKGEN:CLKIN           0.000          dcm0
     ----------------------------------------
-    Total                      3.298ns (1.222ns logic, 2.076ns route)
+    Total                      3.301ns (1.222ns logic, 2.079ns route)
                                        (37.0% logic, 63.0% route)
 
 =========================================================================
@@ -3985,21 +4029,21 @@ Clock to Setup on destination clock sysclk
 Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ----------------+---------+---------+---------+---------+
 clocks/clk_ipb_i|    1.026|         |         |         |
-sysclk          |    5.872|         |         |         |
+sysclk          |    5.869|         |         |         |
 ----------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 61.00 secs
-Total CPU time to Xst completion: 57.17 secs
+Total REAL time to Xst completion: 55.00 secs
+Total CPU time to Xst completion: 54.95 secs
  
 --> 
 
 
-Total memory usage is 609024 kilobytes
+Total memory usage is 609080 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  734 (   0 filtered)
-Number of infos    :  267 (   0 filtered)
+Number of warnings :  757 (   0 filtered)
+Number of infos    :  280 (   0 filtered)
 
