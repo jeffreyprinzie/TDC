@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Fri May 20 13:22:32 2016
+// Written by: Map P.20131013 on Mon May 30 11:13:29 2016
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -98,13 +98,13 @@ COMP "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0<1>" LOCATE = SITE
 COMP "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0<3>" LOCATE = SITE
         "SLICE_X47Y57" LEVEL 1;
 COMPGRP pblock_counter_ch2.SLICE = COMP
-        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0_L0<2>" COMP
+        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180_L0<2>" COMP
         "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180<2>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0<1>";
+        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0<1>" COMP
+        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0_L0<2>";
 COMPGRP "pblock_counter_ch2.SLICE" LOCATE = SITE "SLICE_X46Y58:SLICE_X47Y63"
         LEVEL 4;
 COMPGRP pblock_counter_ch1.SLICE = COMP
-        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180_L0<2>" COMP
         "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180<2>" COMP
         "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0<1>" COMP
         "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0_L0<2>";
@@ -121,20 +121,21 @@ COMPGRP L1buffers_ch1.SLICE = COMP
 COMPGRP "L1buffers_ch1.SLICE" LOCATE = SITE "SLICE_X48Y48:SLICE_X51Y55" LEVEL
         4;
 COMPGRP FSM_TDC2.SLICE = COMP
-        "slaves/TDCchannels/dc2/TDCcore/fine_time_decoded<1>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/valid_hit" COMP
         "slaves/TDCchannels/dc2/TDCcore/FSMstate[3]_GND_469_o_AND_374_o" COMP
-        "slaves/TDCchannels/dc2/TDCcore/FSMstate_FSM_FFd2" COMP
         "slaves/TDCchannels/dc2/TDCcore/coarse_time<1>" COMP
+        "slaves/TDCchannels/dc2/TDCcore/valid_hit" COMP
+        "slaves/TDCchannels/dc2/TDCcore/fine_time_decoded<1>" COMP
+        "slaves/TDCchannels/dc2/TDCcore/FSMstate_FSM_FFd2" COMP
         "slaves/TDCchannels/dc2/TDCcore/coarse_time<2>";
 COMPGRP "FSM_TDC2.SLICE" LOCATE = SITE "SLICE_X52Y56:SLICE_X59Y63" SITE
         "SLICE_X30Y56:SLICE_X45Y63" LEVEL 4;
 COMPGRP FSM_TDC1.SLICE = COMP
-        "slaves/TDCchannels/dc1/TDCcore/FSMstate_FSM_FFd2" COMP
-        "slaves/TDCchannels/dc1/TDCcore/_n0125_inv" COMP
-        "slaves/TDCchannels/dc1/TDCcore/valid_hit" COMP
+        "slaves/TDCchannels/dc1/TDCcore/fine_time_decoded<1>" COMP
+        "slaves/TDCchannels/dc1/TDCcore/FSMstate[3]_GND_469_o_AND_374_o" COMP
+        "slaves/TDCchannels/dc1/TDCcore/coarse_time<2>" COMP
         "slaves/TDCchannels/dc1/TDCcore/coarse_time<1>" COMP
-        "slaves/TDCchannels/dc1/TDCcore/coarse_time<2>";
+        "slaves/TDCchannels/dc1/TDCcore/FSMstate_FSM_FFd2" COMP
+        "slaves/TDCchannels/dc1/TDCcore/valid_hit";
 COMPGRP "FSM_TDC1.SLICE" LOCATE = SITE "SLICE_X52Y48:SLICE_X59Y55" SITE
         "SLICE_X30Y48:SLICE_X45Y55" LEVEL 4;
 TIMEGRP eth_rx_clk_io = BEL "eth/rx_er_r" BEL "eth/rx_dv_r" BEL "eth/rxd_r_0"
@@ -8470,26 +8471,14 @@ TIMEGRP tnm_sysclk = BEL "clocks/rst" BEL "clocks/d17_d" PIN
         "clocks/clkdiv/cnt_26" BEL "clocks/clkdiv/cnt_27" BEL
         "clocks/clkdiv/reset_gen/SRL16E" BEL "clocks/Mshreg_nuke_d2" BEL
         "clocks/nuke_d2" BEL "myprogrammer/startProgram" BEL
-        "myprogrammer/commBusyCtr_0" BEL "myprogrammer/commBusyCtr_1" BEL
-        "myprogrammer/commBusyCtr_2" BEL "myprogrammer/commBusyCtr_3" BEL
-        "myprogrammer/commBusyCtr_4" BEL "myprogrammer/commBusyCtr_5" BEL
-        "myprogrammer/commBusyCtr_6" BEL "myprogrammer/commBusyCtr_7" BEL
-        "myprogrammer/commBusyCtr_8" BEL "myprogrammer/commBusyCtr_9" BEL
-        "myprogrammer/commBusyCtr_10" BEL "myprogrammer/commBusyCtr_11" BEL
-        "myprogrammer/commBusyCtr_12" BEL "myprogrammer/commBusyCtr_13" BEL
-        "myprogrammer/commBusyCtr_14" BEL "myprogrammer/commBusyCtr_15" BEL
-        "myprogrammer/commBusyCtr_16" BEL "myprogrammer/commBusyCtr_17" BEL
-        "myprogrammer/commBusyCtr_18" BEL "myprogrammer/commBusyCtr_19" BEL
-        "myprogrammer/commBusyCtr_20" BEL "myprogrammer/commBusyCtr_21" BEL
-        "myprogrammer/commBusyCtr_22" BEL "myprogrammer/prescaleCounter_0" BEL
-        "myprogrammer/prescaleCounter_1" BEL "myprogrammer/prescaleCounter_2"
-        BEL "myprogrammer/prescaleCounter_3" BEL
-        "myprogrammer/prescaleCounter_4" BEL "myprogrammer/prescaleCounter_5"
-        BEL "myprogrammer/prescaleCounter_6" BEL
-        "myprogrammer/prescaleCounter_7" BEL "myprogrammer/prescaleCounter_8"
-        BEL "myprogrammer/prescaleCounter_9" BEL
-        "myprogrammer/prescaleCounter_10" BEL
-        "myprogrammer/prescaleCounter_11" BEL
+        "myprogrammer/prescaleCounter_0" BEL "myprogrammer/prescaleCounter_1"
+        BEL "myprogrammer/prescaleCounter_2" BEL
+        "myprogrammer/prescaleCounter_3" BEL "myprogrammer/prescaleCounter_4"
+        BEL "myprogrammer/prescaleCounter_5" BEL
+        "myprogrammer/prescaleCounter_6" BEL "myprogrammer/prescaleCounter_7"
+        BEL "myprogrammer/prescaleCounter_8" BEL
+        "myprogrammer/prescaleCounter_9" BEL "myprogrammer/prescaleCounter_10"
+        BEL "myprogrammer/prescaleCounter_11" BEL
         "myprogrammer/prescaleCounter_12" BEL
         "myprogrammer/prescaleCounter_13" BEL
         "myprogrammer/prescaleCounter_14" BEL

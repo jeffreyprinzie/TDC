@@ -83,7 +83,7 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 93: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 98: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 98: Result of <arg fmt="%d" index="1">27</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">26</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 107: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
@@ -368,43 +368,43 @@
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/timegen.v</arg>&quot; line <arg fmt="%s" index="2">85</arg>: Output port &lt;<arg fmt="%s" index="3">full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hit_fifo</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg3</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg4</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg5</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg5</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg6</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg6</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg7</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg7</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg8</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg8</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg9</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg9</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg10</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg10</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg11</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg11</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg12</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg12</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg13</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v</arg>&quot; line <arg fmt="%s" index="2">138</arg>: Output port &lt;<arg fmt="%s" index="3">myReg13</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">UCOMM</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">myReg13&lt;7:5&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -2633,10 +2633,10 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hit_enable</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">prescaler_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">_i000032</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">prescaler_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">_i000032</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
-<msg type="warning" file="Xst" num="1710" delta="new" >FF/Latch &lt;<arg fmt="%s" index="1">prescaler_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">_i000032</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
+<msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">prescaler_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">_i000032</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">write_data.shift_buf_9</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">ARP</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

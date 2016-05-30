@@ -189,9 +189,13 @@ always @(posedge clkin) begin
 	else
 		if(!commBusyCtr[22])
 			commBusyCtr<=commBusyCtr+1;
-end			
-assign commBusy = !commBusyCtr[22]	;
+end	
 
+`ifndef SEUSIM		
+assign commBusy = !commBusyCtr[22]	;
+`else
+assign commBusy=configsel;
+`endif
 
 
  /*logicAnalyser LA1(
