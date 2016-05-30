@@ -1,8 +1,8 @@
 INTSTYLE=impact
-INFILE=/home/jeffrey/projects/work/impact.xsl
-OUTFILE=/home/jeffrey/projects/work/impact.xsl
-FAMILY=Single
-PART=Single
-WORKINGDIR=/home/jeffrey/projects/work
+INFILE=/home/Administrators/jeffrey/xilinx/work/impact.xsl
+OUTFILE=/home/Administrators/jeffrey/xilinx/work/impact.xsl
+FAMILY=Multiple
+PART=Multiple
+WORKINGDIR=/home/Administrators/jeffrey/xilinx/work
 LICENSE=iMPACT
 USER_INFO=iMPACT

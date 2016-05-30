@@ -2,10 +2,10 @@
 # Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 SOFTWARE_VERSION P.20131013
-DATE             5/30/2016 - 11:25
+DATE             5/30/2016 - 12:26
 SOURCE          /home/Administrators/jeffrey/xilinx/work/mem_SEU.mcs
-DEVICE          2048K
+DEVICE          16384K
 DATA_WIDTH      1
 FILL_DATA       0xFF
-SIGNATURE       0x09DD9895
+SIGNATURE       0xE8FD9895
 START_ADDRESS   0x00000000 END_ADDRESS 0x0016A673 DIRECTION_UP   "/home/Administrators/jeffrey/xilinx/work/top.bit" 6slx45csg324

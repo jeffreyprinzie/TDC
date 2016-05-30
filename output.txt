@@ -1,5 +1,5 @@
 Storage Target: SPI Flash Single FPGA
-16M
+128M
 FF
 mem_SEU
 /home/Administrators/jeffrey/xilinx/work/

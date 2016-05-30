@@ -1,17 +1,17 @@
 PROMGEN: Xilinx Prom Generator P.20131013
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-promgen -w -p mcs -c FF -o /home/Administrators/jeffrey/xilinx/work//mem_SEU -s 2048 -u 0000 /home/Administrators/jeffrey/xilinx/work/top.bit -spi 
+promgen -w -p mcs -c FF -o /home/Administrators/jeffrey/xilinx/work//mem_SEU -s 16384 -u 0000 /home/Administrators/jeffrey/xilinx/work/top.bit -spi 
 
-PROM /home/Administrators/jeffrey/xilinx/work/mem_SEU.prm map: Mon May 30 11:25:17 2016
+PROM /home/Administrators/jeffrey/xilinx/work/mem_SEU.prm map: Mon May 30 12:26:59 2016
 
 Calculating PROM checksum with fill value ff
 
 Format        Mcs86 (32-bit)
-Size          2048K
+Size          16384K
 PROM start    0000:0000
-PROM end      001f:ffff
-PROM checksum 09dd9895
+PROM end      00ff:ffff
+PROM checksum e8fd9895
 
         Addr1        Addr2                     Date File(s)
     0000:0000    0016:a673     May 30 11:15:13 2016 /home/Administrators/jeffrey/xilinx/work/top.bit
