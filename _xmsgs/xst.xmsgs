@@ -50,6 +50,9 @@
 <msg type="warning" file="HDLCompiler" num="746" delta="old" >"/home/Administrators/jeffrey/xilinx/ipbus/firmware/ipbus_core/hdl/ipbus_ctrl.vhd" Line 61: Range is empty (null range)
 </msg>
 
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/SEUcounter.v" Line 44: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">3</arg>-bit target.
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/Administrators/jeffrey/xilinx/work/TDCslave.v" Line 77: Port <arg fmt="%s" index="1">LOCKED</arg> is not connected to this instance
 </msg>
 
@@ -212,16 +215,16 @@
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 191: Result of <arg fmt="%d" index="1">24</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">23</arg>-bit target.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/top_atlys.vhd</arg>&quot; line <arg fmt="%s" index="2">86</arg>: Output port &lt;<arg fmt="%s" index="3">hostbus_out_hostrddata</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/top_atlys.vhd</arg>&quot; line <arg fmt="%s" index="2">87</arg>: Output port &lt;<arg fmt="%s" index="3">hostbus_out_hostrddata</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/top_atlys.vhd</arg>&quot; line <arg fmt="%s" index="2">86</arg>: Output port &lt;<arg fmt="%s" index="3">hostbus_out_hostmiimrdy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/top_atlys.vhd</arg>&quot; line <arg fmt="%s" index="2">87</arg>: Output port &lt;<arg fmt="%s" index="3">hostbus_out_hostmiimrdy</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/top_atlys.vhd</arg>&quot; line <arg fmt="%s" index="2">112</arg>: Output port &lt;<arg fmt="%s" index="3">ipb_req</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ipbus</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/top_atlys.vhd</arg>&quot; line <arg fmt="%s" index="2">113</arg>: Output port &lt;<arg fmt="%s" index="3">ipb_req</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">ipbus</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/top_atlys.vhd</arg>&quot; line <arg fmt="%s" index="2">145</arg>: Output port &lt;<arg fmt="%s" index="3">eth_err_ctrl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">slaves</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/top_atlys.vhd</arg>&quot; line <arg fmt="%s" index="2">146</arg>: Output port &lt;<arg fmt="%s" index="3">eth_err_ctrl</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">slaves</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/ipbus/firmware/example_designs/hdl/clocks_s6_extphy_100MHz.vhd</arg>&quot; line <arg fmt="%s" index="2">75</arg>: Output port &lt;<arg fmt="%s" index="3">d25</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">clkdiv</arg>&gt; is unconnected or connected to loadless signal.
@@ -341,16 +344,16 @@
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">pkt_tx</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/slaves_custom.vhd</arg>&quot; line <arg fmt="%s" index="2">98</arg>: Output port &lt;<arg fmt="%s" index="3">q</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">slave2</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/slaves_custom.vhd</arg>&quot; line <arg fmt="%s" index="2">99</arg>: Output port &lt;<arg fmt="%s" index="3">q</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">slave2</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/slaves_custom.vhd</arg>&quot; line <arg fmt="%s" index="2">118</arg>: Output port &lt;<arg fmt="%s" index="3">q</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">slave4</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/slaves_custom.vhd</arg>&quot; line <arg fmt="%s" index="2">119</arg>: Output port &lt;<arg fmt="%s" index="3">q</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">slave4</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/slaves_custom.vhd</arg>&quot; line <arg fmt="%s" index="2">128</arg>: Output port &lt;<arg fmt="%s" index="3">q</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">RAM1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/slaves_custom.vhd</arg>&quot; line <arg fmt="%s" index="2">129</arg>: Output port &lt;<arg fmt="%s" index="3">q</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">RAM1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/slaves_custom.vhd</arg>&quot; line <arg fmt="%s" index="2">143</arg>: Output port &lt;<arg fmt="%s" index="3">q</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">RAM2</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/source/slaves_custom.vhd</arg>&quot; line <arg fmt="%s" index="2">144</arg>: Output port &lt;<arg fmt="%s" index="3">q</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">RAM2</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="old" >Signal &lt;<arg fmt="%s" index="1">eth_err_ctrl</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -2579,6 +2582,12 @@
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cnt_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clkdiv</arg>&gt;.
 </msg>
 
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hit_enable</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hit_enable</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
+</msg>
+
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clean_block.clean_i_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rx_ram_selector</arg>&gt;.
 </msg>
 
@@ -2625,12 +2634,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clean_block.clean_i_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rx_ram_selector</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hit_enable</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
-</msg>
-
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hit_enable</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="1710" delta="old" >FF/Latch &lt;<arg fmt="%s" index="1">prescaler_8</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">0</arg> in block &lt;<arg fmt="%s" index="3">_i000032</arg>&gt;. This FF/Latch will be trimmed during the optimization process.

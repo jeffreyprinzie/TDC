@@ -10,6 +10,7 @@ NET "sdai2c" LOC = M11;
 NET "scli2c" LOC = N11;
 NET "commBusy" LOC = N12;
 NET "TRIGGER" LOC = U13;
+NET "SEUcalin" LOC = U15;
 
 NET "scapt" IOSTANDARD = LVCMOS33;
 NET "reset" IOSTANDARD = LVCMOS33;
@@ -19,7 +20,7 @@ NET "sdai2c" IOSTANDARD = LVCMOS33;
 NET "scli2c" IOSTANDARD = LVCMOS33;
 NET "commBusy" IOSTANDARD = LVCMOS33;
 NET "TRIGGER" IOSTANDARD = LVCMOS33;
-
+NET "SEUcalin" IOSTANDARD = LVCMOS33;
 
 NET "handshakeleds[2]" IOSTANDARD = LVCMOS33;
 NET "handshakeleds[1]" IOSTANDARD = LVCMOS33;
@@ -181,7 +182,7 @@ PIN "slaves/TDCchannels/dc1/TDCcore/buffer.O" CLOCK_DEDICATED_ROUTE = FALSE;
 PIN "slaves/TDCchannels/dc2/TDCcore/buffer.O" CLOCK_DEDICATED_ROUTE = FALSE;
 
 #PIN "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_2.D" CLOCK_DEDICATED_ROUTE = FALSE;
-
+NET "SEUcalin" TIG;
 NET "hit1" TIG;
 NET "slaves/TDCchannels/dc1/TDCcore/hit_in" TIG;
 

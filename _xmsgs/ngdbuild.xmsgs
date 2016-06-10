@@ -13,22 +13,22 @@
 </arg>
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="119" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;hit1&quot; CLOCK_DEDICATED_ROUTE = FALSE;&gt; [atlys.ucf(156)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;hit1&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
+<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;hit1&quot; CLOCK_DEDICATED_ROUTE = FALSE;&gt; [atlys.ucf(157)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;hit1&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="119" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;hit1&quot; CLOCK_DEDICATED_ROUTE = FALSE;&gt; [atlys.ucf(158)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;hit1&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
+<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;hit1&quot; CLOCK_DEDICATED_ROUTE = FALSE;&gt; [atlys.ucf(159)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;hit1&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="119" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;hit2&quot; CLOCK_DEDICATED_ROUTE = FALSE;&gt; [atlys.ucf(160)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;hit2&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
+<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;hit2&quot; CLOCK_DEDICATED_ROUTE = FALSE;&gt; [atlys.ucf(161)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;hit2&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="119" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;slaves/TDCchannels/dc2/TDCcore/hit&quot; CLOCK_DEDICATED_ROUTE = FALSE;&gt; [atlys.ucf(162)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;slaves/TDCchannels/dc2/TDCcore/hit&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
+<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;slaves/TDCchannels/dc2/TDCcore/hit&quot; CLOCK_DEDICATED_ROUTE = FALSE;&gt; [atlys.ucf(163)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;slaves/TDCchannels/dc2/TDCcore/hit&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="119" delta="old" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;slaves/TDCchannels/dc1/TDCcore/hit&quot; CLOCK_DEDICATED_ROUTE = FALSE;&gt; [atlys.ucf(163)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;slaves/TDCchannels/dc1/TDCcore/hit&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
+<msg type="warning" file="ConstraintSystem" num="119" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;slaves/TDCchannels/dc1/TDCcore/hit&quot; CLOCK_DEDICATED_ROUTE = FALSE;&gt; [atlys.ucf(164)]</arg>: This constraint cannot be distributed from the design objects matching &apos;<arg fmt="%s" index="2">NET &quot;slaves/TDCchannels/dc1/TDCcore/hit&quot;</arg>&apos; because those design objects do not contain or drive any instances of the correct type.
 </msg>
 
-<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; LOC = SLICE_X47Y56;&gt; [atlys.ucf(274)]&apos; could not be found and so the Locate constraint will be removed.
+<msg type="warning" file="ConstraintSystem" num="0" >A target design object for the Locate constraint &apos;&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; LOC = SLICE_X47Y56;&gt; [atlys.ucf(275)]&apos; could not be found and so the Locate constraint will be removed.
 </msg>
 
 <msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">tnm_sysclk</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_sysclk</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_CLKGEN</arg> instance <arg fmt="%s" index="5">dcm0</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_CLKGEN</arg> output(s): 
@@ -63,10 +63,16 @@
 <arg fmt="%s" index="7">IOCLK</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_eth_rx_clk_io = PERIOD &quot;eth_rx_clk_io&quot; TS_GMII_RX_CLK HIGH 50%&gt;</arg>
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; BEL = AFF;&gt; [atlys.ucf(273)]</arg> is overridden on the design object <arg fmt="%s" index="2">slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; BEL = AFF;&gt; [atlys.ucf(342)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; BEL = AFF;&gt; [atlys.ucf(274)]</arg> is overridden on the design object <arg fmt="%s" index="2">slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; BEL = AFF;&gt; [atlys.ucf(343)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; LOC = SLICE_X47Y56;&gt; [atlys.ucf(274)]</arg> is overridden on the design object <arg fmt="%s" index="2">slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; LOC = SLICE_X47Y56;&gt; [atlys.ucf(343)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; LOC = SLICE_X47Y56;&gt; [atlys.ucf(275)]</arg> is overridden on the design object <arg fmt="%s" index="2">slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; LOC = SLICE_X47Y56;&gt; [atlys.ucf(344)]</arg>.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">ipb_master_in_ipb_err</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">REFPLL</arg> with clock driver <arg fmt="%s" index="2">slaves/TDCchannels/PLLgen/clkout6_buf</arg> drives no clock pins
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">ipb_master_out_ipb_addr&lt;31&gt;</arg>&apos; has no driver
@@ -132,13 +138,31 @@
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">ipb_master_out_ipb_addr&lt;11&gt;</arg>&apos; has no driver
 </msg>
 
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">ipb_master_in_ipb_err</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">REFPLL</arg> with clock driver <arg fmt="%s" index="2">slaves/TDCchannels/PLLgen/clkout6_buf</arg> drives no clock pins
-</msg>
-
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">N4</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">slaves/ipbr[0]_ipb_err</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">slaves/ipbr[1]_ipb_err</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">slaves/ipbr[2]_ipb_err</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">slaves/ipbr[3]_ipb_err</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">slaves/ipbr[4]_ipb_err</arg>&apos; has no driver
+</msg>
+
+<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">slaves/TDCchannels/CLK_45</arg> with clock driver <arg fmt="%s" index="2">slaves/TDCchannels/PLLgen/clkout2_buf</arg> drives no clock pins
+</msg>
+
+<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">slaves/TDCchannels/CLK_90</arg> with clock driver <arg fmt="%s" index="2">slaves/TDCchannels/PLLgen/clkout3_buf</arg> drives no clock pins
+</msg>
+
+<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">slaves/TDCchannels/CLK_135</arg> with clock driver <arg fmt="%s" index="2">slaves/TDCchannels/PLLgen/clkout4_buf</arg> drives no clock pins
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">ipbus/mac_addr&lt;47&gt;</arg>&apos; has no driver
@@ -928,30 +952,6 @@
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">ipbus/trans/cfg_vector_out&lt;0&gt;</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">slaves/ipbr[0]_ipb_err</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">slaves/ipbr[1]_ipb_err</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">slaves/ipbr[2]_ipb_err</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">slaves/ipbr[3]_ipb_err</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">slaves/ipbr[4]_ipb_err</arg>&apos; has no driver
-</msg>
-
-<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">slaves/TDCchannels/CLK_45</arg> with clock driver <arg fmt="%s" index="2">slaves/TDCchannels/PLLgen/clkout2_buf</arg> drives no clock pins
-</msg>
-
-<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">slaves/TDCchannels/CLK_90</arg> with clock driver <arg fmt="%s" index="2">slaves/TDCchannels/PLLgen/clkout3_buf</arg> drives no clock pins
-</msg>
-
-<msg type="warning" file="NgdBuild" num="478" delta="old" >clock net <arg fmt="%s" index="1">slaves/TDCchannels/CLK_135</arg> with clock driver <arg fmt="%s" index="2">slaves/TDCchannels/PLLgen/clkout4_buf</arg> drives no clock pins
 </msg>
 
 </messages>

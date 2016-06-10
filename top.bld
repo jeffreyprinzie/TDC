@@ -24,35 +24,35 @@ INFO:coreutil - Full license for component <tri_mode_eth_mac> allows you to use
 Resolving constraint associations...
 Checking Constraint Associations...
 WARNING:ConstraintSystem:119 - Constraint <NET "hit1" CLOCK_DEDICATED_ROUTE =
-   FALSE;> [atlys.ucf(156)]: This constraint cannot be distributed from the
+   FALSE;> [atlys.ucf(157)]: This constraint cannot be distributed from the
    design objects matching 'NET "hit1"' because those design objects do not
    contain or drive any instances of the correct type.
 
 WARNING:ConstraintSystem:119 - Constraint <NET "hit1" CLOCK_DEDICATED_ROUTE =
-   FALSE;> [atlys.ucf(158)]: This constraint cannot be distributed from the
+   FALSE;> [atlys.ucf(159)]: This constraint cannot be distributed from the
    design objects matching 'NET "hit1"' because those design objects do not
    contain or drive any instances of the correct type.
 
 WARNING:ConstraintSystem:119 - Constraint <NET "hit2" CLOCK_DEDICATED_ROUTE =
-   FALSE;> [atlys.ucf(160)]: This constraint cannot be distributed from the
+   FALSE;> [atlys.ucf(161)]: This constraint cannot be distributed from the
    design objects matching 'NET "hit2"' because those design objects do not
    contain or drive any instances of the correct type.
 
 WARNING:ConstraintSystem:119 - Constraint <NET
    "slaves/TDCchannels/dc2/TDCcore/hit" CLOCK_DEDICATED_ROUTE = FALSE;>
-   [atlys.ucf(162)]: This constraint cannot be distributed from the design
+   [atlys.ucf(163)]: This constraint cannot be distributed from the design
    objects matching 'NET "slaves/TDCchannels/dc2/TDCcore/hit"' because those
    design objects do not contain or drive any instances of the correct type.
 
 WARNING:ConstraintSystem:119 - Constraint <NET
    "slaves/TDCchannels/dc1/TDCcore/hit" CLOCK_DEDICATED_ROUTE = FALSE;>
-   [atlys.ucf(163)]: This constraint cannot be distributed from the design
+   [atlys.ucf(164)]: This constraint cannot be distributed from the design
    objects matching 'NET "slaves/TDCchannels/dc1/TDCcore/hit"' because those
    design objects do not contain or drive any instances of the correct type.
 
 WARNING:ConstraintSystem - A target design object for the Locate constraint
    '<INST "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0" LOC =
-   SLICE_X47Y56;> [atlys.ucf(274)]' could not be found and so the Locate
+   SLICE_X47Y56;> [atlys.ucf(275)]' could not be found and so the Locate
    constraint will be removed.
 
 INFO:ConstraintSystem:178 - TNM 'tnm_sysclk', used in period specification
@@ -108,19 +108,22 @@ INFO:ConstraintSystem:178 - TNM 'gmii_rx_clk', used in period specification
 
 WARNING:NgdBuild:1012 - The constraint <INST
    "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0" BEL = AFF;>
-   [atlys.ucf(273)] is overridden on the design object
-   slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0 by the constraint <INST
-   "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0" BEL = AFF;>
-   [atlys.ucf(342)].
-WARNING:NgdBuild:1012 - The constraint <INST
-   "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0" LOC = SLICE_X47Y56;>
    [atlys.ucf(274)] is overridden on the design object
    slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0 by the constraint <INST
-   "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0" LOC = SLICE_X47Y56;>
+   "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0" BEL = AFF;>
    [atlys.ucf(343)].
+WARNING:NgdBuild:1012 - The constraint <INST
+   "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0" LOC = SLICE_X47Y56;>
+   [atlys.ucf(275)] is overridden on the design object
+   slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0 by the constraint <INST
+   "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0" LOC = SLICE_X47Y56;>
+   [atlys.ucf(344)].
 Done...
 
 Checking expanded design ...
+WARNING:NgdBuild:452 - logical net 'ipb_master_in_ipb_err' has no driver
+WARNING:NgdBuild:478 - clock net REFPLL with clock driver
+   slaves/TDCchannels/PLLgen/clkout6_buf drives no clock pins
 WARNING:NgdBuild:452 - logical net 'ipb_master_out_ipb_addr<31>' has no driver
 WARNING:NgdBuild:452 - logical net 'ipb_master_out_ipb_addr<30>' has no driver
 WARNING:NgdBuild:452 - logical net 'ipb_master_out_ipb_addr<29>' has no driver
@@ -142,10 +145,18 @@ WARNING:NgdBuild:452 - logical net 'ipb_master_out_ipb_addr<14>' has no driver
 WARNING:NgdBuild:452 - logical net 'ipb_master_out_ipb_addr<13>' has no driver
 WARNING:NgdBuild:452 - logical net 'ipb_master_out_ipb_addr<12>' has no driver
 WARNING:NgdBuild:452 - logical net 'ipb_master_out_ipb_addr<11>' has no driver
-WARNING:NgdBuild:452 - logical net 'ipb_master_in_ipb_err' has no driver
-WARNING:NgdBuild:478 - clock net REFPLL with clock driver
-   slaves/TDCchannels/PLLgen/clkout6_buf drives no clock pins
 WARNING:NgdBuild:452 - logical net 'N4' has no driver
+WARNING:NgdBuild:452 - logical net 'slaves/ipbr[0]_ipb_err' has no driver
+WARNING:NgdBuild:452 - logical net 'slaves/ipbr[1]_ipb_err' has no driver
+WARNING:NgdBuild:452 - logical net 'slaves/ipbr[2]_ipb_err' has no driver
+WARNING:NgdBuild:452 - logical net 'slaves/ipbr[3]_ipb_err' has no driver
+WARNING:NgdBuild:452 - logical net 'slaves/ipbr[4]_ipb_err' has no driver
+WARNING:NgdBuild:478 - clock net slaves/TDCchannels/CLK_45 with clock driver
+   slaves/TDCchannels/PLLgen/clkout2_buf drives no clock pins
+WARNING:NgdBuild:478 - clock net slaves/TDCchannels/CLK_90 with clock driver
+   slaves/TDCchannels/PLLgen/clkout3_buf drives no clock pins
+WARNING:NgdBuild:478 - clock net slaves/TDCchannels/CLK_135 with clock driver
+   slaves/TDCchannels/PLLgen/clkout4_buf drives no clock pins
 WARNING:NgdBuild:452 - logical net 'ipbus/mac_addr<47>' has no driver
 WARNING:NgdBuild:452 - logical net 'ipbus/mac_addr<46>' has no driver
 WARNING:NgdBuild:452 - logical net 'ipbus/mac_addr<45>' has no driver
@@ -535,17 +546,6 @@ WARNING:NgdBuild:452 - logical net 'ipbus/trans/cfg_vector_out<3>' has no driver
 WARNING:NgdBuild:452 - logical net 'ipbus/trans/cfg_vector_out<2>' has no driver
 WARNING:NgdBuild:452 - logical net 'ipbus/trans/cfg_vector_out<1>' has no driver
 WARNING:NgdBuild:452 - logical net 'ipbus/trans/cfg_vector_out<0>' has no driver
-WARNING:NgdBuild:452 - logical net 'slaves/ipbr[0]_ipb_err' has no driver
-WARNING:NgdBuild:452 - logical net 'slaves/ipbr[1]_ipb_err' has no driver
-WARNING:NgdBuild:452 - logical net 'slaves/ipbr[2]_ipb_err' has no driver
-WARNING:NgdBuild:452 - logical net 'slaves/ipbr[3]_ipb_err' has no driver
-WARNING:NgdBuild:452 - logical net 'slaves/ipbr[4]_ipb_err' has no driver
-WARNING:NgdBuild:478 - clock net slaves/TDCchannels/CLK_45 with clock driver
-   slaves/TDCchannels/PLLgen/clkout2_buf drives no clock pins
-WARNING:NgdBuild:478 - clock net slaves/TDCchannels/CLK_90 with clock driver
-   slaves/TDCchannels/PLLgen/clkout3_buf drives no clock pins
-WARNING:NgdBuild:478 - clock net slaves/TDCchannels/CLK_135 with clock driver
-   slaves/TDCchannels/PLLgen/clkout4_buf drives no clock pins
 
 Partition Implementation Status
 -------------------------------
@@ -558,7 +558,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings: 303
 
-Total memory usage is 580200 kilobytes
+Total memory usage is 580684 kilobytes
 
 Writing NGD file "top.ngd" ...
 Total REAL time to NGDBUILD completion:  8 sec

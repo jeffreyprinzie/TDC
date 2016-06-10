@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Saturn::  Mon May 30 11:13:33 2016
+Saturn::  Fri Jun 10 16:48:12 2016
 
 par -w -intstyle ise -ol high -xe n -mt 4 top_map.ncd top.ncd top.pcf 
 
@@ -21,39 +21,39 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                 5,427 out of  54,576    9%
-    Number used as Flip Flops:               5,427
+  Number of Slice Registers:                 5,465 out of  54,576   10%
+    Number used as Flip Flops:               5,465
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                      4,432 out of  27,288   16%
-    Number used as logic:                    4,043 out of  27,288   14%
-      Number using O6 output only:           2,399
-      Number using O5 output only:             297
-      Number using O5 and O6:                1,347
+  Number of Slice LUTs:                      4,550 out of  27,288   16%
+    Number used as logic:                    4,174 out of  27,288   15%
+      Number using O6 output only:           2,551
+      Number using O5 output only:             332
+      Number using O5 and O6:                1,291
       Number used as ROM:                        0
-    Number used as Memory:                      57 out of   6,408    1%
+    Number used as Memory:                      58 out of   6,408    1%
       Number used as Dual Port RAM:             32
         Number using O6 output only:            24
         Number using O5 output only:             0
         Number using O5 and O6:                  8
       Number used as Single Port RAM:            0
-      Number used as Shift Register:            25
-        Number using O6 output only:             9
+      Number used as Shift Register:            26
+        Number using O6 output only:            10
         Number using O5 output only:             0
         Number using O5 and O6:                 16
-    Number used exclusively as route-thrus:    332
-      Number with same-slice register load:    314
-      Number with same-slice carry load:        18
+    Number used exclusively as route-thrus:    318
+      Number with same-slice register load:    299
+      Number with same-slice carry load:        19
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,864 out of   6,822   27%
-  Number of MUXCYs used:                       700 out of  13,644    5%
-  Number of LUT Flip Flop pairs used:        5,437
-    Number with an unused Flip Flop:         1,185 out of   5,437   21%
-    Number with an unused LUT:               1,005 out of   5,437   18%
-    Number of fully used LUT-FF pairs:       3,247 out of   5,437   59%
+  Number of occupied Slices:                 1,848 out of   6,822   27%
+  Number of MUXCYs used:                       732 out of  13,644    5%
+  Number of LUT Flip Flop pairs used:        5,447
+    Number with an unused Flip Flop:         1,153 out of   5,447   21%
+    Number with an unused LUT:                 897 out of   5,447   16%
+    Number of fully used LUT-FF pairs:       3,397 out of   5,447   62%
     Number of slice register sites lost
       to control set restrictions:               0 out of  54,576    0%
 
@@ -64,8 +64,8 @@ Slice Logic Distribution:
   over-mapped for a non-slice resource or if Placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        53 out of     218   24%
-    Number of LOCed IOBs:                       53 out of      53  100%
+  Number of bonded IOBs:                        54 out of     218   24%
+    Number of LOCed IOBs:                       54 out of      54  100%
     IOB Flip Flops:                             11
     IOB Master Pads:                             3
     IOB Slave Pads:                              3
@@ -121,44 +121,44 @@ INFO:Timing:3386 - Intersecting Constraints found and resolved.  For more inform
 WARNING:Par:288 - The signal eth/fifo/U0/xst_fifo_generator/gaxis_fifo.gaxisf.axisf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_D1_O
    has no load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   slaves/TDCchannels/dc2/TDCcore/hit_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_O has no
-   load.  PAR will not attempt to route this signal.
-WARNING:Par:288 - The signal
    slaves/TDCchannels/dc2/TDCcore/hit_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_O has no
    load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
-   slaves/TDCchannels/dc1/TDCcore/hit_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_O has no
+   slaves/TDCchannels/dc2/TDCcore/hit_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_O has no
    load.  PAR will not attempt to route this signal.
 WARNING:Par:288 - The signal
    slaves/TDCchannels/dc1/TDCcore/hit_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM1_RAMD_O has no
    load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal
+   slaves/TDCchannels/dc1/TDCcore/hit_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/Mram_RAM2_RAMD_O has no
+   load.  PAR will not attempt to route this signal.
 Starting Multi-threaded Router
 
 
-Phase  1  : 26889 unrouted;      REAL time: 10 secs 
+Phase  1  : 27477 unrouted;      REAL time: 11 secs 
 
-Phase  2  : 23042 unrouted;      REAL time: 15 secs 
+Phase  2  : 23616 unrouted;      REAL time: 15 secs 
 
-Phase  3  : 9971 unrouted;      REAL time: 24 secs 
+Phase  3  : 10198 unrouted;      REAL time: 23 secs 
 
-Phase  4  : 9970 unrouted; (Setup:1494, Hold:6636, Component Switching Limit:0)     REAL time: 26 secs 
+Phase  4  : 10196 unrouted; (Setup:1609, Hold:5699, Component Switching Limit:0)     REAL time: 25 secs 
 
 Updating file: top.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Setup:1270, Hold:4889, Component Switching Limit:0)     REAL time: 35 secs 
+Phase  5  : 0 unrouted; (Setup:1324, Hold:13588, Component Switching Limit:0)     REAL time: 33 secs 
 
-Phase  6  : 0 unrouted; (Setup:1270, Hold:4889, Component Switching Limit:0)     REAL time: 36 secs 
+Phase  6  : 0 unrouted; (Setup:1324, Hold:13588, Component Switching Limit:0)     REAL time: 34 secs 
 
-Phase  7  : 0 unrouted; (Setup:1205, Hold:4889, Component Switching Limit:0)     REAL time: 1 mins 4 secs 
+Phase  7  : 0 unrouted; (Setup:1284, Hold:13588, Component Switching Limit:0)     REAL time: 1 mins 2 secs 
 
-Phase  8  : 0 unrouted; (Setup:1205, Hold:4889, Component Switching Limit:0)     REAL time: 1 mins 4 secs 
+Phase  8  : 0 unrouted; (Setup:1284, Hold:13588, Component Switching Limit:0)     REAL time: 1 mins 2 secs 
 
-Phase  9  : 0 unrouted; (Setup:1205, Hold:4889, Component Switching Limit:0)     REAL time: 1 mins 4 secs 
+Phase  9  : 0 unrouted; (Setup:1284, Hold:13588, Component Switching Limit:0)     REAL time: 1 mins 2 secs 
 
-Phase 10  : 0 unrouted; (Setup:1205, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 4 secs 
+Phase 10  : 0 unrouted; (Setup:1284, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 3 secs 
 
-Phase 11  : 0 unrouted; (Setup:1205, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 6 secs 
-Total REAL time to Router completion: 1 mins 6 secs 
+Phase 11  : 0 unrouted; (Setup:1284, Hold:0, Component Switching Limit:0)     REAL time: 1 mins 5 secs 
+Total REAL time to Router completion: 1 mins 5 secs 
 Total CPU time to Router completion (all processors): 1 mins 35 secs 
 
 Generating "PAR" statistics.
@@ -170,24 +170,24 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|              clk125 | BUFGMUX_X2Y10| No   |  973 |  0.515     |  1.726      |
+|              clk125 | BUFGMUX_X2Y10| No   |  984 |  0.514     |  1.726      |
 +---------------------+--------------+------+------+------------+-------------+
-|             ipb_clk | BUFGMUX_X2Y11| No   |  252 |  0.063     |  1.275      |
+|             ipb_clk | BUFGMUX_X2Y11| No   |  269 |  0.059     |  1.270      |
 +---------------------+--------------+------+------+------------+-------------+
-|          eth/rx_clk |  BUFGMUX_X2Y3|Yes   |  106 |  0.044     |  1.261      |
+|          eth/rx_clk |  BUFGMUX_X2Y3|Yes   |  108 |  0.035     |  1.249      |
 +---------------------+--------------+------+------+------------+-------------+
-|       slaves/SYSCLK | BUFGMUX_X3Y16| No   |  127 |  0.037     |  1.275      |
+|       slaves/SYSCLK | BUFGMUX_X3Y16| No   |  121 |  0.038     |  1.275      |
 +---------------------+--------------+------+------+------------+-------------+
 |slaves/TDCchannels/C |              |      |      |            |             |
-|                LK_0 |  BUFGMUX_X2Y2| No   |    6 |  0.009     |  1.249      |
+|                LK_0 |  BUFGMUX_X2Y2| No   |    6 |  0.008     |  1.248      |
 +---------------------+--------------+------+------+------------+-------------+
 |slaves/TDCchannels/d |              |      |      |            |             |
-|      c2/TDCcore/hit |  BUFGMUX_X3Y6| No   |    5 |  0.011     |  1.249      |
+|      c2/TDCcore/hit |  BUFGMUX_X3Y6| No   |    4 |  0.011     |  1.248      |
 +---------------------+--------------+------+------+------------+-------------+
 |slaves/TDCchannels/d |              |      |      |            |             |
 |      c1/TDCcore/hit |  BUFGMUX_X3Y8| No   |    4 |  0.010     |  1.250      |
 +---------------------+--------------+------+------+------------+-------------+
-|            sysclk_b |         Local|      |  113 |  8.384     | 11.387      |
+|            sysclk_b |         Local|      |  109 | 10.019     | 12.096      |
 +---------------------+--------------+------+------+------------+-------------+
 |       eth/rx_clk_io |         Local|      |   10 |  0.007     |  1.514      |
 +---------------------+--------------+------+------+------------+-------------+
@@ -200,7 +200,7 @@ the minimum and maximum path delays which includes logic delays.
 * The fanout is the number of component pins not the individual BEL loads,
 for example SLICE loads not FF loads.
 
-Timing Score: 1205 (Setup: 1205, Hold: 0, Component Switching Limit: 0)
+Timing Score: 1284 (Setup: 1284, Hold: 0, Component Switching Limit: 0)
 
 WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
 
@@ -230,47 +230,47 @@ Asterisk (*) preceding a constraint indicates it was not met.
   Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
                                             |             |    Slack   | Achievable | Errors |    Score   
 ----------------------------------------------------------------------------------------------------------
-* NET "slaves/TDCchannels/dc2/TDCcore/hit"  | NETSKEW     |    -0.378ns|     0.378ns|       1|         378
-  MAXSKEW = 0 ns                            |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
 * TS_CLK_0_to_Hit1 = MAXDELAY FROM TIMEGRP  | SETUP       |    -0.291ns|     1.291ns|       3|         472
   "GRPCLK_0" TO TIMEGRP "GRPhit1" 1 ns      | HOLD        |     0.459ns|            |       0|           0
       DATAPATHONLY                          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-* NET "slaves/TDCchannels/dc1/TDCcore/hit"  | NETSKEW     |    -0.262ns|     0.262ns|       1|         262
+* NET "slaves/TDCchannels/dc2/TDCcore/hit"  | NETSKEW     |    -0.258ns|     0.258ns|       1|         258
   MAXSKEW = 0 ns                            |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-* NET "slaves/SYSCLK" MAXSKEW = 0 ns        | NETSKEW     |    -0.093ns|     0.093ns|       1|          93
+* NET "slaves/TDCchannels/dc1/TDCcore/hit"  | NETSKEW     |    -0.257ns|     0.257ns|       1|         257
+  MAXSKEW = 0 ns                            |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_clocks_clk_125_i = PERIOD TIMEGRP "clo | SETUP       |     0.033ns|     7.967ns|       0|           0
-  cks_clk_125_i" TS_sysclk * 1.25 HIGH      | HOLD        |     0.340ns|            |       0|           0
-      50%                                   |             |            |            |        |            
+* NET "slaves/SYSCLK" MAXSKEW = 0 ns        | NETSKEW     |    -0.094ns|     0.094ns|       1|          94
 ----------------------------------------------------------------------------------------------------------
-  TS_SYSCLK_to_IPBCLK = MAXDELAY FROM TIMEG | SETUP       |     0.069ns|     1.931ns|       0|           0
-  RP "GRPSYSCLK" TO TIMEGRP "GRPIPBCLK"     | HOLD        |     0.558ns|            |       0|           0
-       2 ns DATAPATHONLY                    |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_CLK_0_to_Hit2 = MAXDELAY FROM TIMEGRP  | SETUP       |     0.070ns|     0.930ns|       0|           0
-  "GRPCLK_0" TO TIMEGRP "GRPhit2" 1 ns      | HOLD        |     0.433ns|            |       0|           0
+* TS_CLK_0_to_Hit2 = MAXDELAY FROM TIMEGRP  | SETUP       |    -0.088ns|     1.088ns|       4|         203
+  "GRPCLK_0" TO TIMEGRP "GRPhit2" 1 ns      | HOLD        |     0.397ns|            |       0|           0
       DATAPATHONLY                          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_slaves_TDCchannels_PLLgen_clkout4 = PE | SETUP       |     0.163ns|     5.045ns|       0|           0
-  RIOD TIMEGRP         "slaves_TDCchannels_ | HOLD        |     0.247ns|            |       0|           0
-  PLLgen_clkout4" TS_sysclk * 1.92 HIGH 50% |             |            |            |        |            
-----------------------------------------------------------------------------------------------------------
-  TS_slaves_TDCchannels_PLLgen_clkout0 = PE | SETUP       |     0.290ns|     2.544ns|       0|           0
+  TS_slaves_TDCchannels_PLLgen_clkout0 = PE | SETUP       |     0.100ns|     2.924ns|       0|           0
   RIOD TIMEGRP         "slaves_TDCchannels_ | HOLD        |     0.425ns|            |       0|           0
   PLLgen_clkout0" TS_sysclk * 3.2 HIGH 50%  |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_SYSCLK_to_IPBCLK = MAXDELAY FROM TIMEG | SETUP       |     0.121ns|     1.879ns|       0|           0
+  RP "GRPSYSCLK" TO TIMEGRP "GRPIPBCLK"     | HOLD        |     0.604ns|            |       0|           0
+       2 ns DATAPATHONLY                    |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_slaves_TDCchannels_PLLgen_clkout4 = PE | SETUP       |     0.133ns|     5.075ns|       0|           0
+  RIOD TIMEGRP         "slaves_TDCchannels_ | HOLD        |     0.242ns|            |       0|           0
+  PLLgen_clkout4" TS_sysclk * 1.92 HIGH 50% |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   OFFSET = IN 2 ns VALID 3 ns BEFORE COMP " | SETUP       |     0.313ns|     1.687ns|       0|           0
   gmii_rx_clk"                              | HOLD        |     0.611ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_IPBCLK_to_SYSCLK = MAXDELAY FROM TIMEG | SETUP       |     0.316ns|     1.684ns|       0|           0
-  RP "GRPIPBCLK" TO TIMEGRP "GRPSYSCLK"     | HOLD        |     0.505ns|            |       0|           0
+  TS_clocks_clk_125_i = PERIOD TIMEGRP "clo | SETUP       |     0.330ns|     7.670ns|       0|           0
+  cks_clk_125_i" TS_sysclk * 1.25 HIGH      | HOLD        |     0.378ns|            |       0|           0
+      50%                                   |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_IPBCLK_to_SYSCLK = MAXDELAY FROM TIMEG | SETUP       |     0.370ns|     1.630ns|       0|           0
+  RP "GRPIPBCLK" TO TIMEGRP "GRPSYSCLK"     | HOLD        |     0.697ns|            |       0|           0
        2 ns DATAPATHONLY                    |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_sysclk = PERIOD TIMEGRP "tnm_sysclk" 1 | SETUP       |     2.958ns|     7.042ns|       0|           0
-  00 MHz HIGH 50%                           | HOLD        |     0.257ns|            |       0|           0
+  TS_sysclk = PERIOD TIMEGRP "tnm_sysclk" 1 | SETUP       |     0.701ns|     9.299ns|       0|           0
+  00 MHz HIGH 50%                           | HOLD        |     0.185ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   TS_slaves_TDCchannels_PLLgen_clkout3 = PE | MINPERIOD   |     1.395ns|     1.730ns|       0|           0
   RIOD TIMEGRP         "slaves_TDCchannels_ |             |            |            |        |            
@@ -287,22 +287,22 @@ Asterisk (*) preceding a constraint indicates it was not met.
   PLLgen_clkout2" TS_sysclk * 3.2 PHASE 0.7 |             |            |            |        |            
   8125 ns         HIGH 50%                  |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_GMII_RX_CLK = PERIOD TIMEGRP "gmii_rx_ | SETUP       |     1.642ns|     6.358ns|       0|           0
-  clk" 125 MHz HIGH 50%                     | HOLD        |     0.331ns|            |       0|           0
-----------------------------------------------------------------------------------------------------------
-  TS_hit1Divider = MAXDELAY FROM TIMEGRP "G | SETUP       |     2.559ns|     1.441ns|       0|           0
-  RPinputhit1" TO TIMEGRP "GRPSYSCLK" 4     | HOLD        |     0.499ns|            |       0|           0
+  TS_hit1Divider = MAXDELAY FROM TIMEGRP "G | SETUP       |     2.128ns|     1.872ns|       0|           0
+  RPinputhit1" TO TIMEGRP "GRPSYSCLK" 4     | HOLD        |     0.603ns|            |       0|           0
        ns DATAPATHONLY                      |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_hit2Divider = MAXDELAY FROM TIMEGRP "G | SETUP       |     2.603ns|     1.397ns|       0|           0
-  RPinputhit2" TO TIMEGRP "GRPSYSCLK" 4     | HOLD        |     0.560ns|            |       0|           0
+  TS_hit2Divider = MAXDELAY FROM TIMEGRP "G | SETUP       |     2.459ns|     1.541ns|       0|           0
+  RPinputhit2" TO TIMEGRP "GRPSYSCLK" 4     | HOLD        |     0.507ns|            |       0|           0
        ns DATAPATHONLY                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_GMII_RX_CLK = PERIOD TIMEGRP "gmii_rx_ | SETUP       |     3.625ns|     4.375ns|       0|           0
+  clk" 125 MHz HIGH 50%                     | HOLD        |     0.375ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
   TS_eth_rx_clk_io = PERIOD TIMEGRP "eth_rx | MINPERIOD   |     6.941ns|     1.059ns|       0|           0
   _clk_io" TS_GMII_RX_CLK HIGH 50%          |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_clocks_clk_ipb_i = PERIOD TIMEGRP "clo | SETUP       |    19.187ns|    12.813ns|       0|           0
-  cks_clk_ipb_i" TS_sysclk * 0.3125         | HOLD        |     0.345ns|            |       0|           0
+  TS_clocks_clk_ipb_i = PERIOD TIMEGRP "clo | SETUP       |    21.625ns|    10.375ns|       0|           0
+  cks_clk_ipb_i" TS_sysclk * 0.3125         | HOLD        |     0.381ns|            |       0|           0
    HIGH 50%                                 |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   TS_Hit2_to_SYSCLK = MAXDELAY FROM TIMEGRP | N/A         |         N/A|         N/A|     N/A|         N/A
@@ -313,11 +313,11 @@ Asterisk (*) preceding a constraint indicates it was not met.
    "GRPhit1" TO TIMEGRP "GRPSYSCLK" 1       |             |            |            |        |            
      ns DATAPATHONLY                        |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_tig_125_ipb_path" TIG            | SETUP       |         N/A|     9.114ns|     N/A|           0
+  PATH "TS_tig_125_ipb_path" TIG            | SETUP       |         N/A|     8.073ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
-  PATH "TS_tig_ipb_125_path" TIG            | SETUP       |         N/A|    10.970ns|     N/A|           0
+  PATH "TS_tig_ipb_125_path" TIG            | SETUP       |         N/A|    11.415ns|     N/A|           0
 ----------------------------------------------------------------------------------------------------------
-  TIMEGRP "TG_gmii_tx" OFFSET = OUT AFTER C | MAXDELAY    |         N/A|    16.191ns|     N/A|           0
+  TIMEGRP "TG_gmii_tx" OFFSET = OUT AFTER C | MAXDELAY    |         N/A|    15.317ns|     N/A|           0
   OMP "sysclk" REFERENCE_PIN BEL         "g |             |            |            |        |            
   mii_gtx_clk" "RISING"                     |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
@@ -333,16 +333,16 @@ Derived Constraints for TS_sysclk
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_sysclk                      |     10.000ns|      7.042ns|      9.959ns|            0|            0|         5051|        94350|
-| TS_clocks_clk_125_i           |      8.000ns|      7.967ns|          N/A|            0|            0|        49427|            0|
-| TS_clocks_clk_ipb_i           |     32.000ns|     12.813ns|          N/A|            0|            0|        31713|            0|
+|TS_sysclk                      |     10.000ns|      9.299ns|      9.744ns|            0|            0|         5051|        91606|
+| TS_clocks_clk_125_i           |      8.000ns|      7.670ns|          N/A|            0|            0|        47475|            0|
+| TS_clocks_clk_ipb_i           |     32.000ns|     10.375ns|          N/A|            0|            0|        30921|            0|
 | TS_slaves_TDCchannels_PLLgen_c|      3.125ns|      1.730ns|          N/A|            0|            0|            0|            0|
 | lkout3                        |             |             |             |             |             |             |             |
 | TS_slaves_TDCchannels_PLLgen_c|      3.125ns|      1.730ns|          N/A|            0|            0|            0|            0|
 | lkout1                        |             |             |             |             |             |             |             |
-| TS_slaves_TDCchannels_PLLgen_c|      3.125ns|      2.544ns|          N/A|            0|            0|           18|            0|
+| TS_slaves_TDCchannels_PLLgen_c|      3.125ns|      2.924ns|          N/A|            0|            0|           18|            0|
 | lkout0                        |             |             |             |             |             |             |             |
-| TS_slaves_TDCchannels_PLLgen_c|      5.208ns|      5.045ns|          N/A|            0|            0|        13192|            0|
+| TS_slaves_TDCchannels_PLLgen_c|      5.208ns|      5.075ns|          N/A|            0|            0|        13192|            0|
 | lkout4                        |             |             |             |             |             |             |             |
 | TS_slaves_TDCchannels_PLLgen_c|      3.125ns|      1.730ns|          N/A|            0|            0|            0|            0|
 | lkout2                        |             |             |             |             |             |             |             |
@@ -354,11 +354,11 @@ Derived Constraints for TS_GMII_RX_CLK
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_GMII_RX_CLK                 |      8.000ns|      6.358ns|      1.059ns|            0|            0|         1797|            0|
+|TS_GMII_RX_CLK                 |      8.000ns|      4.375ns|      1.059ns|            0|            0|         1797|            0|
 | TS_eth_rx_clk_io              |      8.000ns|      1.059ns|          N/A|            0|            0|            0|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
-4 constraints not met.
+5 constraints not met.
 INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
    constraint is not analyzed due to the following: No paths covered by this 
    constraint; Other constraints intersect with this constraint; or This 
@@ -372,14 +372,14 @@ All signals are completely routed.
 
 WARNING:Par:283 - There are 5 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
 
-Total REAL time to PAR completion: 1 mins 7 secs 
+Total REAL time to PAR completion: 1 mins 6 secs 
 Total CPU time to PAR completion (all processors): 1 mins 37 secs 
 
-Peak Memory Usage:  1260 MB
+Peak Memory Usage:  1265 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.
-Timing: Completed - 6 errors found.
+Timing: Completed - 10 errors found.
 
 Number of error messages: 0
 Number of warning messages: 9

@@ -23,7 +23,8 @@ entity slaves is
 		hit1,hit2: in std_logic;
 		handshakeleds : out std_logic_vector(2 downto 0);
 		REFPLL : out std_logic;
-		TRIGGER : out std_logic
+		TRIGGER : out std_logic;
+		SEUcalin : in std_logic
 	);
 
 end slaves;
@@ -57,7 +58,7 @@ architecture rtl of slaves is
 	signal hitcount2 : std_logic_vector (31 downto 0);
 	
 	
-	
+	signal SEUcounter : std_logic_vector (31 downto 0);
 	
 	signal SYSCLK : std_logic;
 begin
@@ -79,7 +80,7 @@ begin
 			reset => ipb_rst,
 			ipbus_in => ipbw(0),
 			ipbus_out => ipbr(0),
-			d => X"abcdfedc",
+			d => SEUcounter,
 			q => ctrl_reg
 		);
 		
@@ -153,6 +154,13 @@ begin
 			q=>open,
 			addr=>ramAddress2
 		);
+		
+	SEUcalibrator : entity work.SEUcounter
+	port map(
+		clk=>ipb_clk,
+		SEUin => SEUcalin,
+		CTRout=>SEUcounter	
+	);
 		
 	process (handshakeFPGA1)
 	begin
