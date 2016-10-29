@@ -10,7 +10,7 @@ Target Device  : xc6slx45
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Jun 10 16:45:59 2016
+Mapped Date    : Sat Oct 29 14:36:11 2016
 
 Mapping design into LUTs...
 Running directed packing...
@@ -44,20 +44,6 @@ WARNING:Place:1206 - This design contains a global buffer instance,
    applied on COMP.PIN <slaves/TDCchannels/PLLgen/clkout6_buf.O> allowing your
    design to continue. This constraint disables all clock placer rules related
    to the specified COMP.PIN.
-WARNING:Place:1137 - This design is not guaranteed to be routable! This design
-   contains a global buffer instance, <slaves/TDCchannels/dc1/TDCcore/buffer>,
-   driving the net, <slaves/TDCchannels/dc1/TDCcore/hit>, that is driving the
-   following (first 30) non-clock load pins.
-   < PIN: slaves/TDCchannels/dc1/TDCcore/hit_syn0.D; >
-   This is not a recommended design practice in Spartan-6 due to limitations in
-   the global routing that may cause excessive delay, skew or unroutable
-   situations.  It is recommended to only use a BUFG resource to drive clock
-   loads. Please pay extra attention to the timing and routing of this path to
-   ensure the design goals are met. This is normally an ERROR but the
-   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
-   <slaves/TDCchannels/dc1/TDCcore/buffer.O> allowing your design to continue.
-   This constraint disables all clock placer rules related to the specified
-   COMP.PIN.
 WARNING:Place:1137 - This design is not guaranteed to be routable! This design
    contains a global buffer instance, <slaves/TDCchannels/PLLgen/clkout6_buf>,
    driving the net, <REFPLL>, that is driving the following (first 30) non-clock
@@ -147,6 +133,20 @@ WARNING:Place:1137 - This design is not guaranteed to be routable! This design
    <slaves/TDCchannels/dc2/TDCcore/buffer.O> allowing your design to continue.
    This constraint disables all clock placer rules related to the specified
    COMP.PIN.
+WARNING:Place:1137 - This design is not guaranteed to be routable! This design
+   contains a global buffer instance, <slaves/TDCchannels/dc1/TDCcore/buffer>,
+   driving the net, <slaves/TDCchannels/dc1/TDCcore/hit>, that is driving the
+   following (first 30) non-clock load pins.
+   < PIN: slaves/TDCchannels/dc1/TDCcore/hit_syn0.D; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. Please pay extra attention to the timing and routing of this path to
+   ensure the design goals are met. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
+   <slaves/TDCchannels/dc1/TDCcore/buffer.O> allowing your design to continue.
+   This constraint disables all clock placer rules related to the specified
+   COMP.PIN.
 Phase 2.7  Design Feasibility Check (Checksum:91de68b3) REAL time: 21 secs 
 
 Phase 3.31  Local Placement Optimization
@@ -180,19 +180,19 @@ WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
    discouraged as it may lead to very poor timing results. It is recommended
    that this error condition be corrected in the design.
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:e93c1fb5) REAL time: 53 secs 
+(Checksum:e93c1fb5) REAL time: 52 secs 
 
 Phase 5.36  Local Placement Optimization
-Phase 5.36  Local Placement Optimization (Checksum:e93c1fb5) REAL time: 53 secs 
+Phase 5.36  Local Placement Optimization (Checksum:e93c1fb5) REAL time: 52 secs 
 
 Phase 6.30  Global Clock Region Assignment
-Phase 6.30  Global Clock Region Assignment (Checksum:e93c1fb5) REAL time: 53 secs 
+Phase 6.30  Global Clock Region Assignment (Checksum:e93c1fb5) REAL time: 52 secs 
 
 Phase 7.3  Local Placement Optimization
-Phase 7.3  Local Placement Optimization (Checksum:e93c1fb5) REAL time: 53 secs 
+Phase 7.3  Local Placement Optimization (Checksum:e93c1fb5) REAL time: 52 secs 
 
 Phase 8.5  Local Placement Optimization
-Phase 8.5  Local Placement Optimization (Checksum:e93c1fb5) REAL time: 53 secs 
+Phase 8.5  Local Placement Optimization (Checksum:e93c1fb5) REAL time: 52 secs 
 
 Phase 9.8  Global Placement
 ..................................
@@ -200,22 +200,22 @@ Phase 9.8  Global Placement
 ................................................................................................
 ...............................................................................................................
 .................................................
-Phase 9.8  Global Placement (Checksum:de1afd88) REAL time: 1 mins 49 secs 
+Phase 9.8  Global Placement (Checksum:de1afd88) REAL time: 1 mins 46 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:de1afd88) REAL time: 1 mins 49 secs 
+Phase 10.5  Local Placement Optimization (Checksum:de1afd88) REAL time: 1 mins 46 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:9cd3f98f) REAL time: 1 mins 58 secs 
+Phase 11.18  Placement Optimization (Checksum:9cd3f98f) REAL time: 1 mins 55 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:9cd3f98f) REAL time: 1 mins 59 secs 
+Phase 12.5  Local Placement Optimization (Checksum:9cd3f98f) REAL time: 1 mins 55 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:fd526944) REAL time: 1 mins 59 secs 
+Phase 13.34  Placement Validation (Checksum:fd526944) REAL time: 1 mins 55 secs 
 
-Total REAL time to Placer completion: 2 mins 6 secs 
-Total CPU  time to Placer completion: 2 mins 6 secs 
+Total REAL time to Placer completion: 2 mins 2 secs 
+Total CPU  time to Placer completion: 2 mins 2 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:367 - The signal
@@ -357,8 +357,8 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                3.60
 
 Peak Memory Usage:  1072 MB
-Total REAL time to MAP completion:  2 mins 11 secs 
-Total CPU time to MAP completion (all processors):   2 mins 11 secs 
+Total REAL time to MAP completion:  2 mins 7 secs 
+Total CPU time to MAP completion (all processors):   2 mins 7 secs 
 
 Mapping completed.
 See MAP report file "top_map.mrp" for details.

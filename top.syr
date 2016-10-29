@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.04 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: top.prj
@@ -3253,55 +3253,37 @@ Processing Unit <ipbus/udp_if/tx_main> :
 	Register(s) state_machine.state_1 has(ve) been backward balanced into : state_machine.state_1_BRB0 state_machine.state_1_BRB1 state_machine.state_1_BRB3 state_machine.state_1_BRB4.
 Unit <ipbus/udp_if/tx_main> processed.
 
-Processing Unit <ipbus/udp_if/ARP> :
-	Register(s) send_packet.send_pending has(ve) been backward balanced into : send_packet.send_pending_BRB0 send_packet.send_pending_BRB1.
-Unit <ipbus/udp_if/ARP> processed.
+Processing Unit <ipbus/udp_if/rx_packet_parser> :
+	Register(s) pkt_drop_payload_sig has(ve) been backward balanced into : pkt_drop_payload_sig_BRB0 .
+	Register(s) pkt_payload_drop_sig has(ve) been backward balanced into : pkt_payload_drop_sig_BRB0 .
+Unit <ipbus/udp_if/rx_packet_parser> processed.
 
-Processing Unit <ipbus/udp_if/payload> :
-	Register(s) build_packet.load_buf_int has(ve) been backward balanced into : build_packet.load_buf_int_BRB0 build_packet.load_buf_int_BRB1.
-	Register(s) next_addr_block.addr_int_10 has(ve) been backward balanced into : next_addr_block.addr_int_10_BRB0 next_addr_block.addr_int_10_BRB4.
-	Register(s) next_addr_block.addr_int_11 has(ve) been backward balanced into : next_addr_block.addr_int_11_BRB0 next_addr_block.addr_int_11_BRB4.
-	Register(s) next_addr_block.addr_int_12 has(ve) been backward balanced into : next_addr_block.addr_int_12_BRB0 next_addr_block.addr_int_12_BRB1 next_addr_block.addr_int_12_BRB2 next_addr_block.addr_int_12_BRB3 next_addr_block.addr_int_12_BRB4.
-	Register(s) next_addr_block.addr_int_6 has(ve) been backward balanced into : next_addr_block.addr_int_6_BRB0 next_addr_block.addr_int_6_BRB4.
-	Register(s) next_addr_block.addr_int_7 has(ve) been backward balanced into : next_addr_block.addr_int_7_BRB0 next_addr_block.addr_int_7_BRB4.
-	Register(s) next_addr_block.addr_int_8 has(ve) been backward balanced into : next_addr_block.addr_int_8_BRB0 next_addr_block.addr_int_8_BRB4.
-	Register(s) next_addr_block.addr_int_9 has(ve) been backward balanced into : next_addr_block.addr_int_9_BRB0 next_addr_block.addr_int_9_BRB4.
-	Register(s) write_data.shift_buf_0 has(ve) been backward balanced into : write_data.shift_buf_0_BRB0 write_data.shift_buf_0_BRB1 write_data.shift_buf_0_BRB2 write_data.shift_buf_0_BRB3.
-	Register(s) write_data.shift_buf_1 has(ve) been backward balanced into : write_data.shift_buf_1_BRB2 write_data.shift_buf_1_BRB3.
-	Register(s) write_data.shift_buf_10 has(ve) been backward balanced into : write_data.shift_buf_10_BRB2 write_data.shift_buf_10_BRB5.
-	Register(s) write_data.shift_buf_11 has(ve) been backward balanced into : write_data.shift_buf_11_BRB2 write_data.shift_buf_11_BRB5.
-	Register(s) write_data.shift_buf_12 has(ve) been backward balanced into : write_data.shift_buf_12_BRB2 write_data.shift_buf_12_BRB5.
-	Register(s) write_data.shift_buf_13 has(ve) been backward balanced into : write_data.shift_buf_13_BRB2 write_data.shift_buf_13_BRB5.
-	Register(s) write_data.shift_buf_14 has(ve) been backward balanced into : write_data.shift_buf_14_BRB2 write_data.shift_buf_14_BRB5.
-	Register(s) write_data.shift_buf_15 has(ve) been backward balanced into : write_data.shift_buf_15_BRB2 write_data.shift_buf_15_BRB5.
-	Register(s) write_data.shift_buf_2 has(ve) been backward balanced into : write_data.shift_buf_2_BRB2 write_data.shift_buf_2_BRB3.
-	Register(s) write_data.shift_buf_3 has(ve) been backward balanced into : write_data.shift_buf_3_BRB2 write_data.shift_buf_3_BRB3.
-	Register(s) write_data.shift_buf_4 has(ve) been backward balanced into : write_data.shift_buf_4_BRB2 write_data.shift_buf_4_BRB3.
-	Register(s) write_data.shift_buf_5 has(ve) been backward balanced into : write_data.shift_buf_5_BRB2 write_data.shift_buf_5_BRB3.
-	Register(s) write_data.shift_buf_6 has(ve) been backward balanced into : write_data.shift_buf_6_BRB2 write_data.shift_buf_6_BRB3.
-	Register(s) write_data.shift_buf_7 has(ve) been backward balanced into : write_data.shift_buf_7_BRB2 write_data.shift_buf_7_BRB3.
-	Register(s) write_data.shift_buf_8 has(ve) been backward balanced into : write_data.shift_buf_8_BRB2 write_data.shift_buf_8_BRB5.
-	Register(s) write_data.shift_buf_9 has(ve) been backward balanced into : write_data.shift_buf_9_BRB2 write_data.shift_buf_9_BRB5.
-Unit <ipbus/udp_if/payload> processed.
+Processing Unit <ipbus/udp_if/ping> :
+Unit <ipbus/udp_if/ping> processed.
 
-Processing Unit <ipbus/udp_if/status> :
-	Register(s) next_addr.next_addr_2 has(ve) been backward balanced into : next_addr.next_addr_2_BRB0 next_addr.next_addr_2_BRB1 next_addr.next_addr_2_BRB2 next_addr.next_addr_2_BRB3 next_addr.next_addr_2_BRB4.
-	Register(s) next_addr.next_addr_4 has(ve) been backward balanced into : next_addr.next_addr_4_BRB0 next_addr.next_addr_4_BRB2.
-	Register(s) next_addr.next_addr_5 has(ve) been backward balanced into : next_addr.next_addr_5_BRB0 next_addr.next_addr_5_BRB1 next_addr.next_addr_5_BRB3 next_addr.next_addr_5_BRB4 next_addr.next_addr_5_BRB8 next_addr.next_addr_5_BRB10 next_addr.next_addr_5_BRB11 next_addr.next_addr_5_BRB13 next_addr.next_addr_5_BRB15.
-	Register(s) next_addr.next_addr_6 has(ve) been backward balanced into : next_addr.next_addr_6_BRB0 next_addr.next_addr_6_BRB2 next_addr.next_addr_6_BRB3 next_addr.next_addr_6_BRB5.
-	Register(s) send_pending has(ve) been backward balanced into : send_pending_BRB0 send_pending_BRB1.
-Unit <ipbus/udp_if/status> processed.
+Processing Unit <ipbus/udp_if/tx_byte_sum> :
+	Register(s) lo_byte_calc.lo_byte_int_0 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_0_BRB0 lo_byte_calc.lo_byte_int_0_BRB1 lo_byte_calc.lo_byte_int_0_BRB2 lo_byte_calc.lo_byte_int_0_BRB3 lo_byte_calc.lo_byte_int_0_BRB4.
+	Register(s) lo_byte_calc.lo_byte_int_1 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_1_BRB0 lo_byte_calc.lo_byte_int_1_BRB4.
+	Register(s) lo_byte_calc.lo_byte_int_2 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_2_BRB0 lo_byte_calc.lo_byte_int_2_BRB4.
+	Register(s) lo_byte_calc.lo_byte_int_3 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_3_BRB0 lo_byte_calc.lo_byte_int_3_BRB4.
+	Register(s) lo_byte_calc.lo_byte_int_4 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_4_BRB0 lo_byte_calc.lo_byte_int_4_BRB4.
+	Register(s) lo_byte_calc.lo_byte_int_5 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_5_BRB0 lo_byte_calc.lo_byte_int_5_BRB4.
+	Register(s) lo_byte_calc.lo_byte_int_6 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_6_BRB0 lo_byte_calc.lo_byte_int_6_BRB4.
+	Register(s) lo_byte_calc.lo_byte_int_7 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_7_BRB0 lo_byte_calc.lo_byte_int_7_BRB4.
+Unit <ipbus/udp_if/tx_byte_sum> processed.
 
-Processing Unit <slaves/TDCchannels> :
-	Register(s) triggerCounter_0 has(ve) been backward balanced into : triggerCounter_0_BRB0 triggerCounter_0_BRB1.
-	Register(s) triggerCounter_1 has(ve) been backward balanced into : triggerCounter_1_BRB0 .
-	Register(s) triggerCounter_2 has(ve) been backward balanced into : triggerCounter_2_BRB0 .
-	Register(s) triggerCounter_3 has(ve) been backward balanced into : triggerCounter_3_BRB0 .
-	Register(s) triggerCounter_4 has(ve) been backward balanced into : triggerCounter_4_BRB0 .
-	Register(s) triggerCounter_5 has(ve) been backward balanced into : triggerCounter_5_BRB0 .
-	Register(s) triggerCounter_6 has(ve) been backward balanced into : triggerCounter_6_BRB0 .
-	Register(s) triggerCounter_7 has(ve) been backward balanced into : triggerCounter_7_BRB0 .
-Unit <slaves/TDCchannels> processed.
+Processing Unit <ipbus/udp_if/tx_transactor> :
+	Register(s) req_not_found has(ve) been backward balanced into : req_not_found_BRB0 req_not_found_BRB1 req_not_found_BRB2 req_not_found_BRB3 req_not_found_BRB4 req_not_found_BRB5.
+	Register(s) req_resend has(ve) been backward balanced into : req_resend_BRB1 req_resend_BRB2 req_resend_BRB3 req_resend_BRB4 req_resend_BRB5.
+	Register(s) resend_buf_0 has(ve) been backward balanced into : resend_buf_0_BRB0 resend_buf_0_BRB1 resend_buf_0_BRB2 resend_buf_0_BRB3 resend_buf_0_BRB4 resend_buf_0_BRB5.
+	Register(s) resend_buf_1 has(ve) been backward balanced into : resend_buf_1_BRB0 resend_buf_1_BRB1 resend_buf_1_BRB3 resend_buf_1_BRB4 resend_buf_1_BRB5.
+	Register(s) resend_buf_2 has(ve) been backward balanced into : resend_buf_2_BRB0 resend_buf_2_BRB1 resend_buf_2_BRB4 .
+	Register(s) resend_buf_3 has(ve) been backward balanced into : resend_buf_3_BRB0 resend_buf_3_BRB1.
+Unit <ipbus/udp_if/tx_transactor> processed.
+
+Processing Unit <ipbus/udp_if/rx_ram_selector> :
+	Register(s) busy_block.busy_i has(ve) been backward balanced into : busy_block.busy_i_BRB0 busy_block.busy_i_BRB1.
+Unit <ipbus/udp_if/rx_ram_selector> processed.
 
 Processing Unit <ipbus/trans/iface> :
 	Register(s) dsel has(ve) been backward balanced into : dsel_BRB0 dsel_BRB1.
@@ -3388,37 +3370,55 @@ Processing Unit <ipbus/trans/sm> :
 	Register(s) state_FSM_FFd2 has(ve) been backward balanced into : state_FSM_FFd2_BRB0 state_FSM_FFd2_BRB1 state_FSM_FFd2_BRB2 state_FSM_FFd2_BRB3 state_FSM_FFd2_BRB5.
 Unit <ipbus/trans/sm> processed.
 
-Processing Unit <ipbus/udp_if/rx_ram_selector> :
-	Register(s) busy_block.busy_i has(ve) been backward balanced into : busy_block.busy_i_BRB0 busy_block.busy_i_BRB1.
-Unit <ipbus/udp_if/rx_ram_selector> processed.
+Processing Unit <ipbus/udp_if/ARP> :
+	Register(s) send_packet.send_pending has(ve) been backward balanced into : send_packet.send_pending_BRB0 send_packet.send_pending_BRB1.
+Unit <ipbus/udp_if/ARP> processed.
 
-Processing Unit <ipbus/udp_if/rx_packet_parser> :
-	Register(s) pkt_drop_payload_sig has(ve) been backward balanced into : pkt_drop_payload_sig_BRB0 .
-	Register(s) pkt_payload_drop_sig has(ve) been backward balanced into : pkt_payload_drop_sig_BRB0 .
-Unit <ipbus/udp_if/rx_packet_parser> processed.
+Processing Unit <ipbus/udp_if/payload> :
+	Register(s) build_packet.load_buf_int has(ve) been backward balanced into : build_packet.load_buf_int_BRB0 build_packet.load_buf_int_BRB1.
+	Register(s) next_addr_block.addr_int_10 has(ve) been backward balanced into : next_addr_block.addr_int_10_BRB0 next_addr_block.addr_int_10_BRB4.
+	Register(s) next_addr_block.addr_int_11 has(ve) been backward balanced into : next_addr_block.addr_int_11_BRB0 next_addr_block.addr_int_11_BRB4.
+	Register(s) next_addr_block.addr_int_12 has(ve) been backward balanced into : next_addr_block.addr_int_12_BRB0 next_addr_block.addr_int_12_BRB1 next_addr_block.addr_int_12_BRB2 next_addr_block.addr_int_12_BRB3 next_addr_block.addr_int_12_BRB4.
+	Register(s) next_addr_block.addr_int_6 has(ve) been backward balanced into : next_addr_block.addr_int_6_BRB0 next_addr_block.addr_int_6_BRB4.
+	Register(s) next_addr_block.addr_int_7 has(ve) been backward balanced into : next_addr_block.addr_int_7_BRB0 next_addr_block.addr_int_7_BRB4.
+	Register(s) next_addr_block.addr_int_8 has(ve) been backward balanced into : next_addr_block.addr_int_8_BRB0 next_addr_block.addr_int_8_BRB4.
+	Register(s) next_addr_block.addr_int_9 has(ve) been backward balanced into : next_addr_block.addr_int_9_BRB0 next_addr_block.addr_int_9_BRB4.
+	Register(s) write_data.shift_buf_0 has(ve) been backward balanced into : write_data.shift_buf_0_BRB0 write_data.shift_buf_0_BRB1 write_data.shift_buf_0_BRB2 write_data.shift_buf_0_BRB3.
+	Register(s) write_data.shift_buf_1 has(ve) been backward balanced into : write_data.shift_buf_1_BRB2 write_data.shift_buf_1_BRB3.
+	Register(s) write_data.shift_buf_10 has(ve) been backward balanced into : write_data.shift_buf_10_BRB2 write_data.shift_buf_10_BRB5.
+	Register(s) write_data.shift_buf_11 has(ve) been backward balanced into : write_data.shift_buf_11_BRB2 write_data.shift_buf_11_BRB5.
+	Register(s) write_data.shift_buf_12 has(ve) been backward balanced into : write_data.shift_buf_12_BRB2 write_data.shift_buf_12_BRB5.
+	Register(s) write_data.shift_buf_13 has(ve) been backward balanced into : write_data.shift_buf_13_BRB2 write_data.shift_buf_13_BRB5.
+	Register(s) write_data.shift_buf_14 has(ve) been backward balanced into : write_data.shift_buf_14_BRB2 write_data.shift_buf_14_BRB5.
+	Register(s) write_data.shift_buf_15 has(ve) been backward balanced into : write_data.shift_buf_15_BRB2 write_data.shift_buf_15_BRB5.
+	Register(s) write_data.shift_buf_2 has(ve) been backward balanced into : write_data.shift_buf_2_BRB2 write_data.shift_buf_2_BRB3.
+	Register(s) write_data.shift_buf_3 has(ve) been backward balanced into : write_data.shift_buf_3_BRB2 write_data.shift_buf_3_BRB3.
+	Register(s) write_data.shift_buf_4 has(ve) been backward balanced into : write_data.shift_buf_4_BRB2 write_data.shift_buf_4_BRB3.
+	Register(s) write_data.shift_buf_5 has(ve) been backward balanced into : write_data.shift_buf_5_BRB2 write_data.shift_buf_5_BRB3.
+	Register(s) write_data.shift_buf_6 has(ve) been backward balanced into : write_data.shift_buf_6_BRB2 write_data.shift_buf_6_BRB3.
+	Register(s) write_data.shift_buf_7 has(ve) been backward balanced into : write_data.shift_buf_7_BRB2 write_data.shift_buf_7_BRB3.
+	Register(s) write_data.shift_buf_8 has(ve) been backward balanced into : write_data.shift_buf_8_BRB2 write_data.shift_buf_8_BRB5.
+	Register(s) write_data.shift_buf_9 has(ve) been backward balanced into : write_data.shift_buf_9_BRB2 write_data.shift_buf_9_BRB5.
+Unit <ipbus/udp_if/payload> processed.
 
-Processing Unit <ipbus/udp_if/ping> :
-Unit <ipbus/udp_if/ping> processed.
+Processing Unit <ipbus/udp_if/status> :
+	Register(s) next_addr.next_addr_2 has(ve) been backward balanced into : next_addr.next_addr_2_BRB0 next_addr.next_addr_2_BRB1 next_addr.next_addr_2_BRB2 next_addr.next_addr_2_BRB3 next_addr.next_addr_2_BRB4.
+	Register(s) next_addr.next_addr_4 has(ve) been backward balanced into : next_addr.next_addr_4_BRB0 next_addr.next_addr_4_BRB2.
+	Register(s) next_addr.next_addr_5 has(ve) been backward balanced into : next_addr.next_addr_5_BRB0 next_addr.next_addr_5_BRB1 next_addr.next_addr_5_BRB3 next_addr.next_addr_5_BRB4 next_addr.next_addr_5_BRB8 next_addr.next_addr_5_BRB10 next_addr.next_addr_5_BRB11 next_addr.next_addr_5_BRB13 next_addr.next_addr_5_BRB15.
+	Register(s) next_addr.next_addr_6 has(ve) been backward balanced into : next_addr.next_addr_6_BRB0 next_addr.next_addr_6_BRB2 next_addr.next_addr_6_BRB3 next_addr.next_addr_6_BRB5.
+	Register(s) send_pending has(ve) been backward balanced into : send_pending_BRB0 send_pending_BRB1.
+Unit <ipbus/udp_if/status> processed.
 
-Processing Unit <ipbus/udp_if/tx_byte_sum> :
-	Register(s) lo_byte_calc.lo_byte_int_0 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_0_BRB0 lo_byte_calc.lo_byte_int_0_BRB1 lo_byte_calc.lo_byte_int_0_BRB2 lo_byte_calc.lo_byte_int_0_BRB3 lo_byte_calc.lo_byte_int_0_BRB4.
-	Register(s) lo_byte_calc.lo_byte_int_1 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_1_BRB0 lo_byte_calc.lo_byte_int_1_BRB4.
-	Register(s) lo_byte_calc.lo_byte_int_2 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_2_BRB0 lo_byte_calc.lo_byte_int_2_BRB4.
-	Register(s) lo_byte_calc.lo_byte_int_3 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_3_BRB0 lo_byte_calc.lo_byte_int_3_BRB4.
-	Register(s) lo_byte_calc.lo_byte_int_4 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_4_BRB0 lo_byte_calc.lo_byte_int_4_BRB4.
-	Register(s) lo_byte_calc.lo_byte_int_5 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_5_BRB0 lo_byte_calc.lo_byte_int_5_BRB4.
-	Register(s) lo_byte_calc.lo_byte_int_6 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_6_BRB0 lo_byte_calc.lo_byte_int_6_BRB4.
-	Register(s) lo_byte_calc.lo_byte_int_7 has(ve) been backward balanced into : lo_byte_calc.lo_byte_int_7_BRB0 lo_byte_calc.lo_byte_int_7_BRB4.
-Unit <ipbus/udp_if/tx_byte_sum> processed.
-
-Processing Unit <ipbus/udp_if/tx_transactor> :
-	Register(s) req_not_found has(ve) been backward balanced into : req_not_found_BRB0 req_not_found_BRB1 req_not_found_BRB2 req_not_found_BRB3 req_not_found_BRB4 req_not_found_BRB5.
-	Register(s) req_resend has(ve) been backward balanced into : req_resend_BRB1 req_resend_BRB2 req_resend_BRB3 req_resend_BRB4 req_resend_BRB5.
-	Register(s) resend_buf_0 has(ve) been backward balanced into : resend_buf_0_BRB0 resend_buf_0_BRB1 resend_buf_0_BRB2 resend_buf_0_BRB3 resend_buf_0_BRB4 resend_buf_0_BRB5.
-	Register(s) resend_buf_1 has(ve) been backward balanced into : resend_buf_1_BRB0 resend_buf_1_BRB1 resend_buf_1_BRB3 resend_buf_1_BRB4 resend_buf_1_BRB5.
-	Register(s) resend_buf_2 has(ve) been backward balanced into : resend_buf_2_BRB0 resend_buf_2_BRB1 resend_buf_2_BRB4 .
-	Register(s) resend_buf_3 has(ve) been backward balanced into : resend_buf_3_BRB0 resend_buf_3_BRB1.
-Unit <ipbus/udp_if/tx_transactor> processed.
+Processing Unit <slaves/TDCchannels> :
+	Register(s) triggerCounter_0 has(ve) been backward balanced into : triggerCounter_0_BRB0 triggerCounter_0_BRB1.
+	Register(s) triggerCounter_1 has(ve) been backward balanced into : triggerCounter_1_BRB0 .
+	Register(s) triggerCounter_2 has(ve) been backward balanced into : triggerCounter_2_BRB0 .
+	Register(s) triggerCounter_3 has(ve) been backward balanced into : triggerCounter_3_BRB0 .
+	Register(s) triggerCounter_4 has(ve) been backward balanced into : triggerCounter_4_BRB0 .
+	Register(s) triggerCounter_5 has(ve) been backward balanced into : triggerCounter_5_BRB0 .
+	Register(s) triggerCounter_6 has(ve) been backward balanced into : triggerCounter_6_BRB0 .
+	Register(s) triggerCounter_7 has(ve) been backward balanced into : triggerCounter_7_BRB0 .
+Unit <slaves/TDCchannels> processed.
 
 Final Macro Processing ...
 
@@ -4063,13 +4063,13 @@ sysclk          |    5.869|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 56.00 secs
-Total CPU time to Xst completion: 55.63 secs
+Total REAL time to Xst completion: 59.00 secs
+Total CPU time to Xst completion: 56.18 secs
  
 --> 
 
 
-Total memory usage is 611668 kilobytes
+Total memory usage is 611608 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :  758 (   0 filtered)

@@ -10,7 +10,7 @@ Target Device  : xc6slx45
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Fri Jun 10 16:45:59 2016
+Mapped Date    : Sat Oct 29 14:36:11 2016
 
 Design Summary
 --------------
@@ -109,8 +109,8 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                3.60
 
 Peak Memory Usage:  1072 MB
-Total REAL time to MAP completion:  2 mins 11 secs 
-Total CPU time to MAP completion (all processors):   2 mins 11 secs 
+Total REAL time to MAP completion:  2 mins 7 secs 
+Total CPU time to MAP completion (all processors):   2 mins 7 secs 
 
 Table of Contents
 -----------------
@@ -151,20 +151,6 @@ WARNING:Place:1206 - This design contains a global buffer instance,
    applied on COMP.PIN <slaves/TDCchannels/PLLgen/clkout6_buf.O> allowing your
    design to continue. This constraint disables all clock placer rules related
    to the specified COMP.PIN.
-WARNING:Place:1137 - This design is not guaranteed to be routable! This design
-   contains a global buffer instance, <slaves/TDCchannels/dc1/TDCcore/buffer>,
-   driving the net, <slaves/TDCchannels/dc1/TDCcore/hit>, that is driving the
-   following (first 30) non-clock load pins.
-   < PIN: slaves/TDCchannels/dc1/TDCcore/hit_syn0.D; >
-   This is not a recommended design practice in Spartan-6 due to limitations in
-   the global routing that may cause excessive delay, skew or unroutable
-   situations.  It is recommended to only use a BUFG resource to drive clock
-   loads. Please pay extra attention to the timing and routing of this path to
-   ensure the design goals are met. This is normally an ERROR but the
-   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
-   <slaves/TDCchannels/dc1/TDCcore/buffer.O> allowing your design to continue.
-   This constraint disables all clock placer rules related to the specified
-   COMP.PIN.
 WARNING:Place:1137 - This design is not guaranteed to be routable! This design
    contains a global buffer instance, <slaves/TDCchannels/PLLgen/clkout6_buf>,
    driving the net, <REFPLL>, that is driving the following (first 30) non-clock
@@ -252,6 +238,20 @@ WARNING:Place:1137 - This design is not guaranteed to be routable! This design
    ensure the design goals are met. This is normally an ERROR but the
    CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
    <slaves/TDCchannels/dc2/TDCcore/buffer.O> allowing your design to continue.
+   This constraint disables all clock placer rules related to the specified
+   COMP.PIN.
+WARNING:Place:1137 - This design is not guaranteed to be routable! This design
+   contains a global buffer instance, <slaves/TDCchannels/dc1/TDCcore/buffer>,
+   driving the net, <slaves/TDCchannels/dc1/TDCcore/hit>, that is driving the
+   following (first 30) non-clock load pins.
+   < PIN: slaves/TDCchannels/dc1/TDCcore/hit_syn0.D; >
+   This is not a recommended design practice in Spartan-6 due to limitations in
+   the global routing that may cause excessive delay, skew or unroutable
+   situations.  It is recommended to only use a BUFG resource to drive clock
+   loads. Please pay extra attention to the timing and routing of this path to
+   ensure the design goals are met. This is normally an ERROR but the
+   CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN
+   <slaves/TDCchannels/dc1/TDCcore/buffer.O> allowing your design to continue.
    This constraint disables all clock placer rules related to the specified
    COMP.PIN.
 WARNING:Place:1109 - A clock IOB / BUFGMUX clock component pair have been found
