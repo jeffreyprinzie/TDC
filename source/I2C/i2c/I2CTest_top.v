@@ -19,7 +19,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 
-`define SEUSIM
+//`define SEUSIM
 module programmer(
 	 clkin,
 
@@ -120,18 +120,18 @@ localparam myReg13_s1=11;
 
 `else
 	assign myReg1in=myReg1;
-	assign myReg1in=myReg2;
-	assign myReg1in=myReg3;
-	assign myReg1in=myReg4;
-	assign myReg1in=myReg5;
-	assign myReg1in=myReg6;
-	assign myReg1in=myReg7;
-	assign myReg1in=myReg8;
-	assign myReg1in=myReg9;
-	assign myReg1in=myReg10;
-	assign myReg1in=myReg11;
-	assign myReg1in=myReg12;
-	assign myReg1in=myReg13;
+	assign myReg2in=myReg2;
+	assign myReg3in=myReg3;
+	assign myReg4in=myReg4;
+	assign myReg5in=myReg5;
+	assign myReg6in=myReg6;
+	assign myReg7in=myReg7;
+	assign myReg8in=myReg8;
+	assign myReg9in=myReg9;
+	assign myReg10in=myReg10;
+	assign myReg11in=myReg11;
+	assign myReg12in=myReg12;
+	assign myReg13in=myReg13;
 `endif
 
 
