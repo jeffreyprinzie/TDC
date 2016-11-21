@@ -57,7 +57,7 @@ wire [7:0]  myReg1in,myReg2in,myReg3in,myReg4in,myReg5in,myReg6in,myReg7in,myReg
 wire rst;
 assign rst=0;
 
-
+`ifdef SEUSIM
 localparam myReg2_s0=254;
 localparam myReg3_s0=128;
 localparam myReg4_s0=7;
@@ -84,7 +84,7 @@ localparam myReg11_s1=15;
 localparam myReg12_s1=128;
 localparam myReg13_s1=11;
 
-`ifdef SEUSIM
+
 	reg configsel;
 	reg [25:0] prescaleCounter;
 	wire prescale_tick;

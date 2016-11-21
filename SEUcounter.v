@@ -36,7 +36,7 @@ module SEUcounter(
 	 
 	 //SEU glitch filtering
 	 always @(posedge clk) begin
-		  if(SEU_syn==1) begin
+		  if(SEU_syn==0) begin
 					glitch_filt<=3'b111;
 					SEU<=1;
 		  end else begin
