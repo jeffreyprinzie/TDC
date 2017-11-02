@@ -1,0 +1,4 @@
+verilog work "source/TDC/ipcore_dir/hitFIFO.v"
+verilog work "timegen.v"
+verilog work "rammgmt.v"
+verilog work "dataChannel.v"

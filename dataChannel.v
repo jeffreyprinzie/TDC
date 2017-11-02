@@ -113,6 +113,19 @@ module dataChannel(
 	
 	reg [7:0] hit0,hit1;
 	
+	reg [7:0] timeoutCtr,timeoutCtr_next;
+	localparam [7:0] maxTimeoutCtr=8'hff;
+	wire timeout;
+	
+	
+	///added V2 protontests
+	always @(FSMstate,FSMstate_next,timeoutCtr) begin //ensures a timeout in the 2 hit memory to avoid drifts to generate events
+		if(FSMstate==IDLE || FSMstate==PROCESSHIT1 || ( FSMstate==PROCESSHIT2 && FSMstate_next==WAITFORHIT3) ||FSMstate==STARTRAMDUMP) 
+			timeoutCtr_next<=0;
+		else
+			timeoutCtr_next<=timeoutCtr+1;
+	end
+	
 	always @(FSMstate,fifo_data_available,TDCfifo_dout,hit0,hit1,dumpdone) begin
 		case(FSMstate)
 		IDLE:
@@ -161,9 +174,15 @@ module dataChannel(
 	always @(posedge SYSCLK) begin
 		if(RESET) begin
 			FSMstate<=IDLE;
+			timeoutCtr<=0;
 		end else begin
-			FSMstate<=FSMstate_next;
-
+			if(timeoutCtr==maxTimeoutCtr) begin///added V2 protontests
+				FSMstate<=IDLE;///added V2 protontests
+				timeoutCtr<=0;///added V2 protontests
+			end else begin
+				FSMstate<=FSMstate_next;			
+				timeoutCtr<=timeoutCtr_next;///added V2 protontests
+			end
 		end
 	end
 	

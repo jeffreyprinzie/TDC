@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Mon Nov 21 13:01:01 2016
+// Written by: Map P.20131013 on Wed Jul 12 23:49:42 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -99,44 +99,45 @@ COMP "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0<1>" LOCATE = SITE
 COMP "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0<3>" LOCATE = SITE
         "SLICE_X47Y57" LEVEL 1;
 COMPGRP pblock_counter_ch2.SLICE = COMP
-        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180<2>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180_L0<2>" COMP
         "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0<1>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0<0>";
+        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180<2>" COMP
+        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0_L0<2>" COMP
+        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180_L0<2>";
 COMPGRP "pblock_counter_ch2.SLICE" LOCATE = SITE "SLICE_X46Y58:SLICE_X47Y63"
         LEVEL 4;
 COMPGRP pblock_counter_ch1.SLICE = COMP
         "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180<2>" COMP
         "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0<1>" COMP
-        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180_L0<2>";
+        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0_L0<2>";
 COMPGRP "pblock_counter_ch1.SLICE" LOCATE = SITE "SLICE_X46Y50:SLICE_X47Y55"
         LEVEL 4;
 COMPGRP L1buffers_ch2.SLICE = COMP
         "slaves/TDCchannels/dc2/TDCcore/hit_registers_L1<3>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0_L1<2>";
+        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180_L1<2>";
 COMPGRP "L1buffers_ch2.SLICE" LOCATE = SITE "SLICE_X48Y56:SLICE_X51Y63" LEVEL
         4;
 COMPGRP L1buffers_ch1.SLICE = COMP
         "slaves/TDCchannels/dc1/TDCcore/hit_registers_L1<3>" COMP
-        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0_L1<2>";
+        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0_L1<2>" COMP
+        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180_L1<2>";
 COMPGRP "L1buffers_ch1.SLICE" LOCATE = SITE "SLICE_X48Y48:SLICE_X51Y55" LEVEL
         4;
-COMPGRP FSM_TDC2.SLICE = COMP
-        "slaves/TDCchannels/dc2/TDCcore/FSMstate[3]_GND_460_o_AND_375_o" COMP
+COMPGRP FSM_TDC2.SLICE = COMP "slaves/TDCchannels/dc2/TDCcore/hit_syn" COMP
         "slaves/TDCchannels/dc2/TDCcore/FSMstate_FSM_FFd2" COMP
+        "slaves/TDCchannels/dc2/TDCcore/coarse_time<1>" COMP
         "slaves/TDCchannels/dc2/TDCcore/valid_hit" COMP
+        "slaves/TDCchannels/dc2/TDCcore/coarse_time<0>" COMP
         "slaves/TDCchannels/dc2/TDCcore/fine_time_decoded<1>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/coarse_time<2>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/coarse_time<1>";
+        "slaves/TDCchannels/dc2/TDCcore/coarse_time<2>";
 COMPGRP "FSM_TDC2.SLICE" LOCATE = SITE "SLICE_X52Y56:SLICE_X59Y63" SITE
         "SLICE_X30Y56:SLICE_X45Y63" LEVEL 4;
 COMPGRP FSM_TDC1.SLICE = COMP
         "slaves/TDCchannels/dc1/TDCcore/FSMstate_FSM_FFd2" COMP
-        "slaves/TDCchannels/dc1/TDCcore/FSMstate[3]_GND_460_o_AND_375_o" COMP
+        "slaves/TDCchannels/dc1/TDCcore/_n0125_inv" COMP
         "slaves/TDCchannels/dc1/TDCcore/fine_time_decoded<0>" COMP
-        "slaves/TDCchannels/dc1/TDCcore/valid_hit" COMP
-        "slaves/TDCchannels/dc1/TDCcore/coarse_time<2>" COMP
-        "slaves/TDCchannels/dc1/TDCcore/coarse_time<0>";
+        "slaves/TDCchannels/dc1/TDCcore/fine_time_decoded<1>" COMP
+        "slaves/TDCchannels/dc1/TDCcore/coarse_time<0>" COMP
+        "slaves/TDCchannels/dc1/TDCcore/coarse_time<2>";
 COMPGRP "FSM_TDC1.SLICE" LOCATE = SITE "SLICE_X52Y48:SLICE_X59Y55" SITE
         "SLICE_X30Y48:SLICE_X45Y55" LEVEL 4;
 TIMEGRP eth_rx_clk_io = BEL "eth/rx_er_r" BEL "eth/rx_dv_r" BEL "eth/rxd_r_0"
@@ -4242,7 +4243,7 @@ TIMEGRP tnm_clk125 = BEL "eth/gmii_tx_er" BEL "eth/gmii_txd_0" BEL
         "ipbus/udp_if/tx_main/state_machine.state_1_BRB3" BEL
         "ipbus/udp_if/tx_main/state_machine.state_1_BRB4" BEL
         "ipbus/udp_if/tx_main/state_machine.addr_to_set_int_1_BRB1" BEL
-        "ipbus/udp_if/tx_main/state_machine.addr_to_set_int_1_BRB2" BEL
+        "ipbus/udp_if/tx_main/state_machine.addr_to_set_int_1_BRB3" BEL
         "ipbus/udp_if/tx_main/state_machine.addr_to_set_int_1_BRB4" BEL
         "ipbus/udp_if/tx_main/state_machine.state_0_BRB0" BEL
         "ipbus/udp_if/tx_main/state_machine.state_0_BRB1" BEL
@@ -8095,7 +8096,7 @@ TIMEGRP clocks_clk_125_i = BEL "eth/gmii_tx_er" BEL "eth/gmii_txd_0" BEL
         "ipbus/udp_if/tx_main/state_machine.state_1_BRB3" BEL
         "ipbus/udp_if/tx_main/state_machine.state_1_BRB4" BEL
         "ipbus/udp_if/tx_main/state_machine.addr_to_set_int_1_BRB1" BEL
-        "ipbus/udp_if/tx_main/state_machine.addr_to_set_int_1_BRB2" BEL
+        "ipbus/udp_if/tx_main/state_machine.addr_to_set_int_1_BRB3" BEL
         "ipbus/udp_if/tx_main/state_machine.addr_to_set_int_1_BRB4" BEL
         "ipbus/udp_if/tx_main/state_machine.state_0_BRB0" BEL
         "ipbus/udp_if/tx_main/state_machine.state_0_BRB1" BEL
@@ -10845,11 +10846,15 @@ TIMEGRP slaves_TDCchannels_PLLgen_clkout4 = PIN
         "slaves/TDCchannels/dc2/hit1_4" BEL "slaves/TDCchannels/dc2/hit1_5"
         BEL "slaves/TDCchannels/dc2/hit1_6" BEL
         "slaves/TDCchannels/dc2/hit1_7" BEL
-        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd6" BEL
-        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd8" BEL
-        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd7" BEL
-        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd5" BEL
-        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd4" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_0" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_1" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_2" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_3" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_4" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_5" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_6" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_7" BEL
+        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd1" BEL
         "slaves/TDCchannels/dc2/FSMstate_FSM_FFd3" BEL
         "slaves/TDCchannels/dc2/FSMstate_FSM_FFd2" BEL
         "slaves/TDCchannels/dc2/hitCount_0" BEL
@@ -11081,7 +11086,6 @@ TIMEGRP slaves_TDCchannels_PLLgen_clkout4 = PIN
         "slaves/TDCchannels/dc2/ramManager/SR_15_30" BEL
         "slaves/TDCchannels/dc2/ramManager/Mshreg_SR_15_31" BEL
         "slaves/TDCchannels/dc2/ramManager/SR_15_31" BEL
-        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd1" BEL
         "slaves/TDCchannels/dc1/write_buffer" BEL
         "slaves/TDCchannels/dc1/hit0_0" BEL "slaves/TDCchannels/dc1/hit0_1"
         BEL "slaves/TDCchannels/dc1/hit0_2" BEL
@@ -11094,11 +11098,15 @@ TIMEGRP slaves_TDCchannels_PLLgen_clkout4 = PIN
         "slaves/TDCchannels/dc1/hit1_4" BEL "slaves/TDCchannels/dc1/hit1_5"
         BEL "slaves/TDCchannels/dc1/hit1_6" BEL
         "slaves/TDCchannels/dc1/hit1_7" BEL
-        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd6" BEL
-        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd8" BEL
-        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd7" BEL
-        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd5" BEL
-        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd4" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_0" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_1" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_2" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_3" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_4" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_5" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_6" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_7" BEL
+        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd1" BEL
         "slaves/TDCchannels/dc1/FSMstate_FSM_FFd3" BEL
         "slaves/TDCchannels/dc1/FSMstate_FSM_FFd2" BEL
         "slaves/TDCchannels/dc1/hitCount_0" BEL
@@ -11330,7 +11338,6 @@ TIMEGRP slaves_TDCchannels_PLLgen_clkout4 = PIN
         "slaves/TDCchannels/dc1/ramManager/SR_15_30" BEL
         "slaves/TDCchannels/dc1/ramManager/Mshreg_SR_15_31" BEL
         "slaves/TDCchannels/dc1/ramManager/SR_15_31" BEL
-        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd1" BEL
         "slaves/TDCchannels/triggerCounter_0_BRB0" BEL
         "slaves/TDCchannels/triggerCounter_0_BRB1" BEL
         "slaves/TDCchannels/triggerCounter_1_BRB0" BEL
@@ -11416,11 +11423,15 @@ TIMEGRP GRPSYSCLK = BEL "slaves/TDCchannels/hitCount1_tm1_0" BEL
         "slaves/TDCchannels/dc2/hit1_4" BEL "slaves/TDCchannels/dc2/hit1_5"
         BEL "slaves/TDCchannels/dc2/hit1_6" BEL
         "slaves/TDCchannels/dc2/hit1_7" BEL
-        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd6" BEL
-        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd8" BEL
-        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd7" BEL
-        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd5" BEL
-        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd4" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_0" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_1" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_2" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_3" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_4" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_5" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_6" BEL
+        "slaves/TDCchannels/dc2/timeoutCtr_7" BEL
+        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd1" BEL
         "slaves/TDCchannels/dc2/FSMstate_FSM_FFd3" BEL
         "slaves/TDCchannels/dc2/FSMstate_FSM_FFd2" BEL
         "slaves/TDCchannels/dc2/hitCount_0" BEL
@@ -11628,7 +11639,6 @@ TIMEGRP GRPSYSCLK = BEL "slaves/TDCchannels/hitCount1_tm1_0" BEL
         "slaves/TDCchannels/dc2/ramManager/SR_15_30" BEL
         "slaves/TDCchannels/dc2/ramManager/Mshreg_SR_15_31" BEL
         "slaves/TDCchannels/dc2/ramManager/SR_15_31" BEL
-        "slaves/TDCchannels/dc2/FSMstate_FSM_FFd1" BEL
         "slaves/TDCchannels/dc1/write_buffer" BEL
         "slaves/TDCchannels/dc1/hit0_0" BEL "slaves/TDCchannels/dc1/hit0_1"
         BEL "slaves/TDCchannels/dc1/hit0_2" BEL
@@ -11641,11 +11651,15 @@ TIMEGRP GRPSYSCLK = BEL "slaves/TDCchannels/hitCount1_tm1_0" BEL
         "slaves/TDCchannels/dc1/hit1_4" BEL "slaves/TDCchannels/dc1/hit1_5"
         BEL "slaves/TDCchannels/dc1/hit1_6" BEL
         "slaves/TDCchannels/dc1/hit1_7" BEL
-        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd6" BEL
-        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd8" BEL
-        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd7" BEL
-        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd5" BEL
-        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd4" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_0" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_1" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_2" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_3" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_4" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_5" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_6" BEL
+        "slaves/TDCchannels/dc1/timeoutCtr_7" BEL
+        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd1" BEL
         "slaves/TDCchannels/dc1/FSMstate_FSM_FFd3" BEL
         "slaves/TDCchannels/dc1/FSMstate_FSM_FFd2" BEL
         "slaves/TDCchannels/dc1/hitCount_0" BEL
@@ -11853,7 +11867,6 @@ TIMEGRP GRPSYSCLK = BEL "slaves/TDCchannels/hitCount1_tm1_0" BEL
         "slaves/TDCchannels/dc1/ramManager/SR_15_30" BEL
         "slaves/TDCchannels/dc1/ramManager/Mshreg_SR_15_31" BEL
         "slaves/TDCchannels/dc1/ramManager/SR_15_31" BEL
-        "slaves/TDCchannels/dc1/FSMstate_FSM_FFd1" BEL
         "slaves/TDCchannels/triggerCounter_0_BRB0" BEL
         "slaves/TDCchannels/triggerCounter_0_BRB1" BEL
         "slaves/TDCchannels/triggerCounter_1_BRB0" BEL

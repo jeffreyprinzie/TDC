@@ -402,6 +402,7 @@ WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/rammgmt.v" L
 WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/rammgmt.v" Line 112: Result of 3-bit expression is truncated to fit in 2-bit target.
 WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/rammgmt.v" Line 122: Result of 9-bit expression is truncated to fit in 8-bit target.
 WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/dataChannel.v" Line 107: Result of 32-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/dataChannel.v" Line 124: Result of 9-bit expression is truncated to fit in 8-bit target.
 Back to vhdl to continue elaboration
 Going to verilog side to elaborate module programmer
 
@@ -1416,6 +1417,7 @@ Unit <PLL> synthesized.
 Synthesizing Unit <dataChannel>.
     Related source file is "/home/Administrators/jeffrey/xilinx/work/dataChannel.v".
     Found 4-bit register for signal <FSMstate>.
+    Found 8-bit register for signal <timeoutCtr>.
     Found 8-bit register for signal <hit0>.
     Found 8-bit register for signal <hit1>.
     Found 32-bit register for signal <hitCount>.
@@ -1423,8 +1425,8 @@ Synthesizing Unit <dataChannel>.
     Found finite state machine <FSM_2> for signal <FSMstate>.
     -----------------------------------------------------------------------
     | States             | 8                                              |
-    | Transitions        | 14                                             |
-    | Inputs             | 4                                              |
+    | Transitions        | 21                                             |
+    | Inputs             | 5                                              |
     | Outputs            | 8                                              |
     | Clock              | SYSCLK (rising_edge)                           |
     | Reset              | RESET (positive)                               |
@@ -1433,13 +1435,16 @@ Synthesizing Unit <dataChannel>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 32-bit adder for signal <hitCount[31]_GND_459_o_add_40_OUT> created at line 184.
-    Found 8-bit comparator equal for signal <TDCfifo_dout[7]_hit0[7]_equal_10_o> created at line 133
-    Found 8-bit comparator equal for signal <TDCfifo_dout[7]_hit1[7]_equal_14_o> created at line 143
+    Found 8-bit adder for signal <timeoutCtr[7]_GND_459_o_add_12_OUT> created at line 124.
+    Found 32-bit adder for signal <hitCount[31]_GND_459_o_add_51_OUT> created at line 199.
+    Found 4-bit 8-to-1 multiplexer for signal <FSMstate_next> created at line 76.
+    Found 8-bit comparator equal for signal <TDCfifo_dout[7]_hit0[7]_equal_17_o> created at line 144
+    Found 8-bit comparator equal for signal <TDCfifo_dout[7]_hit1[7]_equal_21_o> created at line 154
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  49 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  57 D-type flip-flop(s).
 	inferred   2 Comparator(s).
+	inferred   2 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <dataChannel> synthesized.
 
@@ -1625,7 +1630,7 @@ WARNING:Xst:647 - Input <myReg13<7:5>> is never used. This port will be preserve
     Found 4-bit register for signal <FSMstate>.
     Found 8-bit adder for signal <shiftCtr[7]_GND_518_o_add_9_OUT> created at line 106.
     Found 10-bit adder for signal <prescaler[9]_GND_518_o_add_38_OUT> created at line 194.
-    Found 4-bit 8-to-1 multiplexer for signal <_n0328> created at line 64.
+    Found 4-bit 8-to-1 multiplexer for signal <_n0313> created at line 64.
     HDL ADVISOR - Describing an operational reset or an explicit power-up state for register <FSMstate> would allow inference of a finite state machine and as consequence better performance and smaller area.
     Summary:
 	inferred   2 Adder/Subtractor(s).
@@ -1642,7 +1647,7 @@ Macro Statistics
  4096x8-bit dual-port RAM                              : 1
  8192x32-bit dual-port RAM                             : 1
  8192x8-bit dual-port RAM                              : 4
-# Adders/Subtractors                                   : 52
+# Adders/Subtractors                                   : 54
  1-bit adder                                           : 2
  10-bit adder                                          : 1
  12-bit adder                                          : 2
@@ -1659,10 +1664,10 @@ Macro Statistics
  5-bit adder                                           : 1
  6-bit adder                                           : 3
  7-bit adder                                           : 1
- 8-bit adder                                           : 6
+ 8-bit adder                                           : 8
  8-bit subtractor                                      : 2
  9-bit adder                                           : 4
-# Registers                                            : 501
+# Registers                                            : 503
  1-bit register                                        : 227
  10-bit register                                       : 5
  11-bit register                                       : 1
@@ -1688,7 +1693,7 @@ Macro Statistics
  5-bit register                                        : 4
  6-bit register                                        : 11
  7-bit register                                        : 4
- 8-bit register                                        : 47
+ 8-bit register                                        : 49
  9-bit register                                        : 8
  93-bit register                                       : 1
 # Comparators                                          : 39
@@ -1700,7 +1705,7 @@ Macro Statistics
  6-bit comparator equal                                : 1
  8-bit comparator equal                                : 8
  8-bit comparator not equal                            : 7
-# Multiplexers                                         : 944
+# Multiplexers                                         : 948
  1-bit 16-to-1 multiplexer                             : 6
  1-bit 2-to-1 multiplexer                              : 639
  10-bit 2-to-1 multiplexer                             : 2
@@ -1722,7 +1727,7 @@ Macro Statistics
  38-bit 2-to-1 multiplexer                             : 2
  4-bit 2-to-1 multiplexer                              : 26
  4-bit 4-to-1 multiplexer                              : 1
- 4-bit 8-to-1 multiplexer                              : 1
+ 4-bit 8-to-1 multiplexer                              : 3
  42-bit 2-to-1 multiplexer                             : 3
  45-bit 2-to-1 multiplexer                             : 2
  48-bit 2-to-1 multiplexer                             : 4
@@ -1730,7 +1735,7 @@ Macro Statistics
  6-bit 2-to-1 multiplexer                              : 15
  7-bit 2-to-1 multiplexer                              : 11
  8-bit 15-to-1 multiplexer                             : 1
- 8-bit 2-to-1 multiplexer                              : 77
+ 8-bit 2-to-1 multiplexer                              : 79
  8-bit 4-to-1 multiplexer                              : 1
  9-bit 2-to-1 multiplexer                              : 12
  93-bit 2-to-1 multiplexer                             : 5
@@ -1856,6 +1861,7 @@ The following registers are absorbed into counter <cnt>: 1 register on signal <c
 Unit <clock_div> synthesized (advanced).
 
 Synthesizing (advanced) Unit <dataChannel>.
+The following registers are absorbed into counter <timeoutCtr>: 1 register on signal <timeoutCtr>.
 The following registers are absorbed into counter <hitCount>: 1 register on signal <hitCount>.
 Unit <dataChannel> synthesized (advanced).
 
@@ -2112,7 +2118,7 @@ Macro Statistics
  7-bit adder                                           : 1
  8-bit adder                                           : 2
  9-bit adder                                           : 4
-# Counters                                             : 34
+# Counters                                             : 36
  1-bit up counter                                      : 2
  10-bit up counter                                     : 1
  12-bit up counter                                     : 2
@@ -2127,7 +2133,7 @@ Macro Statistics
  4-bit up counter                                      : 4
  6-bit up counter                                      : 1
  8-bit down counter                                    : 2
- 8-bit up counter                                      : 5
+ 8-bit up counter                                      : 7
 # Registers                                            : 5027
  Flip-Flops                                            : 5027
 # Comparators                                          : 39
@@ -2139,7 +2145,7 @@ Macro Statistics
  6-bit comparator equal                                : 1
  8-bit comparator equal                                : 8
  8-bit comparator not equal                            : 7
-# Multiplexers                                         : 1442
+# Multiplexers                                         : 1444
  1-bit 15-to-1 multiplexer                             : 8
  1-bit 16-to-1 multiplexer                             : 6
  1-bit 2-to-1 multiplexer                              : 1034
@@ -2162,7 +2168,7 @@ Macro Statistics
  38-bit 2-to-1 multiplexer                             : 2
  4-bit 2-to-1 multiplexer                              : 22
  4-bit 4-to-1 multiplexer                              : 1
- 4-bit 8-to-1 multiplexer                              : 1
+ 4-bit 8-to-1 multiplexer                              : 3
  42-bit 2-to-1 multiplexer                             : 3
  45-bit 2-to-1 multiplexer                             : 2
  48-bit 2-to-1 multiplexer                             : 3
@@ -2285,19 +2291,19 @@ Optimizing FSM <myprogrammer/UCOMM/u_i2cSlave/u_serialInterface/FSM_6> on signal
  1101  | 1101
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <slaves/TDCchannels/dc1/FSM_2> on signal <FSMstate[1:8]> with one-hot encoding.
-Optimizing FSM <slaves/TDCchannels/dc2/FSM_2> on signal <FSMstate[1:8]> with one-hot encoding.
+Optimizing FSM <slaves/TDCchannels/dc1/FSM_2> on signal <FSMstate[1:3]> with sequential encoding.
+Optimizing FSM <slaves/TDCchannels/dc2/FSM_2> on signal <FSMstate[1:3]> with sequential encoding.
 -------------------
  State | Encoding
 -------------------
- 0000  | 00000001
- 0001  | 00000010
- 0010  | 00000100
- 0011  | 00001000
- 0100  | 00010000
- 0101  | 00100000
- 0110  | 01000000
- 0111  | 10000000
+ 0000  | 000
+ 0001  | 001
+ 0010  | 010
+ 0011  | 011
+ 0100  | 100
+ 0101  | 101
+ 0110  | 110
+ 0111  | 111
 -------------------
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <slaves/TDCchannels/dc1/TDCcore/FSM_3> on signal <FSMstate[1:2]> with sequential encoding.
@@ -3280,6 +3286,34 @@ Processing Unit <ipbus/trans/sm> :
 	Register(s) state_FSM_FFd2 has(ve) been backward balanced into : state_FSM_FFd2_BRB0 state_FSM_FFd2_BRB1 state_FSM_FFd2_BRB2 state_FSM_FFd2_BRB3 state_FSM_FFd2_BRB5.
 Unit <ipbus/trans/sm> processed.
 
+Processing Unit <ipbus/udp_if/tx_ram_selector> :
+	Register(s) busy_block.busy_i has(ve) been backward balanced into : busy_block.busy_i_BRB1 busy_block.busy_i_BRB2 busy_block.busy_i_BRB3 busy_block.busy_i_BRB4.
+	Register(s) req_send_block.sending_i has(ve) been backward balanced into : req_send_block.sending_i_BRB0 req_send_block.sending_i_BRB1.
+	Register(s) send_pending_block.send_pending_i_0 has(ve) been backward balanced into : send_pending_block.send_pending_i_0_BRB4 send_pending_block.send_pending_i_0_BRB5.
+	Register(s) send_pending_block.send_pending_i_1 has(ve) been backward balanced into : send_pending_block.send_pending_i_1_BRB4 send_pending_block.send_pending_i_1_BRB5.
+	Register(s) send_pending_block.send_pending_i_10 has(ve) been backward balanced into : send_pending_block.send_pending_i_10_BRB4 send_pending_block.send_pending_i_10_BRB5.
+	Register(s) send_pending_block.send_pending_i_11 has(ve) been backward balanced into : send_pending_block.send_pending_i_11_BRB4 send_pending_block.send_pending_i_11_BRB5.
+	Register(s) send_pending_block.send_pending_i_12 has(ve) been backward balanced into : send_pending_block.send_pending_i_12_BRB0 send_pending_block.send_pending_i_12_BRB1 send_pending_block.send_pending_i_12_BRB2 send_pending_block.send_pending_i_12_BRB3 send_pending_block.send_pending_i_12_BRB4 send_pending_block.send_pending_i_12_BRB5.
+	Register(s) send_pending_block.send_pending_i_13 has(ve) been backward balanced into : send_pending_block.send_pending_i_13_BRB4 send_pending_block.send_pending_i_13_BRB5.
+	Register(s) send_pending_block.send_pending_i_14 has(ve) been backward balanced into : send_pending_block.send_pending_i_14_BRB4 send_pending_block.send_pending_i_14_BRB5.
+	Register(s) send_pending_block.send_pending_i_15 has(ve) been backward balanced into : send_pending_block.send_pending_i_15_BRB4 send_pending_block.send_pending_i_15_BRB5.
+	Register(s) send_pending_block.send_pending_i_2 has(ve) been backward balanced into : send_pending_block.send_pending_i_2_BRB4 send_pending_block.send_pending_i_2_BRB5.
+	Register(s) send_pending_block.send_pending_i_3 has(ve) been backward balanced into : send_pending_block.send_pending_i_3_BRB4 send_pending_block.send_pending_i_3_BRB5.
+	Register(s) send_pending_block.send_pending_i_4 has(ve) been backward balanced into : send_pending_block.send_pending_i_4_BRB4 send_pending_block.send_pending_i_4_BRB5.
+	Register(s) send_pending_block.send_pending_i_5 has(ve) been backward balanced into : send_pending_block.send_pending_i_5_BRB4 send_pending_block.send_pending_i_5_BRB5.
+	Register(s) send_pending_block.send_pending_i_6 has(ve) been backward balanced into : send_pending_block.send_pending_i_6_BRB4 send_pending_block.send_pending_i_6_BRB5.
+	Register(s) send_pending_block.send_pending_i_7 has(ve) been backward balanced into : send_pending_block.send_pending_i_7_BRB4 send_pending_block.send_pending_i_7_BRB5.
+	Register(s) send_pending_block.send_pending_i_8 has(ve) been backward balanced into : send_pending_block.send_pending_i_8_BRB0 send_pending_block.send_pending_i_8_BRB4 send_pending_block.send_pending_i_8_BRB5.
+	Register(s) send_pending_block.send_pending_i_9 has(ve) been backward balanced into : send_pending_block.send_pending_i_9_BRB4 send_pending_block.send_pending_i_9_BRB5.
+Unit <ipbus/udp_if/tx_ram_selector> processed.
+
+Processing Unit <ipbus/udp_if/tx_main> :
+	Register(s) state_machine.addr_to_set_int_1 has(ve) been backward balanced into : state_machine.addr_to_set_int_1_BRB1 state_machine.addr_to_set_int_1_BRB3 state_machine.addr_to_set_int_1_BRB4.
+	Register(s) state_machine.set_addr_int has(ve) been backward balanced into : state_machine.set_addr_int_BRB0 state_machine.set_addr_int_BRB1 state_machine.set_addr_int_BRB2.
+	Register(s) state_machine.state_0 has(ve) been backward balanced into : state_machine.state_0_BRB0 state_machine.state_0_BRB1 state_machine.state_0_BRB2 state_machine.state_0_BRB3 state_machine.state_0_BRB4 state_machine.state_0_BRB5.
+	Register(s) state_machine.state_1 has(ve) been backward balanced into : state_machine.state_1_BRB0 state_machine.state_1_BRB1 state_machine.state_1_BRB3 state_machine.state_1_BRB4.
+Unit <ipbus/udp_if/tx_main> processed.
+
 Processing Unit <ipbus/udp_if/payload> :
 	Register(s) build_packet.load_buf_int has(ve) been backward balanced into : build_packet.load_buf_int_BRB0 build_packet.load_buf_int_BRB1.
 	Register(s) next_addr_block.addr_int_10 has(ve) been backward balanced into : next_addr_block.addr_int_10_BRB0 next_addr_block.addr_int_10_BRB4.
@@ -3314,34 +3348,6 @@ Processing Unit <ipbus/udp_if/status> :
 	Register(s) next_addr.next_addr_6 has(ve) been backward balanced into : next_addr.next_addr_6_BRB0 next_addr.next_addr_6_BRB2 next_addr.next_addr_6_BRB3 next_addr.next_addr_6_BRB5.
 	Register(s) send_pending has(ve) been backward balanced into : send_pending_BRB0 send_pending_BRB1.
 Unit <ipbus/udp_if/status> processed.
-
-Processing Unit <ipbus/udp_if/tx_ram_selector> :
-	Register(s) busy_block.busy_i has(ve) been backward balanced into : busy_block.busy_i_BRB1 busy_block.busy_i_BRB2 busy_block.busy_i_BRB3 busy_block.busy_i_BRB4.
-	Register(s) req_send_block.sending_i has(ve) been backward balanced into : req_send_block.sending_i_BRB0 req_send_block.sending_i_BRB1.
-	Register(s) send_pending_block.send_pending_i_0 has(ve) been backward balanced into : send_pending_block.send_pending_i_0_BRB4 send_pending_block.send_pending_i_0_BRB5.
-	Register(s) send_pending_block.send_pending_i_1 has(ve) been backward balanced into : send_pending_block.send_pending_i_1_BRB4 send_pending_block.send_pending_i_1_BRB5.
-	Register(s) send_pending_block.send_pending_i_10 has(ve) been backward balanced into : send_pending_block.send_pending_i_10_BRB4 send_pending_block.send_pending_i_10_BRB5.
-	Register(s) send_pending_block.send_pending_i_11 has(ve) been backward balanced into : send_pending_block.send_pending_i_11_BRB4 send_pending_block.send_pending_i_11_BRB5.
-	Register(s) send_pending_block.send_pending_i_12 has(ve) been backward balanced into : send_pending_block.send_pending_i_12_BRB0 send_pending_block.send_pending_i_12_BRB1 send_pending_block.send_pending_i_12_BRB2 send_pending_block.send_pending_i_12_BRB3 send_pending_block.send_pending_i_12_BRB4 send_pending_block.send_pending_i_12_BRB5.
-	Register(s) send_pending_block.send_pending_i_13 has(ve) been backward balanced into : send_pending_block.send_pending_i_13_BRB4 send_pending_block.send_pending_i_13_BRB5.
-	Register(s) send_pending_block.send_pending_i_14 has(ve) been backward balanced into : send_pending_block.send_pending_i_14_BRB4 send_pending_block.send_pending_i_14_BRB5.
-	Register(s) send_pending_block.send_pending_i_15 has(ve) been backward balanced into : send_pending_block.send_pending_i_15_BRB4 send_pending_block.send_pending_i_15_BRB5.
-	Register(s) send_pending_block.send_pending_i_2 has(ve) been backward balanced into : send_pending_block.send_pending_i_2_BRB4 send_pending_block.send_pending_i_2_BRB5.
-	Register(s) send_pending_block.send_pending_i_3 has(ve) been backward balanced into : send_pending_block.send_pending_i_3_BRB4 send_pending_block.send_pending_i_3_BRB5.
-	Register(s) send_pending_block.send_pending_i_4 has(ve) been backward balanced into : send_pending_block.send_pending_i_4_BRB4 send_pending_block.send_pending_i_4_BRB5.
-	Register(s) send_pending_block.send_pending_i_5 has(ve) been backward balanced into : send_pending_block.send_pending_i_5_BRB4 send_pending_block.send_pending_i_5_BRB5.
-	Register(s) send_pending_block.send_pending_i_6 has(ve) been backward balanced into : send_pending_block.send_pending_i_6_BRB4 send_pending_block.send_pending_i_6_BRB5.
-	Register(s) send_pending_block.send_pending_i_7 has(ve) been backward balanced into : send_pending_block.send_pending_i_7_BRB4 send_pending_block.send_pending_i_7_BRB5.
-	Register(s) send_pending_block.send_pending_i_8 has(ve) been backward balanced into : send_pending_block.send_pending_i_8_BRB0 send_pending_block.send_pending_i_8_BRB4 send_pending_block.send_pending_i_8_BRB5.
-	Register(s) send_pending_block.send_pending_i_9 has(ve) been backward balanced into : send_pending_block.send_pending_i_9_BRB4 send_pending_block.send_pending_i_9_BRB5.
-Unit <ipbus/udp_if/tx_ram_selector> processed.
-
-Processing Unit <ipbus/udp_if/tx_main> :
-	Register(s) state_machine.addr_to_set_int_1 has(ve) been backward balanced into : state_machine.addr_to_set_int_1_BRB1 state_machine.addr_to_set_int_1_BRB2 state_machine.addr_to_set_int_1_BRB4.
-	Register(s) state_machine.set_addr_int has(ve) been backward balanced into : state_machine.set_addr_int_BRB0 state_machine.set_addr_int_BRB1 state_machine.set_addr_int_BRB2.
-	Register(s) state_machine.state_0 has(ve) been backward balanced into : state_machine.state_0_BRB0 state_machine.state_0_BRB1 state_machine.state_0_BRB2 state_machine.state_0_BRB3 state_machine.state_0_BRB4 state_machine.state_0_BRB5.
-	Register(s) state_machine.state_1 has(ve) been backward balanced into : state_machine.state_1_BRB0 state_machine.state_1_BRB1 state_machine.state_1_BRB3 state_machine.state_1_BRB4.
-Unit <ipbus/udp_if/tx_main> processed.
 
 Processing Unit <slaves/TDCchannels> :
 	Register(s) triggerCounter_0 has(ve) been backward balanced into : triggerCounter_0_BRB0 triggerCounter_0_BRB1.
@@ -3428,8 +3434,8 @@ Unit <u_i2cSlave> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 4774
- Flip-Flops                                            : 4774
+# Registers                                            : 4780
+ Flip-Flops                                            : 4780
 # Shift Registers                                      : 19
  10-bit shift register                                 : 1
  13-bit shift register                                 : 16
@@ -3456,32 +3462,32 @@ Top Level Output File Name         : top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 6896
+# BELS                             : 6954
 #      GND                         : 37
-#      INV                         : 75
+#      INV                         : 73
 #      LUT1                        : 345
-#      LUT2                        : 1087
-#      LUT3                        : 1185
-#      LUT4                        : 531
-#      LUT5                        : 643
-#      LUT6                        : 1742
-#      MUXCY                       : 639
+#      LUT2                        : 1085
+#      LUT3                        : 1191
+#      LUT4                        : 537
+#      LUT5                        : 657
+#      LUT6                        : 1748
+#      MUXCY                       : 653
 #      MUXF5                       : 1
 #      MUXF7                       : 66
 #      MUXF8                       : 5
 #      VCC                         : 32
-#      XORCY                       : 508
-# FlipFlops/Latches                : 5833
-#      FD                          : 1592
+#      XORCY                       : 524
+# FlipFlops/Latches                : 5839
+#      FD                          : 1590
 #      FDC                         : 141
 #      FDC_1                       : 6
 #      FDCE                        : 74
 #      FDE                         : 1610
 #      FDP                         : 44
 #      FDPE                        : 2
-#      FDR                         : 483
+#      FDR                         : 493
 #      FDRE                        : 1734
-#      FDS                         : 60
+#      FDS                         : 58
 #      FDSE                        : 86
 #      ODDR2                       : 1
 # RAMS                             : 57
@@ -3517,18 +3523,18 @@ Selected Device : 6slx45csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            5833  out of  54576    10%  
- Number of Slice LUTs:                 5706  out of  27288    20%  
-    Number used as Logic:              5608  out of  27288    20%  
+ Number of Slice Registers:            5839  out of  54576    10%  
+ Number of Slice LUTs:                 5734  out of  27288    21%  
+    Number used as Logic:              5636  out of  27288    20%  
     Number used as Memory:               98  out of   6408     1%  
        Number used as RAM:               52
        Number used as SRL:               46
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   7793
-   Number with an unused Flip Flop:    1960  out of   7793    25%  
-   Number with an unused LUT:          2087  out of   7793    26%  
-   Number of fully used LUT-FF pairs:  3746  out of   7793    48%  
+ Number of LUT Flip Flop pairs used:   7815
+   Number with an unused Flip Flop:    1976  out of   7815    25%  
+   Number with an unused LUT:          2081  out of   7815    26%  
+   Number of fully used LUT-FF pairs:  3758  out of   7815    48%  
    Number of unique control sets:       338
 
 IO Utilization: 
@@ -3566,7 +3572,7 @@ gmii_rx_clk                                    | IBUFG+BUFIO2           | 464   
 clocks/clk_125_i                               | BUFG                   | 3767  |
 sysclk                                         | IBUFG                  | 369   |
 clocks/clk_ipb_i                               | BUFG                   | 884   |
-slaves/TDCchannels/PLLgen/pll_base_inst/CLKOUT4| BUFG                   | 455   |
+slaves/TDCchannels/PLLgen/pll_base_inst/CLKOUT4| BUFG                   | 461   |
 slaves/TDCchannels/PLLgen/pll_base_inst/CLKOUT0| BUFG                   | 12    |
 hit2_P                                         | IBUFGDS+BUFG           | 10    |
 hit1_P                                         | IBUFGDS+BUFG           | 10    |
@@ -3662,8 +3668,8 @@ Delay:               5.872ns (Levels of Logic = 4)
      FDR:C->Q             14   0.447   1.186  prescaler_7 (prescaler_7)
      LUT3:I0->O            1   0.205   0.580  _n0342_inv1_SW0 (N4)
      LUT6:I5->O          113   0.205   2.159  _n0342_inv1 (tick_n)
-     LUT5:I1->O            1   0.203   0.580  Mmux__n032822 (Mmux__n032821)
-     LUT5:I4->O            1   0.205   0.000  Mmux__n032823 (FSMstate_next<1>)
+     LUT5:I1->O            1   0.203   0.580  Mmux__n031322 (Mmux__n031321)
+     LUT5:I4->O            1   0.205   0.000  Mmux__n031323 (FSMstate_next<1>)
      FD:D                      0.102          FSMstate_1
     ----------------------------------------
     Total                      5.872ns (1.367ns logic, 4.505ns route)
@@ -3710,33 +3716,29 @@ Delay:               6.895ns (Levels of Logic = 12)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'slaves/TDCchannels/PLLgen/pll_base_inst/CLKOUT4'
-  Clock period: 5.760ns (frequency: 173.623MHz)
-  Total number of paths / destination ports: 13118 / 1092
+  Clock period: 5.351ns (frequency: 186.883MHz)
+  Total number of paths / destination ports: 14894 / 1096
 -------------------------------------------------------------------------
-Delay:               5.760ns (Levels of Logic = 7)
-  Source:            slaves/TDCchannels/dc2/TDCcore/hit_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i (FF)
-  Destination:       slaves/TDCchannels/dc2/TDCcore/hit_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i (FF)
+Delay:               5.351ns (Levels of Logic = 4)
+  Source:            slaves/TDCchannels/dc2/TDCcore/hit_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/dout_i_1 (FF)
+  Destination:       slaves/TDCchannels/dc2/hit1_0 (FF)
   Source Clock:      slaves/TDCchannels/PLLgen/pll_base_inst/CLKOUT4 rising
   Destination Clock: slaves/TDCchannels/PLLgen/pll_base_inst/CLKOUT4 rising
 
-  Data Path: slaves/TDCchannels/dc2/TDCcore/hit_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i to slaves/TDCchannels/dc2/TDCcore/hit_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_i
+  Data Path: slaves/TDCchannels/dc2/TDCcore/hit_fifo/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/dout_i_1 to slaves/TDCchannels/dc2/hit1_0
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDP:C->Q              1   0.447   0.579  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/grss.rsts/ram_empty_i (empty)
-     end scope: 'slaves/TDCchannels/dc2/TDCcore/hit_fifo:empty'
-     INV:I->O              5   0.206   1.059  fifo_data_available1_INV_0 (fifo_data_available)
-     end scope: 'slaves/TDCchannels/dc2/TDCcore:fifo_data_available'
-     LUT5:I0->O            3   0.203   0.755  FSMstate_read_fifo1 (read_fifo)
-     begin scope: 'slaves/TDCchannels/dc2/TDCcore:read_fifo'
-     begin scope: 'slaves/TDCchannels/dc2/TDCcore/hit_fifo:rd_en'
-     LUT2:I0->O           21   0.203   1.114  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/ram_rd_en_i1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/ram_rd_en_i)
-     LUT6:I5->O            1   0.205   0.684  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_comb2 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_comb2)
-     LUT6:I4->O            2   0.203   0.000  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_comb5 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_comb)
-     FDP:D                     0.102          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwss.wsts/ram_full_fb_i
+     FDCE:C->Q             6   0.447   1.089  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.mem/gdm.dm/dout_i_1 (dout<1>)
+     end scope: 'slaves/TDCchannels/dc2/TDCcore/hit_fifo:dout<1>'
+     end scope: 'slaves/TDCchannels/dc2/TDCcore:fifo_dout<1>'
+     LUT6:I1->O            1   0.203   0.944  TDCfifo_dout[7]_hit0[7]_equal_17_o81 (TDCfifo_dout[7]_hit0[7]_equal_17_o8)
+     LUT6:I0->O           12   0.203   1.137  TDCfifo_dout[7]_hit0[7]_equal_17_o83 (TDCfifo_dout[7]_hit0[7]_equal_17_o)
+     LUT4:I1->O            8   0.205   0.802  FSMstate_FSM_FFd1-In121 (FSMstate_FSM_FFd1-In12)
+     FDE:CE                    0.322          hit1_0
     ----------------------------------------
-    Total                      5.760ns (1.569ns logic, 4.191ns route)
-                                       (27.2% logic, 72.8% route)
+    Total                      5.351ns (1.380ns logic, 3.971ns route)
+                                       (25.8% logic, 74.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'slaves/TDCchannels/PLLgen/pll_base_inst/CLKOUT0'
@@ -3890,7 +3892,7 @@ Offset:              5.724ns (Levels of Logic = 4)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FD:C->Q              12   0.447   1.137  FSMstate_2 (FSMstate_2)
-     LUT3:I0->O            1   0.205   0.579  Mmux__n0328141 (scapt)
+     LUT3:I0->O            1   0.205   0.579  Mmux__n0313141 (scapt)
      end scope: 'myprogrammer/_i000014:scapt'
      INV:I->O              1   0.206   0.579  p_scapt_inv1_INV_0 (p_scapt_inv)
      end scope: 'myprogrammer:p_scapt_inv'
@@ -4009,7 +4011,7 @@ Source Clock                                   |Dest:Rise|Dest:Rise|Dest:Fall|De
 clocks/clk_ipb_i                               |    1.371|         |         |         |
 hit1_P                                         |    1.128|         |         |         |
 hit2_P                                         |    1.128|         |         |         |
-slaves/TDCchannels/PLLgen/pll_base_inst/CLKOUT4|    5.760|         |         |         |
+slaves/TDCchannels/PLLgen/pll_base_inst/CLKOUT4|    5.351|         |         |         |
 -----------------------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock sysclk
@@ -4024,15 +4026,15 @@ sysclk          |    5.872|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 59.00 secs
-Total CPU time to Xst completion: 55.10 secs
+Total REAL time to Xst completion: 58.00 secs
+Total CPU time to Xst completion: 55.35 secs
  
 --> 
 
 
-Total memory usage is 611336 kilobytes
+Total memory usage is 611388 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  735 (   0 filtered)
+Number of warnings :  736 (   0 filtered)
 Number of infos    :  267 (   0 filtered)
 
