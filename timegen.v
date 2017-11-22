@@ -44,11 +44,19 @@ module timegen(
 		
 	wire hit,hit_ub;
 	reg hit_enable;
+	
+	reg [3:0] hitenablectr;
 	always @(negedge hit_in) begin
 		if(RESET)
 			hit_enable<=0;
-		else
-			hit_enable <=  ~hit_enable;
+		else begin
+			hitenablectr<=hitenablectr+1;
+			if(hitenablectr==0)
+				hit_enable<=1;
+			else
+				hit_enable<=0;
+			//hit_enable <=  ~hit_enable;
+		end
 	end
 
 	assign hit_ub = (enableHitskip) ? (hit_in && hit_enable) : hit_in;

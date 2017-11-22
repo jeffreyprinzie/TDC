@@ -4,14 +4,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 0.00 secs
+Total REAL time to Xst completion: 1.00 secs
 Total CPU time to Xst completion: 0.05 secs
  
 --> 
@@ -389,9 +389,10 @@ Elaborating module <PLL_BASE(BANDWIDTH="HIGH",CLK_FEEDBACK="CLKFBOUT",COMPENSATI
 Elaborating module <BUFG>.
 
 Elaborating module <dataChannel>.
-WARNING:HDLCompiler:1016 - "/home/Administrators/jeffrey/xilinx/work/timegen.v" Line 85: Port full is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/Administrators/jeffrey/xilinx/work/timegen.v" Line 93: Port full is not connected to this instance
 
 Elaborating module <timegen>.
+WARNING:HDLCompiler:413 - "/home/Administrators/jeffrey/xilinx/work/timegen.v" Line 53: Result of 5-bit expression is truncated to fit in 4-bit target.
 
 Elaborating module <hitFIFO>.
 WARNING:HDLCompiler:1499 - "/home/Administrators/jeffrey/xilinx/work/source/TDC/ipcore_dir/hitFIFO.v" Line 39: Empty module <hitFIFO> remains a black box.
@@ -1298,7 +1299,7 @@ Synthesizing Unit <transactor_sm>.
     Found 8-bit adder for signal <timer[7]_GND_367_o_add_38_OUT> created at line 1241.
     Found 32-bit adder for signal <rmw_input[31]_rx_data[31]_add_44_OUT> created at line 166.
     Found 8-bit subtractor for signal <GND_367_o_GND_367_o_sub_29_OUT<7:0>> created at line 1308.
-    Found 4-bit 4-to-1 multiplexer for signal <_n0265> created at line 61.
+    Found 4-bit 4-to-1 multiplexer for signal <_n0237> created at line 61.
     Summary:
 	inferred   5 Adder/Subtractor(s).
 	inferred 190 D-type flip-flop(s).
@@ -1450,12 +1451,13 @@ Unit <dataChannel> synthesized.
 
 Synthesizing Unit <timegen>.
     Related source file is "/home/Administrators/jeffrey/xilinx/work/timegen.v".
-INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/timegen.v" line 85: Output port <full> of the instance <hit_fifo> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/timegen.v" line 93: Output port <full> of the instance <hit_fifo> is unconnected or connected to loadless signal.
     Found 4-bit register for signal <hit_registers_L0>.
     Found 3-bit register for signal <counter_val_CK0_L0>.
     Found 3-bit register for signal <counter_val_CK180_L0>.
     Found 3-bit register for signal <counter_val_CK0>.
     Found 3-bit register for signal <counter_val_CK180>.
+    Found 4-bit register for signal <hitenablectr>.
     Found 4-bit register for signal <hit_registers_L1>.
     Found 3-bit register for signal <counter_val_CK0_L1>.
     Found 3-bit register for signal <counter_val_CK180_L1>.
@@ -1479,11 +1481,12 @@ INFO:Xst:3210 - "/home/Administrators/jeffrey/xilinx/work/timegen.v" line 85: Ou
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 3-bit adder for signal <counter_val_CK180_L1[2]_GND_460_o_add_17_OUT> created at line 140.
-    Found 3-bit adder for signal <counter_val_CK0[2]_GND_460_o_add_57_OUT> created at line 258.
+    Found 4-bit adder for signal <hitenablectr[3]_GND_460_o_add_1_OUT> created at line 53.
+    Found 3-bit adder for signal <counter_val_CK180_L1[2]_GND_460_o_add_21_OUT> created at line 148.
+    Found 3-bit adder for signal <counter_val_CK0[2]_GND_460_o_add_61_OUT> created at line 266.
     Summary:
-	inferred   2 Adder/Subtractor(s).
-	inferred  36 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
 	inferred   1 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <timegen> synthesized.
@@ -1647,7 +1650,7 @@ Macro Statistics
  4096x8-bit dual-port RAM                              : 1
  8192x32-bit dual-port RAM                             : 1
  8192x8-bit dual-port RAM                              : 4
-# Adders/Subtractors                                   : 54
+# Adders/Subtractors                                   : 56
  1-bit adder                                           : 2
  10-bit adder                                          : 1
  12-bit adder                                          : 2
@@ -1660,14 +1663,14 @@ Macro Statistics
  3-bit adder                                           : 5
  3-bit subtractor                                      : 1
  32-bit adder                                          : 6
- 4-bit adder                                           : 4
+ 4-bit adder                                           : 6
  5-bit adder                                           : 1
  6-bit adder                                           : 3
  7-bit adder                                           : 1
  8-bit adder                                           : 8
  8-bit subtractor                                      : 2
  9-bit adder                                           : 4
-# Registers                                            : 503
+# Registers                                            : 505
  1-bit register                                        : 227
  10-bit register                                       : 5
  11-bit register                                       : 1
@@ -1686,7 +1689,7 @@ Macro Statistics
  34-bit register                                       : 1
  36-bit register                                       : 1
  38-bit register                                       : 2
- 4-bit register                                        : 18
+ 4-bit register                                        : 20
  42-bit register                                       : 3
  45-bit register                                       : 2
  48-bit register                                       : 3
@@ -1904,6 +1907,7 @@ Unit <rammgmt> synthesized (advanced).
 
 Synthesizing (advanced) Unit <timegen>.
 The following registers are absorbed into counter <counter_val_CK0>: 1 register on signal <counter_val_CK0>.
+The following registers are absorbed into counter <hitenablectr>: 1 register on signal <hitenablectr>.
 Unit <timegen> synthesized (advanced).
 
 Synthesizing (advanced) Unit <transactor_if>.
@@ -2117,7 +2121,7 @@ Macro Statistics
  7-bit adder                                           : 1
  8-bit adder                                           : 4
  9-bit adder                                           : 4
-# Counters                                             : 34
+# Counters                                             : 36
  1-bit up counter                                      : 2
  10-bit up counter                                     : 1
  12-bit up counter                                     : 2
@@ -2129,7 +2133,7 @@ Macro Statistics
  3-bit down counter                                    : 1
  3-bit up counter                                      : 2
  32-bit up counter                                     : 4
- 4-bit up counter                                      : 4
+ 4-bit up counter                                      : 6
  6-bit up counter                                      : 1
  8-bit down counter                                    : 2
  8-bit up counter                                      : 5
@@ -3006,7 +3010,15 @@ WARNING:Xst:2677 - Node <cnt_25> of sequential type is unconnected in block <clk
 WARNING:Xst:2677 - Node <cnt_26> of sequential type is unconnected in block <clkdiv>.
 WARNING:Xst:2677 - Node <cnt_27> of sequential type is unconnected in block <clkdiv>.
 WARNING:Xst:2677 - Node <hit_enable> of sequential type is unconnected in block <TDCcore>.
+WARNING:Xst:2677 - Node <hitenablectr_0> of sequential type is unconnected in block <TDCcore>.
+WARNING:Xst:2677 - Node <hitenablectr_1> of sequential type is unconnected in block <TDCcore>.
+WARNING:Xst:2677 - Node <hitenablectr_2> of sequential type is unconnected in block <TDCcore>.
+WARNING:Xst:2677 - Node <hitenablectr_3> of sequential type is unconnected in block <TDCcore>.
 WARNING:Xst:2677 - Node <hit_enable> of sequential type is unconnected in block <TDCcore>.
+WARNING:Xst:2677 - Node <hitenablectr_0> of sequential type is unconnected in block <TDCcore>.
+WARNING:Xst:2677 - Node <hitenablectr_1> of sequential type is unconnected in block <TDCcore>.
+WARNING:Xst:2677 - Node <hitenablectr_2> of sequential type is unconnected in block <TDCcore>.
+WARNING:Xst:2677 - Node <hitenablectr_3> of sequential type is unconnected in block <TDCcore>.
 WARNING:Xst:2677 - Node <clean_block.clean_i_0> of sequential type is unconnected in block <rx_ram_selector>.
 WARNING:Xst:2677 - Node <clean_block.clean_i_1> of sequential type is unconnected in block <rx_ram_selector>.
 WARNING:Xst:2677 - Node <clean_block.clean_i_2> of sequential type is unconnected in block <rx_ram_selector>.
@@ -3252,6 +3264,45 @@ Processing Unit <ipbus/udp_if/rx_ram_selector> :
 	Register(s) busy_block.busy_i has(ve) been backward balanced into : busy_block.busy_i_BRB0 busy_block.busy_i_BRB1.
 Unit <ipbus/udp_if/rx_ram_selector> processed.
 
+Processing Unit <ipbus/udp_if/ARP> :
+	Register(s) send_packet.send_pending has(ve) been backward balanced into : send_packet.send_pending_BRB0 send_packet.send_pending_BRB1.
+Unit <ipbus/udp_if/ARP> processed.
+
+Processing Unit <ipbus/udp_if/payload> :
+	Register(s) build_packet.load_buf_int has(ve) been backward balanced into : build_packet.load_buf_int_BRB0 build_packet.load_buf_int_BRB1.
+	Register(s) next_addr_block.addr_int_10 has(ve) been backward balanced into : next_addr_block.addr_int_10_BRB0 next_addr_block.addr_int_10_BRB4.
+	Register(s) next_addr_block.addr_int_11 has(ve) been backward balanced into : next_addr_block.addr_int_11_BRB0 next_addr_block.addr_int_11_BRB4.
+	Register(s) next_addr_block.addr_int_12 has(ve) been backward balanced into : next_addr_block.addr_int_12_BRB0 next_addr_block.addr_int_12_BRB1 next_addr_block.addr_int_12_BRB2 next_addr_block.addr_int_12_BRB3 next_addr_block.addr_int_12_BRB4.
+	Register(s) next_addr_block.addr_int_6 has(ve) been backward balanced into : next_addr_block.addr_int_6_BRB0 next_addr_block.addr_int_6_BRB4.
+	Register(s) next_addr_block.addr_int_7 has(ve) been backward balanced into : next_addr_block.addr_int_7_BRB0 next_addr_block.addr_int_7_BRB4.
+	Register(s) next_addr_block.addr_int_8 has(ve) been backward balanced into : next_addr_block.addr_int_8_BRB0 next_addr_block.addr_int_8_BRB4.
+	Register(s) next_addr_block.addr_int_9 has(ve) been backward balanced into : next_addr_block.addr_int_9_BRB0 next_addr_block.addr_int_9_BRB4.
+	Register(s) write_data.shift_buf_0 has(ve) been backward balanced into : write_data.shift_buf_0_BRB0 write_data.shift_buf_0_BRB1 write_data.shift_buf_0_BRB2 write_data.shift_buf_0_BRB3.
+	Register(s) write_data.shift_buf_1 has(ve) been backward balanced into : write_data.shift_buf_1_BRB2 write_data.shift_buf_1_BRB3.
+	Register(s) write_data.shift_buf_10 has(ve) been backward balanced into : write_data.shift_buf_10_BRB2 write_data.shift_buf_10_BRB5.
+	Register(s) write_data.shift_buf_11 has(ve) been backward balanced into : write_data.shift_buf_11_BRB2 write_data.shift_buf_11_BRB5.
+	Register(s) write_data.shift_buf_12 has(ve) been backward balanced into : write_data.shift_buf_12_BRB2 write_data.shift_buf_12_BRB5.
+	Register(s) write_data.shift_buf_13 has(ve) been backward balanced into : write_data.shift_buf_13_BRB2 write_data.shift_buf_13_BRB5.
+	Register(s) write_data.shift_buf_14 has(ve) been backward balanced into : write_data.shift_buf_14_BRB2 write_data.shift_buf_14_BRB5.
+	Register(s) write_data.shift_buf_15 has(ve) been backward balanced into : write_data.shift_buf_15_BRB2 write_data.shift_buf_15_BRB5.
+	Register(s) write_data.shift_buf_2 has(ve) been backward balanced into : write_data.shift_buf_2_BRB2 write_data.shift_buf_2_BRB3.
+	Register(s) write_data.shift_buf_3 has(ve) been backward balanced into : write_data.shift_buf_3_BRB2 write_data.shift_buf_3_BRB3.
+	Register(s) write_data.shift_buf_4 has(ve) been backward balanced into : write_data.shift_buf_4_BRB2 write_data.shift_buf_4_BRB3.
+	Register(s) write_data.shift_buf_5 has(ve) been backward balanced into : write_data.shift_buf_5_BRB2 write_data.shift_buf_5_BRB3.
+	Register(s) write_data.shift_buf_6 has(ve) been backward balanced into : write_data.shift_buf_6_BRB2 write_data.shift_buf_6_BRB3.
+	Register(s) write_data.shift_buf_7 has(ve) been backward balanced into : write_data.shift_buf_7_BRB2 write_data.shift_buf_7_BRB3.
+	Register(s) write_data.shift_buf_8 has(ve) been backward balanced into : write_data.shift_buf_8_BRB2 write_data.shift_buf_8_BRB5.
+	Register(s) write_data.shift_buf_9 has(ve) been backward balanced into : write_data.shift_buf_9_BRB2 write_data.shift_buf_9_BRB5.
+Unit <ipbus/udp_if/payload> processed.
+
+Processing Unit <ipbus/udp_if/status> :
+	Register(s) next_addr.next_addr_2 has(ve) been backward balanced into : next_addr.next_addr_2_BRB0 next_addr.next_addr_2_BRB1 next_addr.next_addr_2_BRB2 next_addr.next_addr_2_BRB3 next_addr.next_addr_2_BRB4.
+	Register(s) next_addr.next_addr_4 has(ve) been backward balanced into : next_addr.next_addr_4_BRB0 next_addr.next_addr_4_BRB2.
+	Register(s) next_addr.next_addr_5 has(ve) been backward balanced into : next_addr.next_addr_5_BRB0 next_addr.next_addr_5_BRB1 next_addr.next_addr_5_BRB3 next_addr.next_addr_5_BRB4 next_addr.next_addr_5_BRB8 next_addr.next_addr_5_BRB10 next_addr.next_addr_5_BRB11 next_addr.next_addr_5_BRB13 next_addr.next_addr_5_BRB15.
+	Register(s) next_addr.next_addr_6 has(ve) been backward balanced into : next_addr.next_addr_6_BRB0 next_addr.next_addr_6_BRB2 next_addr.next_addr_6_BRB3 next_addr.next_addr_6_BRB5.
+	Register(s) send_pending has(ve) been backward balanced into : send_pending_BRB0 send_pending_BRB1.
+Unit <ipbus/udp_if/status> processed.
+
 Processing Unit <ipbus/trans/iface> :
 	Register(s) dsel has(ve) been backward balanced into : dsel_BRB0 dsel_BRB1.
 	Register(s) first has(ve) been backward balanced into : first_BRB0 first_BRB1.
@@ -3337,41 +3388,6 @@ Processing Unit <ipbus/trans/sm> :
 	Register(s) state_FSM_FFd2 has(ve) been backward balanced into : state_FSM_FFd2_BRB0 state_FSM_FFd2_BRB1 state_FSM_FFd2_BRB2 state_FSM_FFd2_BRB3 state_FSM_FFd2_BRB5.
 Unit <ipbus/trans/sm> processed.
 
-Processing Unit <ipbus/udp_if/payload> :
-	Register(s) build_packet.load_buf_int has(ve) been backward balanced into : build_packet.load_buf_int_BRB0 build_packet.load_buf_int_BRB1.
-	Register(s) next_addr_block.addr_int_10 has(ve) been backward balanced into : next_addr_block.addr_int_10_BRB0 next_addr_block.addr_int_10_BRB4.
-	Register(s) next_addr_block.addr_int_11 has(ve) been backward balanced into : next_addr_block.addr_int_11_BRB0 next_addr_block.addr_int_11_BRB4.
-	Register(s) next_addr_block.addr_int_12 has(ve) been backward balanced into : next_addr_block.addr_int_12_BRB0 next_addr_block.addr_int_12_BRB1 next_addr_block.addr_int_12_BRB2 next_addr_block.addr_int_12_BRB3 next_addr_block.addr_int_12_BRB4.
-	Register(s) next_addr_block.addr_int_6 has(ve) been backward balanced into : next_addr_block.addr_int_6_BRB0 next_addr_block.addr_int_6_BRB4.
-	Register(s) next_addr_block.addr_int_7 has(ve) been backward balanced into : next_addr_block.addr_int_7_BRB0 next_addr_block.addr_int_7_BRB4.
-	Register(s) next_addr_block.addr_int_8 has(ve) been backward balanced into : next_addr_block.addr_int_8_BRB0 next_addr_block.addr_int_8_BRB4.
-	Register(s) next_addr_block.addr_int_9 has(ve) been backward balanced into : next_addr_block.addr_int_9_BRB0 next_addr_block.addr_int_9_BRB4.
-	Register(s) write_data.shift_buf_0 has(ve) been backward balanced into : write_data.shift_buf_0_BRB0 write_data.shift_buf_0_BRB1 write_data.shift_buf_0_BRB2 write_data.shift_buf_0_BRB3.
-	Register(s) write_data.shift_buf_1 has(ve) been backward balanced into : write_data.shift_buf_1_BRB2 write_data.shift_buf_1_BRB3.
-	Register(s) write_data.shift_buf_10 has(ve) been backward balanced into : write_data.shift_buf_10_BRB2 write_data.shift_buf_10_BRB5.
-	Register(s) write_data.shift_buf_11 has(ve) been backward balanced into : write_data.shift_buf_11_BRB2 write_data.shift_buf_11_BRB5.
-	Register(s) write_data.shift_buf_12 has(ve) been backward balanced into : write_data.shift_buf_12_BRB2 write_data.shift_buf_12_BRB5.
-	Register(s) write_data.shift_buf_13 has(ve) been backward balanced into : write_data.shift_buf_13_BRB2 write_data.shift_buf_13_BRB5.
-	Register(s) write_data.shift_buf_14 has(ve) been backward balanced into : write_data.shift_buf_14_BRB2 write_data.shift_buf_14_BRB5.
-	Register(s) write_data.shift_buf_15 has(ve) been backward balanced into : write_data.shift_buf_15_BRB2 write_data.shift_buf_15_BRB5.
-	Register(s) write_data.shift_buf_2 has(ve) been backward balanced into : write_data.shift_buf_2_BRB2 write_data.shift_buf_2_BRB3.
-	Register(s) write_data.shift_buf_3 has(ve) been backward balanced into : write_data.shift_buf_3_BRB2 write_data.shift_buf_3_BRB3.
-	Register(s) write_data.shift_buf_4 has(ve) been backward balanced into : write_data.shift_buf_4_BRB2 write_data.shift_buf_4_BRB3.
-	Register(s) write_data.shift_buf_5 has(ve) been backward balanced into : write_data.shift_buf_5_BRB2 write_data.shift_buf_5_BRB3.
-	Register(s) write_data.shift_buf_6 has(ve) been backward balanced into : write_data.shift_buf_6_BRB2 write_data.shift_buf_6_BRB3.
-	Register(s) write_data.shift_buf_7 has(ve) been backward balanced into : write_data.shift_buf_7_BRB2 write_data.shift_buf_7_BRB3.
-	Register(s) write_data.shift_buf_8 has(ve) been backward balanced into : write_data.shift_buf_8_BRB2 write_data.shift_buf_8_BRB5.
-	Register(s) write_data.shift_buf_9 has(ve) been backward balanced into : write_data.shift_buf_9_BRB2 write_data.shift_buf_9_BRB5.
-Unit <ipbus/udp_if/payload> processed.
-
-Processing Unit <ipbus/udp_if/status> :
-	Register(s) next_addr.next_addr_2 has(ve) been backward balanced into : next_addr.next_addr_2_BRB0 next_addr.next_addr_2_BRB1 next_addr.next_addr_2_BRB2 next_addr.next_addr_2_BRB3 next_addr.next_addr_2_BRB4.
-	Register(s) next_addr.next_addr_4 has(ve) been backward balanced into : next_addr.next_addr_4_BRB0 next_addr.next_addr_4_BRB2.
-	Register(s) next_addr.next_addr_5 has(ve) been backward balanced into : next_addr.next_addr_5_BRB0 next_addr.next_addr_5_BRB1 next_addr.next_addr_5_BRB3 next_addr.next_addr_5_BRB4 next_addr.next_addr_5_BRB8 next_addr.next_addr_5_BRB10 next_addr.next_addr_5_BRB11 next_addr.next_addr_5_BRB13 next_addr.next_addr_5_BRB15.
-	Register(s) next_addr.next_addr_6 has(ve) been backward balanced into : next_addr.next_addr_6_BRB0 next_addr.next_addr_6_BRB2 next_addr.next_addr_6_BRB3 next_addr.next_addr_6_BRB5.
-	Register(s) send_pending has(ve) been backward balanced into : send_pending_BRB0 send_pending_BRB1.
-Unit <ipbus/udp_if/status> processed.
-
 Processing Unit <slaves/TDCchannels> :
 	Register(s) triggerCounter_0 has(ve) been backward balanced into : triggerCounter_0_BRB0 triggerCounter_0_BRB1.
 	Register(s) triggerCounter_1 has(ve) been backward balanced into : triggerCounter_1_BRB0 .
@@ -3382,10 +3398,6 @@ Processing Unit <slaves/TDCchannels> :
 	Register(s) triggerCounter_6 has(ve) been backward balanced into : triggerCounter_6_BRB0 .
 	Register(s) triggerCounter_7 has(ve) been backward balanced into : triggerCounter_7_BRB0 .
 Unit <slaves/TDCchannels> processed.
-
-Processing Unit <ipbus/udp_if/ARP> :
-	Register(s) send_packet.send_pending has(ve) been backward balanced into : send_packet.send_pending_BRB0 send_packet.send_pending_BRB1.
-Unit <ipbus/udp_if/ARP> processed.
 
 Final Macro Processing ...
 
@@ -4029,15 +4041,15 @@ sysclk          |    5.872|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 55.00 secs
-Total CPU time to Xst completion: 55.20 secs
+Total REAL time to Xst completion: 58.00 secs
+Total CPU time to Xst completion: 54.84 secs
  
 --> 
 
 
-Total memory usage is 611588 kilobytes
+Total memory usage is 611548 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  736 (   0 filtered)
+Number of warnings :  745 (   0 filtered)
 Number of infos    :  267 (   0 filtered)
 
