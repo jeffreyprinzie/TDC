@@ -53,7 +53,7 @@ module TDCslave(
 	
 	
 	wire enableHitskip;
-	assign enableHitskip=0;
+	assign enableHitskip=1;
 	
 		reg [7:0] triggerCounter;
 	reg [31:0] hitCount1_tm1,hitCount2_tm1;

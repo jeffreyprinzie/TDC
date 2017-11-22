@@ -63,10 +63,10 @@
 <arg fmt="%s" index="7">IOCLK</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_eth_rx_clk_io = PERIOD &quot;eth_rx_clk_io&quot; TS_GMII_RX_CLK HIGH 50%&gt;</arg>
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; BEL = AFF;&gt; [atlys.ucf(274)]</arg> is overridden on the design object <arg fmt="%s" index="2">slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; BEL = AFF;&gt; [atlys.ucf(343)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; BEL = AFF;&gt; [atlys.ucf(274)]</arg> is overridden on the design object <arg fmt="%s" index="2">slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; BEL = AFF;&gt; [atlys.ucf(343)]</arg>.
 </msg>
 
-<msg type="warning" file="NgdBuild" num="1012" delta="new" >The constraint <arg fmt="%s" index="1">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; LOC = SLICE_X47Y56;&gt; [atlys.ucf(275)]</arg> is overridden on the design object <arg fmt="%s" index="2">slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; LOC = SLICE_X47Y56;&gt; [atlys.ucf(344)]</arg>.
+<msg type="warning" file="NgdBuild" num="1012" delta="old" >The constraint <arg fmt="%s" index="1">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; LOC = SLICE_X47Y56;&gt; [atlys.ucf(275)]</arg> is overridden on the design object <arg fmt="%s" index="2">slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0</arg> by the constraint <arg fmt="%s" index="3">&lt;INST &quot;slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0&quot; LOC = SLICE_X47Y56;&gt; [atlys.ucf(344)]</arg>.
 </msg>
 
 <msg type="warning" file="NgdBuild" num="452" delta="old" ><arg fmt="%s" index="1">logical</arg> net &apos;<arg fmt="%s" index="2">ipb_master_in_ipb_err</arg>&apos; has no driver
