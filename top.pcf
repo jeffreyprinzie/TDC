@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Nov 22 19:41:41 2017
+// Written by: Map P.20131013 on Fri Nov 24 11:47:04 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -99,8 +99,8 @@ COMP "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0<1>" LOCATE = SITE
 COMP "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0<3>" LOCATE = SITE
         "SLICE_X47Y57" LEVEL 1;
 COMPGRP pblock_counter_ch2.SLICE = COMP
+        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180_L0<2>" COMP
         "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180<2>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0_L0<2>" COMP
         "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0<1>";
 COMPGRP "pblock_counter_ch2.SLICE" LOCATE = SITE "SLICE_X46Y58:SLICE_X47Y63"
         LEVEL 4;
@@ -116,26 +116,27 @@ COMPGRP L1buffers_ch2.SLICE = COMP
 COMPGRP "L1buffers_ch2.SLICE" LOCATE = SITE "SLICE_X48Y56:SLICE_X51Y63" LEVEL
         4;
 COMPGRP L1buffers_ch1.SLICE = COMP
-        "slaves/TDCchannels/dc1/TDCcore/hit_registers_L1<3>" COMP
-        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0_L1<2>";
+        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180_L1<2>" COMP
+        "slaves/TDCchannels/dc1/TDCcore/hit_registers_L1<3>";
 COMPGRP "L1buffers_ch1.SLICE" LOCATE = SITE "SLICE_X48Y48:SLICE_X51Y55" LEVEL
         4;
 COMPGRP FSM_TDC2.SLICE = COMP
-        "slaves/TDCchannels/dc2/TDCcore/fine_time_decoded<0>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/fine_time_decoded<1>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/_n0138_inv" COMP
         "slaves/TDCchannels/dc2/TDCcore/FSMstate_FSM_FFd2" COMP
+        "slaves/TDCchannels/dc2/TDCcore/hit_syn" COMP
         "slaves/TDCchannels/dc2/TDCcore/coarse_time<1>" COMP
         "slaves/TDCchannels/dc2/TDCcore/coarse_time<0>" COMP
-        "slaves/TDCchannels/dc2/TDCcore/valid_hit";
+        "slaves/TDCchannels/dc2/TDCcore/fine_time_decoded<1>" COMP
+        "slaves/TDCchannels/dc2/TDCcore/coarse_time<2>";
 COMPGRP "FSM_TDC2.SLICE" LOCATE = SITE "SLICE_X52Y56:SLICE_X59Y63" SITE
         "SLICE_X30Y56:SLICE_X45Y63" LEVEL 4;
-COMPGRP FSM_TDC1.SLICE = COMP "slaves/TDCchannels/dc1/TDCcore/hit_ub" COMP
+COMPGRP FSM_TDC1.SLICE = COMP
+        "slaves/TDCchannels/dc1/TDCcore/fine_time_decoded<0>" COMP
+        "slaves/TDCchannels/dc1/TDCcore/FSMstate_FSM_FFd2" COMP
         "slaves/TDCchannels/dc1/TDCcore/fine_time_decoded<1>" COMP
-        "slaves/TDCchannels/dc1/TDCcore/valid_hit" COMP
-        "slaves/TDCchannels/dc1/TDCcore/coarse_time<2>" COMP
         "slaves/TDCchannels/dc1/TDCcore/FSMstate[3]_GND_460_o_AND_375_o" COMP
-        "slaves/TDCchannels/dc1/TDCcore/FSMstate_FSM_FFd2";
+        "slaves/TDCchannels/dc1/TDCcore/valid_hit" COMP
+        "slaves/TDCchannels/dc1/TDCcore/coarse_time<0>" COMP
+        "slaves/TDCchannels/dc1/TDCcore/coarse_time<2>";
 COMPGRP "FSM_TDC1.SLICE" LOCATE = SITE "SLICE_X52Y48:SLICE_X59Y55" SITE
         "SLICE_X30Y48:SLICE_X45Y55" LEVEL 4;
 TIMEGRP eth_rx_clk_io = BEL "eth/rx_er_r" BEL "eth/rx_dv_r" BEL "eth/rxd_r_0"
@@ -8676,6 +8677,7 @@ TIMEGRP tnm_sysclk = BEL "clocks/rst" BEL "clocks/d17_d" PIN
         "myprogrammer/UCOMM/u_registerInterface/myReg1_5" BEL
         "myprogrammer/UCOMM/u_registerInterface/myReg1_6" BEL
         "myprogrammer/UCOMM/u_registerInterface/myReg1_7" BEL
+        "myprogrammer/_i000014/oneHzdel" BEL
         "myprogrammer/_i000014/FSMstate_0" BEL
         "myprogrammer/_i000014/FSMstate_1" BEL
         "myprogrammer/_i000014/FSMstate_2" BEL
@@ -8772,7 +8774,7 @@ TIMEGRP tnm_sysclk = BEL "clocks/rst" BEL "clocks/d17_d" PIN
         "myprogrammer/_i000014/shiftregister_90" BEL
         "myprogrammer/_i000014/shiftregister_91" BEL
         "myprogrammer/_i000014/shiftregister_92" BEL
-        "myprogrammer/_i000014/sda" BEL "myprogrammer/_i000014/shiftCtr_0" BEL
+        "myprogrammer/_i000014/shiftCtr_0" BEL
         "myprogrammer/_i000014/shiftCtr_1" BEL
         "myprogrammer/_i000014/shiftCtr_2" BEL
         "myprogrammer/_i000014/shiftCtr_3" BEL
@@ -8787,15 +8789,15 @@ TIMEGRP tnm_sysclk = BEL "clocks/rst" BEL "clocks/d17_d" PIN
         "myprogrammer/_i000014/prescaler_4" BEL
         "myprogrammer/_i000014/prescaler_5" BEL
         "myprogrammer/_i000014/prescaler_6" BEL
-        "myprogrammer/_i000014/prescaler_7" BEL "myprogrammer/_i000014/sck"
-        BEL "myprogrammer/_i000014/Result<0>_FRB" BEL
-        "myprogrammer/_i000014/Result<1>_FRB" BEL
-        "myprogrammer/_i000014/Result<2>_FRB" BEL
-        "myprogrammer/_i000014/Result<3>_FRB" BEL
-        "myprogrammer/_i000014/Result<4>_FRB" BEL
-        "myprogrammer/_i000014/Result<5>_FRB" BEL
-        "myprogrammer/_i000014/Result<6>_FRB" BEL
-        "myprogrammer/_i000014/Result<7>_FRB" PIN
+        "myprogrammer/_i000014/prescaler_7" BEL
+        "myprogrammer/_i000014/psForceProg_0" BEL
+        "myprogrammer/_i000014/psForceProg_1" BEL
+        "myprogrammer/_i000014/psForceProg_2" BEL
+        "myprogrammer/_i000014/psForceProg_3" BEL
+        "myprogrammer/_i000014/psForceProg_4" BEL
+        "myprogrammer/_i000014/psForceProg_5" BEL "myprogrammer/_i000014/sck"
+        BEL "myprogrammer/_i000014/sda" BEL "myprogrammer/_i000014/oneHzTick"
+        BEL "myprogrammer/_i000014/forceprogram" PIN
         "slaves/TDCchannels/PLLgen/SP6_BUFIO2_INSERT_PLL1_ML_BUFIO2_0_pins<0>"
         PIN "slaves/TDCchannels/PLLgen/pll_base_inst/PLL_ADV_pins<2>";
 PIN slaves/RAM2/Mram_ram_pins<19> = BEL "slaves/RAM2/Mram_ram" PINNAME CLKB;
@@ -11902,8 +11904,7 @@ TIMEGRP slaves_TDCchannels_PLLgen_clkout3 = BEL
         "slaves/TDCchannels/PLLgen/clkout4_buf" BEL
         "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0" BEL
         "slaves/TDCchannels/dc1/TDCcore/hit_registers_L0_0";
-TIMEGRP GRPinputhit2 = BEL "slaves/TDCchannels/dc2/TDCcore/hit_enable" BEL
-        "slaves/TDCchannels/dc2/TDCcore/hit_syn0" BEL
+TIMEGRP GRPinputhit2 = BEL "slaves/TDCchannels/dc2/TDCcore/hit_syn0" BEL
         "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0" BEL
         "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_1" BEL
         "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_2" BEL
@@ -11913,11 +11914,7 @@ TIMEGRP GRPinputhit2 = BEL "slaves/TDCchannels/dc2/TDCcore/hit_enable" BEL
         "slaves/TDCchannels/dc2/TDCcore/counter_val_CK0_L0_2" BEL
         "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180_L0_0" BEL
         "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180_L0_1" BEL
-        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180_L0_2" BEL
-        "slaves/TDCchannels/dc2/TDCcore/hitenablectr_0" BEL
-        "slaves/TDCchannels/dc2/TDCcore/hitenablectr_1" BEL
-        "slaves/TDCchannels/dc2/TDCcore/hitenablectr_2" BEL
-        "slaves/TDCchannels/dc2/TDCcore/hitenablectr_3";
+        "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180_L0_2";
 TIMEGRP GRPhit2 = BEL "slaves/TDCchannels/dc2/TDCcore/hit_syn0" BEL
         "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_0" BEL
         "slaves/TDCchannels/dc2/TDCcore/hit_registers_L0_1" BEL
@@ -11943,8 +11940,7 @@ TIMEGRP GRPCLK_0 = BEL "slaves/TDCchannels/dc2/TDCcore/counter_val_CK180_0"
         "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0_0" BEL
         "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0_1" BEL
         "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0_2";
-TIMEGRP GRPinputhit1 = BEL "slaves/TDCchannels/dc1/TDCcore/hit_enable" BEL
-        "slaves/TDCchannels/dc1/TDCcore/hit_syn0" BEL
+TIMEGRP GRPinputhit1 = BEL "slaves/TDCchannels/dc1/TDCcore/hit_syn0" BEL
         "slaves/TDCchannels/dc1/TDCcore/hit_registers_L0_0" BEL
         "slaves/TDCchannels/dc1/TDCcore/hit_registers_L0_1" BEL
         "slaves/TDCchannels/dc1/TDCcore/hit_registers_L0_2" BEL
@@ -11954,11 +11950,7 @@ TIMEGRP GRPinputhit1 = BEL "slaves/TDCchannels/dc1/TDCcore/hit_enable" BEL
         "slaves/TDCchannels/dc1/TDCcore/counter_val_CK0_L0_2" BEL
         "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180_L0_0" BEL
         "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180_L0_1" BEL
-        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180_L0_2" BEL
-        "slaves/TDCchannels/dc1/TDCcore/hitenablectr_0" BEL
-        "slaves/TDCchannels/dc1/TDCcore/hitenablectr_1" BEL
-        "slaves/TDCchannels/dc1/TDCcore/hitenablectr_2" BEL
-        "slaves/TDCchannels/dc1/TDCcore/hitenablectr_3";
+        "slaves/TDCchannels/dc1/TDCcore/counter_val_CK180_L0_2";
 TIMEGRP GRPhit1 = BEL "slaves/TDCchannels/dc1/TDCcore/hit_syn0" BEL
         "slaves/TDCchannels/dc1/TDCcore/hit_registers_L0_0" BEL
         "slaves/TDCchannels/dc1/TDCcore/hit_registers_L0_1" BEL

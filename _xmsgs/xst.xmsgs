@@ -5,9 +5,6 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="248" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 51: Block identifier is required on this block
-</msg>
-
 <msg type="warning" file="HDLCompiler" num="248" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 52: Block identifier is required on this block
 </msg>
 
@@ -41,6 +38,9 @@
 <msg type="warning" file="HDLCompiler" num="248" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 62: Block identifier is required on this block
 </msg>
 
+<msg type="warning" file="HDLCompiler" num="248" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 63: Block identifier is required on this block
+</msg>
+
 <msg type="warning" file="HDLCompiler" num="1499" delta="old" >"/home/Administrators/jeffrey/xilinx/work/ipcore_dir/mac_fifo_axi4.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">mac_fifo_axi4</arg>&gt; remains a black box.
 </msg>
 
@@ -65,7 +65,7 @@
 <msg type="warning" file="HDLCompiler" num="1016" delta="old" >"/home/Administrators/jeffrey/xilinx/work/timegen.v" Line 93: Port <arg fmt="%s" index="1">full</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/timegen.v" Line 53: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/Administrators/jeffrey/xilinx/work/timegen.v" Line 53: Result of <arg fmt="%d" index="1">5</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">4</arg>-bit target.
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="1499" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/TDC/ipcore_dir/hitFIFO.v" Line 39: Empty module &lt;<arg fmt="%s" index="1">hitFIFO</arg>&gt; remains a black box.
@@ -128,31 +128,37 @@
 <msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/registerInterface.v" Line 111: Signal &lt;<arg fmt="%s" index="1">myReg13</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="604" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 162: Module instantiation should have an instance name
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 81: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="604" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 163: Module instantiation should have an instance name
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 82: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 89: Signal &lt;<arg fmt="%s" index="1">myReg2_r</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 83: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 106: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="new" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 94: Result of <arg fmt="%d" index="1">7</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">6</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 194: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="91" delta="new" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 106: Signal &lt;<arg fmt="%s" index="1">forceprogram</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 210: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="91" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 108: Signal &lt;<arg fmt="%s" index="1">myReg2_r</arg>&gt; missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 211: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 125: Result of <arg fmt="%d" index="1">9</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">8</arg>-bit target.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 191: Result of <arg fmt="%d" index="1">24</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">23</arg>-bit target.
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 213: Result of <arg fmt="%d" index="1">11</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">10</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 229: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/SerialConfig.v" Line 230: Result of <arg fmt="%d" index="1">32</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">1</arg>-bit target.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="413" delta="old" >"/home/Administrators/jeffrey/xilinx/work/source/I2C/i2c/I2CTest_top.v" Line 193: Result of <arg fmt="%d" index="1">24</arg>-bit expression is truncated to fit in <arg fmt="%d" index="2">23</arg>-bit target.
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/top_atlys.vhd</arg>&quot; line <arg fmt="%s" index="2">87</arg>: Output port &lt;<arg fmt="%s" index="3">hostbus_out_hostrddata</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">eth</arg>&gt; is unconnected or connected to loadless signal.
@@ -308,7 +314,7 @@
 <msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/TDCslave.v</arg>&quot; line <arg fmt="%s" index="2">77</arg>: Output port &lt;<arg fmt="%s" index="3">LOCKED</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">PLLgen</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="old" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/timegen.v</arg>&quot; line <arg fmt="%s" index="2">93</arg>: Output port &lt;<arg fmt="%s" index="3">full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hit_fifo</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">/home/Administrators/jeffrey/xilinx/work/timegen.v</arg>&quot; line <arg fmt="%s" index="2">93</arg>: Output port &lt;<arg fmt="%s" index="3">full</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">hit_fifo</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">myReg13&lt;7:5&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
@@ -2478,6 +2484,36 @@
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">cnt_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">clkdiv</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hit_enable</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hitenablectr_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hitenablectr_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hitenablectr_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hitenablectr_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">hit_enable</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hitenablectr_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hitenablectr_1</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hitenablectr_2</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">hitenablectr_3</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">TDCcore</arg>&gt;.
 </msg>
 
 <msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clean_block.clean_i_0</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">rx_ram_selector</arg>&gt;.

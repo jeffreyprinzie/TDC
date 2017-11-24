@@ -170,7 +170,8 @@ begin
 	 p_sck_inv=>sck,
 	 p_sda_inv=>sda,
 	 p_scapt_inv=>scapt,
-	 p_reset_inv=>reset
+	 p_reset_inv=>reset,
+	 oneHz=>onehz
     );
 	 
 	 

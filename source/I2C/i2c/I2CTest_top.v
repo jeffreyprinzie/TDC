@@ -25,6 +25,7 @@ module programmer(
 
 	 sda,
 	 scl,
+	 oneHz,
 	 //rx,
 	 //tx,
 	 //enUART,
@@ -36,7 +37,7 @@ module programmer(
     );
 
 
-input wire clkin;
+input wire clkin,oneHz;
 
 input scl;
 inout sda;
@@ -166,6 +167,7 @@ SerialConfig(
 		p_sda,
 		p_scapt,
 		p_reset,
+		oneHz,
 		
 		myReg1in,
 		myReg2in,

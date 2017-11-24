@@ -25,6 +25,7 @@ module SerialConfig(
 		sda,
 		scapt,
 		reset,
+		oneHz,
 		
 		myReg1,
 		myReg2,
@@ -41,7 +42,7 @@ module SerialConfig(
 		myReg13
     );
 
-input sysclk,rst;
+input sysclk,rst,oneHz;
 output reg sck,sda;
 output wire scapt,reset;
 input wire [7:0]  myReg1,myReg2,myReg3,myReg4,myReg5,myReg6,myReg7,myReg8,myReg9,myReg10,myReg11,myReg12,myReg13;
@@ -81,10 +82,28 @@ wire tick;
 assign tick_p = (prescaler == PSVAL/2) ? 1 : 0;
 assign tick_n = (prescaler == 0) ? 1 : 0;
 
+reg [5:0] psForceProg;
+
+
+reg forceprogram;
+reg oneHzdel,oneHzTick;
+always @(posedge sysclk) begin
+	oneHzdel<=oneHz;
+	oneHzTick<= oneHz & ~oneHzdel;
+	if(oneHzTick)
+		psForceProg<=psForceProg + 1;
+		
+	if(oneHzTick==1 && (psForceProg==0))
+		forceprogram<=1;
+	else
+		forceprogram<=0;
+	
+end
+
 always @(FSMstate,shiftCtr,shiftregister,myReg1,myReg2,myReg3,myReg4,myReg5,myReg6,myReg7,myReg8,myReg9,myReg10,myReg11,myReg12,myReg13,tick_n,tick_p) begin
 	case (FSMstate)
 		IDLE:
-			if(myReg1==1) begin
+			if(myReg1==1 || forceprogram==1) begin
 				FSMstate_next<=PROGRAMSERIAL;
 				shiftregister_next<= {myReg2_r,myReg3_r,myReg4_r,myReg5_r,myReg6_r,myReg7_r,myReg8_r,myReg9_r,myReg10_r,myReg11_r,myReg12_r,myReg13_r[7:3]};
 				shiftCtr_next<=0;
